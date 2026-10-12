@@ -1,0 +1,88 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{xcolor,graphicx,booktabs,longtable,array,amsmath,fancyhdr,tcolorbox,hyperref,caption}
+\usepackage[bidi=basic]{babel}
+\babelprovide[main,import]{persian}
+\babelprovide[import]{english}
+\babelfont[persian]{rm}{Tahoma}
+\babelfont[english]{rm}{Arial}
+\newcommand{\lr}[1]{\foreignlanguage{english}{#1}}
+\newenvironment{latin}{\begin{otherlanguage}{english}}{\end{otherlanguage}}
+\definecolor{navy}{HTML}{17365D}\definecolor{cyan}{HTML}{2E75B6}\definecolor{green}{HTML}{2F855A}\definecolor{pale}{HTML}{EEF5FA}
+\pagestyle{fancy}\fancyhf{}\rhead{نتایج و بحث}\lhead{CostStableEHOA}\cfoot{\thepage}
+\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=cyan}
+\newenvironment{resultbox}{\begin{quote}\color{navy}\bfseries}{\end{quote}}
+\begin{document}
+\begin{titlepage}\pagecolor{navy}\color{white}\centering\vspace*{2.2cm}
+{\Huge\bfseries گزارش نتایج و بحث\par}\vspace{.7cm}{\LARGE ارزیابی تأییدی انتخاب ویژگی هزینه‌آگاه و پایدار\par}\vspace{1.4cm}\rule{.8\textwidth}{1pt}\vfill
+{\Large پروژه درس کلان‌داده - کارشناسی ارشد\par}\vspace{1cm}
+\begin{tabular}{rl}دانشجو: & امیررضا غفاریان\\ استاد: & دکتر محمدحسین معطر\\ دانشگاه: & دانشگاه آزاد اسلامی\\ تاریخ: & مرداد ۱۴۰۵\end{tabular}\vfill
+\color{white!80}تمام اعداد از فایل خام ۳۰۰ اجرای نهایی استخراج شده‌اند.\end{titlepage}
+\nopagecolor\color{black}\tableofcontents\newpage
+\section{پرسش پژوهش و فرضیه‌ها}
+پرسش اصلی این است که آیا تعمیر مبتنی بر کران پایین سودمندی پایدار می‌تواند هزینه و ناپایداری انتخاب ویژگی را بدون افت جدی توان پیش‌بینی کاهش دهد. سه فرضیه از پیش قابل آزمون‌اند: کاهش هزینه نسبت به EHOA، افزایش پایداری نسبت به EHOA، و حفظ تقریبی دقت متوازن. «بهبود دقت» شرط یا ادعای این روش نیست.
+
+\section{طراحی آزمایش}
+ده دیتاست عمومی شامل \lr{Breast Cancer}، \lr{Wine}، \lr{Ionosphere}، \lr{Sonar}، \lr{Dermatology}، \lr{Spambase}، \lr{Parkinsons}، \lr{Hill Valley}، \lr{Steel Plates Fault} و \lr{Madelon} ارزیابی شدند. پنج روش EHOA بدون بودجه و چهار نسخه بودجه‌ای با تعمیر تصادفی، ارزان‌ترین، اطلاعات متقابل و \lr{Stable-LCB} مقایسه شدند. برای هر ترکیب، دو بذر و سه چین بیرونی طبقه‌بندی‌شده استفاده شد. معیار اصلی دقت متوازن است؛ هزینه نسبی، تعداد ویژگی، پایداری نوگوئیرا و زمان نیز گزارش شده‌اند.
+
+\section{صحت داده‌های خروجی}
+\begin{resultbox}
+۳۰۰ ردیف مورد انتظار ثبت شد؛ ۱۰ دیتاست و ۵ روش کامل‌اند؛ ۳۰۰ فایل ماسک موجود است؛ کلید تکراری، مقدار گم‌شده، اجرای شکست‌خورده و نقض بودجه همگی صفر هستند. تمام ردیف‌ها دارای وضعیت \lr{complete} و هش پیکربندی‌اند.
+\end{resultbox}
+
+\section{نتایج کلی}
+\begin{table}[h]\centering\caption{میانگین روی ده دیتاست؛ ابتدا در هر دیتاست شش اجرای مستقل تجمیع شده است.}
+\begin{tabular}{lrrrr}\toprule روش & دقت متوازن & نسبت هزینه & تعداد ویژگی & پایداری\\\midrule
+EHOA & 0.8301 & 0.4782 & 42.07 & 0.1229\\
+Budget-random & 0.8288 & 0.2724 & 31.87 & 0.1403\\
+Budget-cheapest & 0.8324 & 0.2728 & 35.18 & 0.2552\\
+Budget-mi & \textbf{0.8331} & 0.2735 & \textbf{27.95} & 0.2335\\
+Budget-stable\_lcb & 0.8280 & 0.2775 & 30.98 & \textbf{0.2554}\\\bottomrule
+\end{tabular}\end{table}
+
+روش پیشنهادی بالاترین پایداری متوسط را دارد، اما بهترین دقت متعلق به تعمیر اطلاعات متقابل است. نسبت هزینه همه نسخه‌های بودجه‌ای نزدیک ۰٫۲۷ است و از سقف ۰٫۳۰ عبور نکرده است. هزینه انتخاب‌شده دقیقاً با بودجه برابر نیست، زیرا جواب دودویی و هزینه ویژگی‌ها گسسته‌اند.
+
+\begin{figure}[p]\centering\includegraphics[width=.96\textwidth]{D:/desktop/dfa-ehoa-research/results/cost_stable_confirmatory/final_analysis/balanced_accuracy_by_dataset.png}\caption{دقت متوازن روش‌ها روی هر دیتاست. این نمودار مستقیماً از فایل خام اجرای نهایی تولید شده است.}\end{figure}
+\begin{figure}[p]\centering\includegraphics[width=.88\textwidth]{D:/desktop/dfa-ehoa-research/results/cost_stable_confirmatory/final_analysis/accuracy_cost_tradeoff.png}\caption{مبادله دقت و هزینه؛ جهت مطلوب به سمت چپ و بالا است.}\end{figure}
+\clearpage
+
+\section{آزمون‌های آماری}
+برای جلوگیری از شبه‌تکرار، ابتدا شش اجرای هر روش در هر دیتاست میانگین گرفته شد و ده دیتاست واحدهای مستقل آزمون بودند. آزمون فریدمن مقایسه کلی و ویلکاکسون زوجی مقایسه روش پیشنهادی با مبناها را انجام داد؛ چهار مقایسه هر معیار با روش هولم اصلاح شدند.
+
+\begin{table}[h]\centering\caption{مقایسه \lr{Stable-LCB} با EHOA روی ده دیتاست}
+\begin{tabular}{lrrrr}\toprule معیار & اختلاف میانگین & برد/مساوی/باخت & $p$ خام & $p$ هولم\\\midrule
+دقت متوازن & -0.00209 & 6/0/4 & 0.5566 & 1.0000\\
+نسبت هزینه & -0.20067 & 0/0/10$^*$ & 0.00195 & 0.00781\\
+پایداری نوگوئیرا & +0.13254 & 9/0/1 & 0.00391 & 0.01563\\\bottomrule
+\end{tabular}\end{table}
+در ردیف هزینه، علامت منفی مطلوب است؛ بنابراین ۱۰ کاهش از ۱۰ دیتاست ثبت شده است. پس از اصلاح هولم، کاهش هزینه و افزایش پایداری معنادار باقی مانده‌اند. اختلاف دقت معنادار نیست. فاصله اطمینان بوت‌استرپ ۹۵ درصد اختلاف دقت با EHOA از حدود -۰٫۰۱۷۷ تا +۰٫۰۰۸۷ است؛ ازاین‌رو داده‌ها «برابری قطعی» یا عدم‌کاهندگی با حاشیه کوچک را اثبات نمی‌کنند، بلکه فقط نبود شواهد افت/افزایش معنادار را نشان می‌دهند.
+
+\section{مقایسه با تعمیرهای بودجه‌ای}
+در برابر تعمیر \lr{Budget-mi}، اختلاف متوسط دقت روش پیشنهادی -۰٫۰۰۵۱ است و آزمون زوجی معنادار نیست. اختلاف پایداری +۰٫۰۲۱۹ نیز پس از اصلاح معنادار نیست. در برابر تعمیر ارزان‌ترین، پایداری تقریباً یکسان است. بنابراین مزیت قطعی \lr{Stable-LCB} نسبت به همه تعمیرهای ساده‌تر تأیید نشده است. این نتیجه برای گزارش علمی مهم است: قید بودجه بخش اصلی کاهش هزینه را ایجاد می‌کند، در حالی که امتیاز پایداری بیشترین تفاوت روشن را نسبت به EHOA بدون بودجه نشان می‌دهد.
+
+\section{بحث علمی}
+\subsection{چه چیزی تأیید شد؟}
+قید سخت در تمام اجراها رعایت شد. روش پیشنهادی نسبت به EHOA حدود ۴۲ درصد کاهش نسبی در هزینه انتخاب‌شده ایجاد کرد: $(0.4782-0.2775)/0.4782\approx 0.42$. پایداری نوگوئیرا نیز بیش از دو برابر شد. این دو نتیجه با آزمون زوجی بین‌دیتاستی و اصلاح چندگانه پشتیبانی می‌شوند.
+
+\subsection{چه چیزی تأیید نشد؟}
+برتری دقت تأیید نشد و حتی میانگین روش پیشنهادی ۰٫۲ واحد درصد پایین‌تر از EHOA است. همچنین در برابر تعمیرهای بودجه‌ای ساده‌تر، مزیت آماری قانع‌کننده‌ای دیده نشد. بنابراین عبارت‌هایی مانند «بهترین الگوریتم»، «برتری عمومی» یا «افزایش قطعی دقت» با این داده‌ها نادرست‌اند.
+
+\subsection{مرز نوآوری}
+مؤلفه‌های هزینه ویژگی، اطلاعات متقابل، بازنمونه‌گیری، کران اطمینان و تعمیر جواب در ادبیات سابقه دارند. سهم این پروژه، ادغام مشخصِ امتیاز کران پایین بازنمونه‌گیری‌شده به‌ازای هزینه با تعمیر سخت بودجه در چرخه EHOA و ارزیابی تفکیکی آن در کنار سه تعمیر کنترل است. این یک نوآوری افزایشی و قابل آزمون است، نه ادعای «اولین روش جهان».
+
+\section{تهدیدهای اعتبار}
+هزینه‌ها مصنوعی و مستقل از برچسب‌اند و ممکن است ساختار هزینه واقعی را بازنمایی نکنند. تنها ده دیتاست، دو بذر و سه چین به‌کار رفته است. ارزیابی اصلی با KNN انجام شده و تعمیم به طبقه‌بندهای دیگر نیازمند آزمایش جداگانه است. جست‌وجوی فراابتکاری با بودجه محاسباتی جمعیت ۸ و ۱۰ تکرار انجام شده؛ بودجه‌های بزرگ‌تر ممکن است رتبه روش‌ها را تغییر دهند.
+
+\section{نتیجه‌گیری نهایی}
+\begin{resultbox}
+نتیجه قابل دفاع برای ارائه: روش \lr{CostStableEHOA} با تعمیر \lr{Stable-LCB}، در ۱۰ دیتاست و ۳۰۰ اجرای کامل، هزینه و ناپایداری انتخاب ویژگی را نسبت به EHOA به‌طور معنادار کاهش داد، در حالی که تغییر دقت متوازن از نظر آماری معنادار نبود. با این حال، برتری آن نسبت به تعمیرهای بودجه‌ای ساده‌تر و عدم‌کاهندگی رسمی دقت اثبات نشد.
+\end{resultbox}
+این بیان هم نقاط قوت را نشان می‌دهد و هم از بزرگ‌نمایی نتیجه جلوگیری می‌کند. تمام CSVها، ماسک‌ها، پیکربندی، کد تحلیل و نمودارها در بسته تحویل قرار گرفته‌اند.
+
+\section*{منابع منتخب}
+\begin{latin}\small
+Nogueira, S., Sechidis, K., and Brown, G. (2018). On the Stability of Feature Selection Algorithms. JMLR, 18, 1--54.\\
+Jagdhuber, R. et al. (2020). Cost-constrained feature selection in binary classification. Computational Statistics, 35, 1419--1440.\\
+Hegazy, A. et al. Enhanced Hiking Optimization Algorithm for feature selection (source article supplied with the project).
+\end{latin}
+\end{document}

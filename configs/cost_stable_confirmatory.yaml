@@ -1,0 +1,25 @@
+schema_version: 1
+experiment: cost_stable_confirmatory_v1
+confirmatory: true
+paper_eligible: true
+student: امیررضا غفاریان
+course: کلان‌داده
+degree: کارشناسی ارشد
+university: دانشگاه آزاد اسلامی
+datasets: [breast_cancer, wine, ionosphere, sonar, dermatology, spambase, parkinsons, hill_valley, steel_plates_fault, madelon]
+methods: [EHOA, Budget-random, Budget-cheapest, Budget-mi, Budget-stable_lcb]
+seeds: [71001, 71002]
+outer_folds: 3
+inner_folds: 3
+population: 8
+iterations: 10
+alpha: 0.99
+cost_scenario: preregistered_lognormal
+cost_seed_offset: 1000
+cost_lognormal_sigma: 0.7
+budget_ratio: 0.30
+evidence_resamples: 4
+lcb_z: 1.0
+primary_metric: balanced_accuracy
+equivalence_margin: 0.005
+resume: true

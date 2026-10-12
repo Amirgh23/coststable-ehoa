@@ -1,0 +1,205 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[top=19mm,bottom=25.4mm,left=16mm,right=16mm]{geometry}
+\usepackage{fontspec,graphicx,amsmath,amssymb,multicol,booktabs,array,tabularx}
+\usepackage[hidelinks]{hyperref}
+\setmainfont{Times New Roman}
+\setlength{\columnsep}{6mm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\setlength{\multicolsep}{4pt}
+\setlength{\abovedisplayskip}{4pt}
+\setlength{\belowdisplayskip}{4pt}
+\pagestyle{empty}
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0pt}{5pt}{2pt}{\normalfont\normalsize\bfseries}}
+\makeatother
+\newcommand{\sect}[1]{\section*{#1}}
+\usepackage{xepersian}
+\settextfont{B Nazanin}
+\setlatintextfont{Times New Roman}
+\begin{document}
+\begin{center}\includegraphics[width=\textwidth]{baic2026_header.png}\par\vspace{4pt}
+{\fontsize{14}{17}\selectfont\bfseries انتخاب ویژگی با بودجه سخت و تعمیر مبتنی بر اطلاعات متقابل بازنمونه‌گیری‌شده در \lr{EHOA}}\par
+امیررضا غفاریان\par
+دانشجوی کارشناسی ارشد، دانشگاه آزاد اسلامی\end{center}
+\textbf{چکیده. } چهار روش تعمیر بودجه را در الگوریتم بهینه‌سازی کوه‌پیمایی بهبود‌یافته \lr{(EHOA)} با جست‌وجو و تابع هدف یکسان مقایسه می‌کنیم. روش پیشنهادی، اطلاعات متقابل را بازنمونه‌گیری می‌کند و نسبت امتیاز نامنفی «میانگین منهای انحراف معیار» به هزینه مصنوعی را مبنای حذف قرار می‌دهد. این امتیاز ابتکاری محافظه‌کارانه است، نه کران اطمینان کالیبره‌شده. ممیزی ۳۰۰ اجرای موجود روی ده دیتاست نشان می‌دهد همه ۲۴۰ خروجی مقید، بودجه ۳۰ درصد هزینه کل را رعایت می‌کنند. به‌دلیل نشت هدف در \lr{Steel Plates} و خطر هم‌پوشانی افراد در \lr{Parkinsons}، تحلیل اصلی گذشته‌نگر به هشت دیتاست محدود شد. تعمیر بازنمونه‌گیری‌شده، میانگین دقت متوازن را از \lr{0.8068} به \lr{0.8116}، نسبت هزینه را از \lr{0.4791} به \lr{0.2792} و پایداری نوگوئیرا را از \lr{0.1161} به \lr{0.2550} تغییر داد. فریدمن اختلاف روش‌ها را برای هزینه و پایداری نشان داد، اما برای دقت متوازن معنادار نبود. اختلاف زوجی پایداری با \lr{EHOA} پس از اصلاح هولم درون معیار معنادار نیست. مطالعه موردی سیتولوژی سرطان پستان، کاربرد انتخاب زیرمجموعه را نشان می‌دهد و اعتبارسنجی بالینی یا صرفه‌جویی پولی را ادعا نمی‌کند. سهم پژوهش، مقایسه قابل‌ممیزی تعمیرهاست، نه برتری عمومی پیش‌بینی. شصت اجرای اصلاح‌شده اکتشافی جداگانه نیز برتری عمومی پیش‌بینی را نشان نداد.
+
+\textbf{کلیدواژه‌ها. } انتخاب ویژگی، بودجه سخت، اطلاعات متقابل بازنمونه‌گیری‌شده، پایداری زیرمجموعه
+\begin{multicols}{2}\raggedcolumns
+\sect{۱  مسئله و سهم پژوهش}
+زیرمجموعه کوچک الزاماً کم‌هزینه نیست؛ هزینه کسب ویژگی‌ها می‌تواند متفاوت باشد. انتخاب با بودجه سخت، مجموع هزینه ویژگی‌های منتخب را محدود می‌کند \lr{[1].} پایداری زیرمجموعه، تغییر انتخاب ویژگی در نمونه‌های آموزش و جست‌وجوی تصادفی را می‌سنجد؛ این مفهوم با ثبات دقت یا همگرایی متفاوت است \lr{[2].} این تمایز برای تفسیر مجموعه اندازه‌گیری‌های زیست‌پزشکی اهمیت دارد.
+
+جست‌وجوی پیاده‌سازی‌شده \lr{EHOA [3]} را حفظ و آن را با چهار تعمیر مقایسه می‌کنیم. بین نسخه‌های مقید، فقط سودمندی تعمیر تغییر می‌کند. سهم پژوهش، ادغام و ارزیابی کنترل‌شده تعمیر مبتنی بر ارتباط بازنمونه‌گیری‌شده به‌ازای هزینه است. بودجه، تعمیر، اطلاعات متقابل \lr{(MI)} و بازنمونه‌گیری به‌تنهایی نوآوری نیستند. شناسه کد \lr{CostStableEHOA} حفظ شد؛ عنوان جدید، ثبات هزینه یا تضمین پایداری انتخاب را القا نمی‌کند.
+
+\sect{۲  مطالعات مرتبط}
+شاخص پایداری ممکن است انتخاب‌های تکرارپذیر اما کم‌ارزش را مطلوب نشان دهد؛ پایداری وزن‌دار با اهمیت ویژگی به این مسئله می‌پردازد \lr{[4].} انتخاب پزشکی با ریسک جریمه‌شده \lr{[5]}، کسب ترتیبی ویژگی \lr{[6]} و هزینه گروهی با ویژگی سایه \lr{[7]} مسائل مرتبط ولی متفاوتی‌اند. جدول ۱ تفاوت‌ها را نشان می‌دهد. \lr{NR} یعنی گزارش نشده در منبع بررسی‌شده؛ نتایج عددی این مطالعات با پروتکل حاضر مستقیماً مقایسه نمی‌شوند.
+
+\par\vspace{3pt}\begin{minipage}{\linewidth}{\footnotesize جدول ۱. مقایسه مطالعات؛ جزئیات پروتکل در پیوست آمده است.\par}
+\begin{latin}
+{\fontsize{6.8}{8.3}\selectfont\setlength{\tabcolsep}{2pt}\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\linewidth}{>{\hsize=1.0000\hsize\raggedright\arraybackslash}X>{\hsize=1.0000\hsize\raggedright\arraybackslash}X>{\hsize=1.0000\hsize\raggedright\arraybackslash}X>{\hsize=1.0000\hsize\raggedright\arraybackslash}X>{\hsize=1.0000\hsize\raggedright\arraybackslash}X>{\hsize=1.0000\hsize\raggedright\arraybackslash}X}\toprule
+Study & Budget & Costs & Stability & Evaluation & Difference\\\midrule
+Jagdhuber [1] & Yes & Additive & NR & Simulation & Feasible GA\\
+Nogueira [2] & NR & NR & Chance-corrected & Resampling & Metric\\
+Hamer [4] & NR & NR & Importance-weighted & Resampling & Metric limits\\
+Klonecki [5] & Yes & Feature / proxy & NR & Medical data & Penalized ERM\\
+Valancius [6] & NR & Sequential & NR & AFA benchmarks & Patient-wise policy\\
+Klonecki [7] & Yes & Grouped & NR & MIMIC & Shadow stopping\\
+This work & Yes & Synthetic additive & Nogueira & 2 x 3 outer & MI/cost repair\\
+\bottomrule\end{tabularx}}
+\end{latin}
+\end{minipage}\par\vspace{3pt}
+\sect{۳  \lr{EHOA} پیاده‌سازی‌شده}
+هر عضو جمعیت، موقعیت پیوسته \lr{x} و سرعت \lr{v} دارد؛ ماسک دودویی \lr{z} ویژگی‌ها را انتخاب می‌کند. مقداردهی اولیه از دنباله \lr{tent} با مقدار آغازین \lr{0.7} و پارامتر \lr{0.4} در بازه \lr{[-6,6]} استفاده می‌کند. سرعت اولیه در \lr{[-1.2,1.2]} یکنواخت است. به‌روزرسانی پیاده‌سازی در تکرار \lr{t} از \lr{T=10} چنین است:
+
+\begin{latin}\begin{equation}\begin{gathered}\begin{aligned}v_i\leftarrow\operatorname{clip}_{[-12,12]}\big(&w_t v_i+SF_t[2r_1(p_i-x_i)\\&+2r_2(g-x_i)]\big)\end{aligned}\end{gathered}\end{equation}\end{latin}
+\begin{latin}\begin{equation}\begin{gathered}\begin{gathered}x_i\leftarrow\operatorname{clip}_{[-6,6]}(x_i+v_i)\\w_t=0.9-0.5t/T,\quad SF_t=3-2t/T\end{gathered}\end{gathered}\end{equation}\end{latin}
+در این روابط \lr{p\_i} و \lr{g} بهترین موقعیت پیوسته فردی و سراسری‌اند؛ \lr{r\_1} و \lr{r\_2} برای هر ویژگی مستقل و یکنواخت‌اند. احتمال انتخاب از سیگموئید \lr{1/(1+exp(-x\_j))} می‌آید. ماسک نمونه‌گیری‌شده تهی، ویژگی دارای بیشترین احتمال را بازمی‌گرداند. کد، رهبرهای پیوسته را از ماسک تعمیرشده جدا نگه می‌دارد، برازندگی ماسک تکراری را ذخیره می‌کند و پس از ده تکرار بدون توقف زودهنگام پایان می‌یابد.
+
+\sect{۴  تعمیر بودجه و پایداری}
+هزینه‌ها، واحدهای مصنوعی مثبت، جمع‌پذیر و مستقل از برچسب‌اند. برای هر دیتاست یک‌بار از \lr{lognormal(0,0.7)} با بذر \lr{NumPy} برابر \lr{1000+D} تولید می‌شوند. بودجه مطلق \lr{B=0.30 sum(c)} از نسبت بودجه حاصل می‌شود. \lr{Ionosphere} و \lr{Dermatology} به‌دلیل \lr{D=34}، بردار هزینه یکسان دارند. ماسک غیرتهی زمانی شدنی است که \lr{sum(z\_j c\_j) <= B} باشد.
+
+\begin{latin}\begin{equation}\begin{gathered}u_j=\max(0,\bar I_j-\lambda s_j),\qquad q_j=u_j/c_j,\qquad\lambda=1\end{gathered}\end{equation}\end{latin}
+در تعمیر بازنمونه‌گیری‌شده، چهار نمونه درون هر کلاس با جایگذاری و اندازه \lr{ceil(0.8 n\_class)}، حداقل دو، تولید می‌شود. \lr{mutual\_info\_classif} برای ماتریس متراکم، ویژگی‌ها را پیوسته و تعداد همسایه را سه در نظر می‌گیرد؛ واحد \lr{MI} نَت است. فقط برای \lr{MI}، مقدار گم‌شده صفر می‌شود. \lr{s\_j} انحراف معیار نمونه با \lr{ddof=1} است. تقسیم بر \lr{sqrt(R)} یا سطح اطمینان کالیبره‌شده وجود ندارد. سودمندی یک‌بار روی آموزش بیرونی و با بذر مستقل \lr{selector\_seed+7919} محاسبه می‌شود.
+
+\par\vspace{3pt}\begin{minipage}{\linewidth}{\footnotesize جدول ۲. هر چهار تعمیر، قاعده حذف یکسان دارند.\par}
+\begin{latin}
+{\fontsize{6.8}{8.3}\selectfont\setlength{\tabcolsep}{2pt}\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\linewidth}{>{\hsize=1.0000\hsize\raggedright\arraybackslash}X>{\hsize=1.0000\hsize\raggedright\arraybackslash}X>{\hsize=1.0000\hsize\raggedright\arraybackslash}X}\toprule
+Repair & Utility u\_j & Meaning\\\midrule
+Random/cost & U(0,1), fixed per fit & Not uniform deletion\\
+Cheapest & 1 & Largest cost first\\
+MI/cost & Single-sample MI & Relevance per cost\\
+Resampled/cost & max(0, mean MI - SD) & Conservative heuristic\\
+\bottomrule\end{tabularx}}
+\end{latin}
+\end{minipage}\par\vspace{3pt}
+روند اجرا: جمعیت را مقداردهی کن؛ ماسک سیگموئید را بساز؛ پیش از برازندگی تعمیر کن؛ ارزیابی و رهبرهای فردی/سراسری را به‌روزرسانی کن؛ حرکت، نمونه‌گیری، تعمیر و ارزیابی را تکرار کن؛ بهترین ماسک تعمیرشده را برگردان. تعمیر تا زمان نقض بودجه و وجود بیش از یک ویژگی، کمترین \lr{q\_j} فعال را حذف می‌کند. تک‌ویژگی غیرقابل‌خرید حذف و ماسک تهی با بهترین نسبت از بین ویژگی‌های قابل‌خرید پر می‌شود. تساوی با اولین اندیس شکسته می‌شود. سودمندی برای هر جواب دوباره محاسبه نمی‌شود.
+
+\begin{latin}\begin{equation}\begin{gathered}F(z)=0.99(1-\overline{Acc}_{inner})+0.01\|z\|_0/D\end{gathered}\end{equation}\end{latin}
+تابع هدف دست‌نخورده، خطای دقت معمولی درونی را کمینه می‌کند، نه خطای دقت متوازن. دقت متوازن بیرونی \lr{(BA)}، میانگین بازخوانی کلاس‌هاست. پایداری یک‌بار برای هر دیتاست/روش و از \lr{M=6} ماسک نهایی محاسبه می‌شود:
+
+\begin{latin}\begin{equation}\begin{gathered}\Phi=\operatorname{clip}_{[-1,1]}\left(1-\frac{\frac{M}{M-1}\frac{1}{D}\sum_j p_j(1-p_j)}{(\bar k/D)(1-\bar k/D)}\right)\end{gathered}\end{equation}\end{latin}
+\lr{p\_j} فراوانی انتخاب و \lr{k-bar} میانگین اندازه زیرمجموعه است. کد برای ماسک‌های تهی/کامل یکسان، مقدار یک برمی‌گرداند. این شاخص بدون واحد و تصحیح‌شده نسبت به شانس \lr{[2]}، تغییر ناشی از تقسیم داده و جست‌وجو را با هم می‌سنجد. هم‌پوشانی آموزش، شش ماسک را وابسته می‌کند. شش مقدار پایداری تکرارشده در \lr{CSV} شش مشاهده مستقل نیستند. هم‌پوشانی جاکارد، معیار تکمیلی بدون تصحیح شانس است.
+
+\sect{۵  دیتاست‌ها و ممیزی منبع}
+\par\vspace{3pt}\begin{minipage}{\linewidth}{\footnotesize جدول ۳. \lr{N} فایل / پس از حذف تکراری؛ \lr{D} تعداد ستون عددی موجود است.\par}
+\begin{latin}
+{\fontsize{6.8}{8.3}\selectfont\setlength{\tabcolsep}{2pt}\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\linewidth}{>{\hsize=1.4237\hsize\raggedright\arraybackslash}X>{\hsize=1.3220\hsize\raggedright\arraybackslash}X>{\hsize=0.3559\hsize\raggedright\arraybackslash}X>{\hsize=0.3051\hsize\raggedright\arraybackslash}X>{\hsize=1.9322\hsize\raggedright\arraybackslash}X>{\hsize=0.6610\hsize\raggedright\arraybackslash}X}\toprule
+Dataset & N raw/used & D & K & Class counts used & Source\\\midrule
+Breast Cancer & 569 / 569 & 30 & 2 & 212/ 357 & U17\\
+Wine & 178 / 178 & 13 & 3 & 59/ 71/ 48 & U109\\
+Ionosphere & 351 / 350 & 34 & 2 & 125/ 225 & O59\\
+Sonar & 208 / 208 & 60 & 2 & 111/ 97 & O40\\
+Dermatology & 366 / 366 & 34 & 6 & 112/ 61/ 72/ 49/ 52/ 20 & O35\\
+Spambase & 4601 / 4210 & 57 & 2 & 2531/ 1679 & O44\\
+Parkinsons* & 195 / 195 & 22 & 2 & 48/ 147 & O1488\\
+Hill-Valley & 1212 / 1212 & 100 & 2 & 606/ 606 & O1479\\
+Steel Plates* & 1941 / 1941 & 33 & 2 & 1268/ 673 & O1504\\
+Madelon & 2600 / 2600 & 500 & 2 & 1300/ 1300 & O1485\\
+\bottomrule\end{tabularx}}
+\end{latin}
+\end{minipage}\par\vspace{3pt}
+شناسه \lr{U} به \lr{archive.ics.uci.edu/dataset/\{id\}} و \lr{O} به \lr{openml.org/d/\{id\}} ارجاع می‌دهد. پیوست، لینک مستقیم، توزیع خام/پاک‌شده، هش و بودجه را دارد. کدگذاری \lr{one-hot} هنگام اجرا انجام نمی‌شود. \lr{Steel} در فایل ۳۳ ورودی و دو کلاس دارد، ولی \lr{UCI} آن را با ۲۷ پیش‌بین و هفت نوع عیب معرفی می‌کند. ستون‌های \lr{V28} تا \lr{V33} شش نشانگر عیب‌اند و هدف را دقیق تعیین می‌کنند؛ نتایج آن کنار گذاشته شد. \lr{Parkinsons} شامل ضبط‌های تکراری افراد است و تقسیم فردمحور ندارد؛ آن نیز از تحلیل اصلی حذف شد. هشت دیتاست باقی‌مانده ۲۴۰ اجرا دارند.
+
+\sect{۶  ارزیابی و تحلیل آماری}
+جدول ۴ تنظیمات واقعی اجرا را نشان می‌دهد، نه پیش‌فرض کلاس. تقسیم‌ها، هزینه‌ها، بذرها، معادلات جست‌وجو و برازندگی برای همه روش‌ها یکسان‌اند. موقعیت اولیه قطعی است؛ سرعت و ماسک از مولد تصادفی انتخابگر می‌آیند. چهار تعمیر، اثر رتبه‌بندی سودمندی را تحت بودجه مشترک تفکیک می‌کنند؛ مقایسه با \lr{EHOA} همچنین اثر اعمال بودجه را می‌سنجد.
+
+\par\vspace{3pt}\begin{minipage}{\linewidth}{\footnotesize جدول ۴. پارامترهای استخراج‌شده از کد و پیکربندی.\par}
+\begin{latin}
+{\fontsize{6.8}{8.3}\selectfont\setlength{\tabcolsep}{2pt}\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\linewidth}{>{\hsize=1.0000\hsize\raggedright\arraybackslash}X>{\hsize=1.0000\hsize\raggedright\arraybackslash}X}\toprule
+Parameter & Value\\\midrule
+Population / iterations & 8 / 10; no early stop\\
+Position / velocity clip & [-6,6] / [-12,12]\\
+Tent / sweep / inertia & 0.7, p=0.4 / 3 to 1 / 0.9 to 0.4\\
+c1,c2 / alpha & 2,2 / 0.99\\
+Outer / inner folds & 3 stratified / 3 stratified\\
+Outer seeds & 71001, 71002\\
+Selector seed & outer seed + fold index x 100003\\
+MI resamples / fraction & 4 / 0.8 with replacement\\
+lambda / MI neighbors & 1 / 3\\
+Cost / budget & lognormal(0,0.7) / 30\% total\\
+Classifier & 5-NN; uniform; Euclidean\\
+Imputation / scale & Training mean / StandardScaler\\
+SMOTE & Training only; k=min(5,n\_min-1)\\
+\bottomrule\end{tabularx}}
+\end{latin}
+\end{minipage}\par\vspace{3pt}
+در هر تقسیم درونی، فقط آموزش برای جایگذاری میانگین، استانداردسازی و \lr{SMOTE} به‌کار می‌رود؛ اعتبارسنجی بازنمونه‌گیری نمی‌شود. سودمندی \lr{MI} تمام برچسب‌های آموزش بیرونی، از جمله ردیف‌های اعتبارسنجی درونی بعدی، را می‌بیند؛ بنابراین امتیاز درونی، امتیاز انتخاب است و برآورد بی‌اریب نیست. برچسب آزمون بیرونی وارد انتخاب نمی‌شود. آموزش نهایی، پیش‌پردازش/\lr{SMOTE} و \lr{5-NN} را برازش می‌کند. اجراگر چهار طبقه‌بند را برازش کرده، اما آرشیو فقط معیارهای \lr{5-NN} را نگه داشته است. پیش‌پردازش و \lr{SMOTE} پیش از اعمال ماسک‌اند؛ این شبیه‌سازی است، نه سامانه عملیاتی کسب فقط ویژگی‌های منتخب.
+
+شش مقدار \lr{BA}، هزینه و اندازه را در هر دیتاست میانگین می‌گیریم و یک مقدار پایداری برای هر روش/دیتاست داریم. هشت دیتاست، نه ۲۴۰ ردیف، بلوک تحلیل‌اند \lr{[8].} تحلیل \lr{2026-10-12} گذشته‌نگر است؛ برچسب \lr{confirmatory} و هش تنظیمات، ثبت پیشینی تاریخ‌دار را ثابت نمی‌کنند. فریدمن با تصحیح تساوی و \lr{df=4}، ویلکاکسون زوجی دوطرفه برای چهار مقایسه و اصلاح هولم درون هر معیار را به‌کار بردیم. پیوست، اصلاح هم‌زمان ۲۴ مقایسه و شش آزمون کلی را نیز دارد. فاصله‌های صدکی بازنمونه‌گیری دیتاست (۲۰۰۰۰ بار؛ بذر \lr{20261012)}، توصیفی و بدون اصلاح چندگانگی‌اند.
+
+\sect{۷  نتایج}
+\par\vspace{3pt}\begin{minipage}{\linewidth}{\footnotesize جدول ۵. میانگین هم‌وزن هشت دیتاست؛ \lr{V} تعداد خروجی فراتر از بودجه است.\par}
+\begin{latin}
+{\fontsize{6.8}{8.3}\selectfont\setlength{\tabcolsep}{2pt}\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\linewidth}{>{\hsize=1.0000\hsize\raggedright\arraybackslash}X>{\hsize=1.0000\hsize\raggedright\arraybackslash}X>{\hsize=1.0000\hsize\raggedright\arraybackslash}X>{\hsize=1.0000\hsize\raggedright\arraybackslash}X>{\hsize=1.0000\hsize\raggedright\arraybackslash}X>{\hsize=1.0000\hsize\raggedright\arraybackslash}X}\toprule
+Method & BA & Cost ratio & Size & Stability & V\\\midrule
+EHOA & 0.8068 & 0.4791 & 49.21 & 0.1161 & 47/48\\
+Random/cost & 0.8054 & 0.2727 & 37.54 & 0.1238 & 0/48\\
+Cheapest & 0.8090 & 0.2708 & 41.50 & 0.2423 & 0/48\\
+MI/cost & 0.8109 & 0.2770 & 32.65 & 0.2287 & 0/48\\
+Resamp./cost & 0.8116 & 0.2792 & 36.40 & 0.2550 & 0/48\\
+\bottomrule\end{tabularx}}
+\end{latin}
+\end{minipage}\par\vspace{3pt}
+\par\vspace{3pt}\begin{minipage}{\linewidth}{\footnotesize جدول ۶. آماره فریدمن و \lr{p} خام؛ رتبه‌ها به ترتیب \lr{E/R/C/M/S}، یک بهترین است.\par}
+\begin{latin}
+{\fontsize{6.8}{8.3}\selectfont\setlength{\tabcolsep}{2pt}\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\linewidth}{>{\hsize=1.0000\hsize\raggedright\arraybackslash}X>{\hsize=1.0000\hsize\raggedright\arraybackslash}X>{\hsize=1.0000\hsize\raggedright\arraybackslash}X>{\hsize=1.0000\hsize\raggedright\arraybackslash}X>{\hsize=1.0000\hsize\raggedright\arraybackslash}X>{\hsize=1.0000\hsize\raggedright\arraybackslash}X>{\hsize=1.0000\hsize\raggedright\arraybackslash}X>{\hsize=1.0000\hsize\raggedright\arraybackslash}X}\toprule
+Metric & Chi2 & p & E & R & C & M & S\\\midrule
+BA & 4.5000 & 0.34255 & 3.12 & 3.88 & 3.00 & 2.75 & 2.25\\
+Cost & 21.1000 & 0.00030 & 5.00 & 1.88 & 1.88 & 3.00 & 3.25\\
+Size & 23.7233 & 0.00009 & 5.00 & 1.88 & 3.81 & 2.06 & 2.25\\
+Stability & 15.7000 & 0.00345 & 4.25 & 4.12 & 1.88 & 2.50 & 2.25\\
+\bottomrule\end{tabularx}}
+\end{latin}
+\end{minipage}\par\vspace{3pt}
+تعمیر بازنمونه‌گیری‌شده در برابر \lr{EHOA}، نسبت هزینه را به‌اندازه \lr{-0.19986} تغییر می‌دهد (ویلکاکسون \lr{W=0}؛ \lr{p} خام \lr{0.00781}؛ هولم درون معیار \lr{0.03125}؛ اندازه اثر رتبه‌ای \lr{r=-1).} تغییر پایداری \lr{+0.13895} است \lr{(W=1}؛ \lr{p} خام \lr{0.01563}؛ هولم \lr{0.06250}؛ \lr{r=0.944).} تغییر \lr{BA} برابر \lr{+0.00482} است \lr{(W=9}؛ هولم \lr{0.750}؛ \lr{r=0.500}؛ فاصله ۹۵ درصد \lr{[-0.00149,0.01109]).} این نتایج هم‌ارزی یا عدم‌کاهندگی را ثابت نمی‌کنند. هیچ مقایسه تعمیر بازنمونه‌گیری‌شده با سه تعمیر دیگر، برای \lr{BA} یا پایداری نوگوئیرا پس از هولم درون معیار معنادار نیست.
+
+در تحلیل حساسیت اکتشافی جداگانه، ۶۰ اجرای اصلاح‌شده انجام دادیم: \lr{Steel} با ۲۷ پیش‌بین و هفت کلاس؛ \lr{Parkinsons} با تقسیم بیرونی و درونی مستقل در سطح شناسه فرد، پس از تطبیق تمام ۱۹۵ ضبط با فایل \lr{UCI.} ترکیب آنها با ۲۴۰ اجرای آرشیوی واجد شرایط، ده بلوک اصلاح‌شده می‌دهد. فریدمن \lr{BA} همچنان معنادار نیست \lr{(Chi2=4.32}، \lr{df=4}، \lr{p=0.36443).} هولم درون معیار برای اختلاف پایداری پیشنهادی با \lr{EHOA} برابر \lr{0.01563} است، اما هولم همه ۲۰ مقایسه \lr{p=0.06641} می‌دهد. دلتای میانگین \lr{BA} برابر \lr{-0.00583} و فاصله توصیفی \lr{[-0.02523,0.00771]} است. این نتایج اکتشافی، آزمایش دارای نشت قبلی یا برتری بر تعمیرهای ساده‌تر را تأیید نمی‌کنند.
+
+\par\begin{minipage}{\linewidth}\centering\includegraphics[width=\linewidth]{figures/eligible_comparison.pdf}\par{\footnotesize شکل ۱. میانگین هشت دیتاست؛ هزینه مصنوعی است. ارتفاع ستون پایداری، معناداری اختلاف زوجی را ثابت نمی‌کند.\par}\end{minipage}\par
+\sect{۸  مطالعه موردی پزشکی و ارتباط با کنگره}
+دیتاست تشخیصی سرطان پستان \lr{UCI} شامل ۵۶۹ نمونه آسپیراسیون با سوزن ظریف (۲۱۲ بدخیم و ۳۵۷ خوش‌خیم) و ۳۰ توصیفگر تصویر هسته سلول است \lr{[9].} شعاع، بافت، محیط، مساحت، همواری، فشردگی، تقعر، نقاط مقعر، تقارن و بعد فراکتال، هر یک خلاصه میانگین، خطا و بدترین مقدار دارند. جدول ۷ نتیجه پنج روش را در این دیتاست نشان می‌دهد.
+
+\par\vspace{3pt}\begin{minipage}{\linewidth}{\footnotesize جدول ۷. مطالعه سرطان پستان، میانگین شش اجرا.\par}
+\begin{latin}
+{\fontsize{6.8}{8.3}\selectfont\setlength{\tabcolsep}{2pt}\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\linewidth}{>{\hsize=1.0000\hsize\raggedright\arraybackslash}X>{\hsize=1.0000\hsize\raggedright\arraybackslash}X>{\hsize=1.0000\hsize\raggedright\arraybackslash}X>{\hsize=1.0000\hsize\raggedright\arraybackslash}X>{\hsize=1.0000\hsize\raggedright\arraybackslash}X}\toprule
+Method & BA & Cost ratio & Size & Stability\\\midrule
+EHOA & 0.9563 & 0.5227 & 14.17 & 0.0682\\
+Random/cost & 0.9452 & 0.2651 & 10.17 & 0.0627\\
+Cheapest & 0.9557 & 0.2673 & 11.33 & 0.2815\\
+MI/cost & 0.9462 & 0.2758 & 10.50 & 0.2137\\
+Resamp./cost & 0.9525 & 0.2799 & 11.17 & 0.2059\\
+\bottomrule\end{tabularx}}
+\end{latin}
+\end{minipage}\par\vspace{3pt}
+\par\begin{minipage}{\linewidth}\centering\includegraphics[width=\linewidth]{figures/breast_top_frequencies.pdf}\par{\footnotesize شکل ۲. شمار انتخاب هشت ویژگی پرتکرار تعمیر بازنمونه‌گیری‌شده در شش ماسک آرشیوشده.\par}\end{minipage}\par
+تعمیر بازنمونه‌گیری‌شده، میانگین نقاط مقعر را در \lr{6/6} و میانگین بافت و مساحت را در \lr{5/6} ماسک انتخاب کرده است. این شمارش، انتخاب‌های آرشیوشده را توصیف می‌کند؛ زیست‌نشانگر علّی یا اتکاپذیری بالینی را ثابت نمی‌کند. تعمیر ارزان‌ترین در این دیتاست پایدارتر است \lr{(0.2815} در برابر \lr{0.2059).} هزینه مصنوعی ویژگی، قیمت نمونه‌برداری نیست؛ همه توصیفگرها از یک کسب تصویر می‌آیند و هزینه گروهی واقع‌بینانه‌تر خواهد بود.
+
+نزدیک‌ترین محور رسمی \lr{BAIC2026}، «هوش مصنوعی، یادگیری ماشین و علم داده / سیستم‌های هوشمند تشخیص بیماری» است \lr{(baic.um.ac.ir/fa/home/Content/12).} کاربرد پزشکی پژوهش، انتخاب محاسباتی مجموعه اندازه‌گیری‌هاست و سامانه تشخیصی اعتبارسنجی‌شده بالینی محسوب نمی‌شود. سازوکار علوم شناختی ادعا نمی‌کنیم.
+
+\sect{۹  محدودیت‌ها و بازتولیدپذیری}
+فقط یک بودجه مصنوعی، چهار بازنمونه \lr{MI}، هشت دیتاست واجد شرایط، دو بذر و جست‌وجوی کوتاه بررسی شد. \lr{MI}، ورودی‌های ترتیبی \lr{Dermatology} را پیوسته فرض می‌کند؛ تکرار ردیف‌های \lr{bootstrap} می‌تواند برآورد همسایگی \lr{MI} را منحرف کند. پایداری هم‌پوشانی، اهمیت بالینی را تأیید نمی‌کند. اجرای اصلاح‌شده اکتشافی جداگانه گزارش شد. متن \lr{UCI} تعداد ۳۱ فرد را می‌گوید، ولی فایل ۳۲ پیشوند شناسه دارد؛ هویت گروه‌ها به تأیید مستقل نیاز دارد. ثبت تاریخ‌دار، گزارش‌های اجرای اصلی و زمان سرتاسری موجود نیست. \lr{runtime\_seconds} ساخت سودمندی \lr{MI} در نسخه‌های مقید را شامل نمی‌شود.
+
+پیوست محلی، لینک همه داده‌ها، ممیزی ۳۰۰ ماسک، نتایج هر دیتاست، بردار هزینه، آمار و اسکریپت بازتولید را دارد. فایل‌های خام و اصلی حفظ شده‌اند. مخزن عمومی معتبر کد در اختیار نیست؛ دسترسی محلی، انتشار عمومی محسوب نمی‌شود. حذف دو دیتاست و تحلیل هشت‌دیتاستی گذشته‌نگر است و آزمایش تأییدی تازه نیست.
+
+\sect{۱۰  نتیجه‌گیری}
+همه خروجی‌های مقید آرشیوشده شدنی‌اند. در هشت دیتاست واجد شرایط، تعمیر بازنمونه‌گیری‌شده مبادله توصیفی هزینه و پایداری را نشان می‌دهد؛ برتری زوجی پایداری پس از اصلاح یا برتری عمومی پیش‌بینی تأیید نشد. ادعای پزشکی قوی‌تر به هزینه واقعی گروهی، ارزیابی مستقل در سطح فرد و اعتبارسنجی بالینی بیرونی نیاز دارد.
+
+\sect{مراجع}
+\begin{minipage}{\linewidth}{\fontsize{7}{8.2}\selectfont \begin{latin}[1] R. Jagdhuber, M. Lang, A. Stenzl, J. Neuhaus, and J. Rahnenführer, "Cost-Constrained feature selection in binary classification: adaptations for greedy forward selection and genetic algorithms," BMC Bioinformatics, vol. 21, art. 26, 2020. \url{https://doi.org/10.1186/s12859-020-3361-9}\end{latin}\par}\end{minipage}\par
+\begin{minipage}{\linewidth}{\fontsize{7}{8.2}\selectfont \begin{latin}[2] S. Nogueira, K. Sechidis, and G. Brown, "On the Stability of Feature Selection Algorithms," Journal of Machine Learning Research, vol. 18, no. 174, pp. 1-54, 2018. \url{https://jmlr.org/papers/v18/17-514.html}\end{latin}\par}\end{minipage}\par
+\begin{minipage}{\linewidth}{\fontsize{7}{8.2}\selectfont \begin{latin}[3] A. E. Hegazy, M. A. Makhlouf, O. A. M. Salem, and B. Hafiz, "An enhanced Hiking optimization algorithm for accurate and interpretable feature selection in medical data classification," Cluster Computing, vol. 29, art. 244, 2026. \url{https://doi.org/10.1007/s10586-026-05946-9}\end{latin}\par}\end{minipage}\par
+\begin{minipage}{\linewidth}{\fontsize{7}{8.2}\selectfont \begin{latin}[4] V. Hamer and P. Dupont, "An Importance Weighted Feature Selection Stability Measure," Journal of Machine Learning Research, vol. 22, no. 116, pp. 1-57, 2021. \url{https://jmlr.org/papers/v22/20-366.html}\end{latin}\par}\end{minipage}\par
+\begin{minipage}{\linewidth}{\fontsize{7}{8.2}\selectfont \begin{latin}[5] T. Klonecki and P. Teisseyre, "Feature selection under budget constraint in medical applications: analysis of penalized empirical risk minimization methods," Applied Intelligence, vol. 53, pp. 29943-29973, 2023. \url{https://doi.org/10.1007/s10489-023-05063-9}\end{latin}\par}\end{minipage}\par
+\begin{minipage}{\linewidth}{\fontsize{7}{8.2}\selectfont \begin{latin}[6] M. Valancius, M. Lennon, and J. Oliva, "Acquisition Conditioned Oracle for Nongreedy Active Feature Acquisition," Proceedings of the 41st International Conference on Machine Learning, PMLR, vol. 235, pp. 48957-48975, 2024. \url{https://proceedings.mlr.press/v235/valancius24a.html}\end{latin}\par}\end{minipage}\par
+\begin{minipage}{\linewidth}{\fontsize{7}{8.2}\selectfont \begin{latin}[7] T. Klonecki, P. Teisseyre, and J. Lee, "Cost-Constrained Multi-label Group Feature Selection Using Shadow Features," in Advances in Artificial Intelligence Research, PP-RAI 2025, Lecture Notes in Networks and Systems, vol. 1599, pp. 3-16, Springer, 2026. \url{https://doi.org/10.1007/978-3-032-04197-5_1}\end{latin}\par}\end{minipage}\par
+\begin{minipage}{\linewidth}{\fontsize{7}{8.2}\selectfont \begin{latin}[8] J. Demšar, "Statistical Comparisons of Classifiers over Multiple Data Sets," Journal of Machine Learning Research, vol. 7, pp. 1-30, 2006. \url{https://jmlr.org/papers/v7/demsar06a.html}\end{latin}\par}\end{minipage}\par
+\begin{minipage}{\linewidth}{\fontsize{7}{8.2}\selectfont \begin{latin}[9] W. Wolberg, O. Mangasarian, N. Street, and W. Street, "Breast Cancer Wisconsin (Diagnostic)," UCI Machine Learning Repository, 1993. \url{https://doi.org/10.24432/C5DW2B}\end{latin}\par}\end{minipage}\par
+\end{multicols}
+\end{document}

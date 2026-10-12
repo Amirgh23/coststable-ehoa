@@ -1,0 +1,7 @@
+metric,n_datasets,n_methods,df,statistic,p_raw,analysis,p_holm_six_metrics
+balanced_accuracy,8,5,4,4.5,0.34254747982605904,Exploratory source-audited subset; excludes Steel label leakage and Parkinson subject overlap risk,0.6850949596521181
+cost_ratio,8,5,4,21.100000000000023,0.00030253470402254466,Exploratory source-audited subset; excludes Steel label leakage and Parkinson subject overlap risk,0.0015126735201127233
+selected_features,8,5,4,23.72327044025159,9.075142759495848e-05,Exploratory source-audited subset; excludes Steel label leakage and Parkinson subject overlap risk,0.0005445085655697508
+nogueira_stability,8,5,4,15.700000000000017,0.0034493049190368525,Exploratory source-audited subset; excludes Steel label leakage and Parkinson subject overlap risk,0.01379721967614741
+jaccard_stability,8,5,4,12.700000000000017,0.012838591451519133,Exploratory source-audited subset; excludes Steel label leakage and Parkinson subject overlap risk,0.0385157743545574
+runtime_seconds,8,5,4,2.5,0.6446357929354278,Exploratory source-audited subset; excludes Steel label leakage and Parkinson subject overlap risk,0.6850949596521181

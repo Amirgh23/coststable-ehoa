@@ -1,0 +1,7 @@
+metric,status,analysis_date
+balanced_accuracy,Primary metric in supplied config,2026-10-12
+cost_ratio,Secondary descriptive/exploratory,2026-10-12
+selected_features,Secondary descriptive/exploratory,2026-10-12
+nogueira_stability,Secondary descriptive/exploratory,2026-10-12
+jaccard_stability,Secondary descriptive/exploratory,2026-10-12
+runtime_seconds,Secondary descriptive/exploratory,2026-10-12

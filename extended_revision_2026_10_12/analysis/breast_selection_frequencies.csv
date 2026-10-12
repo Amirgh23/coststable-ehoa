@@ -1,0 +1,151 @@
+method,feature,selected_count,n_masks
+EHOA,mean radius,8,15
+EHOA,mean texture,10,15
+EHOA,mean perimeter,10,15
+EHOA,mean area,7,15
+EHOA,mean smoothness,9,15
+EHOA,mean compactness,3,15
+EHOA,mean concavity,7,15
+EHOA,mean concave points,9,15
+EHOA,mean symmetry,7,15
+EHOA,mean fractal dimension,8,15
+EHOA,radius error,7,15
+EHOA,texture error,6,15
+EHOA,perimeter error,7,15
+EHOA,area error,4,15
+EHOA,smoothness error,6,15
+EHOA,compactness error,5,15
+EHOA,concavity error,11,15
+EHOA,concave points error,1,15
+EHOA,symmetry error,9,15
+EHOA,fractal dimension error,5,15
+EHOA,worst radius,13,15
+EHOA,worst texture,11,15
+EHOA,worst perimeter,10,15
+EHOA,worst area,9,15
+EHOA,worst smoothness,7,15
+EHOA,worst compactness,7,15
+EHOA,worst concavity,5,15
+EHOA,worst concave points,14,15
+EHOA,worst symmetry,6,15
+EHOA,worst fractal dimension,8,15
+random,mean radius,8,15
+random,mean texture,12,15
+random,mean perimeter,1,15
+random,mean area,9,15
+random,mean smoothness,0,15
+random,mean compactness,4,15
+random,mean concavity,5,15
+random,mean concave points,6,15
+random,mean symmetry,6,15
+random,mean fractal dimension,6,15
+random,radius error,2,15
+random,texture error,7,15
+random,perimeter error,5,15
+random,area error,4,15
+random,smoothness error,2,15
+random,compactness error,8,15
+random,concavity error,5,15
+random,concave points error,3,15
+random,symmetry error,0,15
+random,fractal dimension error,3,15
+random,worst radius,8,15
+random,worst texture,6,15
+random,worst perimeter,9,15
+random,worst area,3,15
+random,worst smoothness,7,15
+random,worst compactness,4,15
+random,worst concavity,1,15
+random,worst concave points,6,15
+random,worst symmetry,7,15
+random,worst fractal dimension,6,15
+cheapest,mean radius,11,15
+cheapest,mean texture,11,15
+cheapest,mean perimeter,2,15
+cheapest,mean area,9,15
+cheapest,mean smoothness,0,15
+cheapest,mean compactness,2,15
+cheapest,mean concavity,1,15
+cheapest,mean concave points,11,15
+cheapest,mean symmetry,5,15
+cheapest,mean fractal dimension,8,15
+cheapest,radius error,8,15
+cheapest,texture error,6,15
+cheapest,perimeter error,7,15
+cheapest,area error,8,15
+cheapest,smoothness error,5,15
+cheapest,compactness error,4,15
+cheapest,concavity error,0,15
+cheapest,concave points error,2,15
+cheapest,symmetry error,0,15
+cheapest,fractal dimension error,7,15
+cheapest,worst radius,10,15
+cheapest,worst texture,9,15
+cheapest,worst perimeter,12,15
+cheapest,worst area,0,15
+cheapest,worst smoothness,9,15
+cheapest,worst compactness,7,15
+cheapest,worst concavity,7,15
+cheapest,worst concave points,9,15
+cheapest,worst symmetry,6,15
+cheapest,worst fractal dimension,9,15
+mi,mean radius,6,15
+mi,mean texture,12,15
+mi,mean perimeter,2,15
+mi,mean area,10,15
+mi,mean smoothness,1,15
+mi,mean compactness,6,15
+mi,mean concavity,8,15
+mi,mean concave points,5,15
+mi,mean symmetry,6,15
+mi,mean fractal dimension,1,15
+mi,radius error,7,15
+mi,texture error,4,15
+mi,perimeter error,3,15
+mi,area error,4,15
+mi,smoothness error,0,15
+mi,compactness error,7,15
+mi,concavity error,2,15
+mi,concave points error,3,15
+mi,symmetry error,0,15
+mi,fractal dimension error,0,15
+mi,worst radius,11,15
+mi,worst texture,8,15
+mi,worst perimeter,10,15
+mi,worst area,4,15
+mi,worst smoothness,5,15
+mi,worst compactness,4,15
+mi,worst concavity,4,15
+mi,worst concave points,14,15
+mi,worst symmetry,2,15
+mi,worst fractal dimension,5,15
+stable_lcb,mean radius,9,15
+stable_lcb,mean texture,8,15
+stable_lcb,mean perimeter,2,15
+stable_lcb,mean area,10,15
+stable_lcb,mean smoothness,0,15
+stable_lcb,mean compactness,2,15
+stable_lcb,mean concavity,7,15
+stable_lcb,mean concave points,8,15
+stable_lcb,mean symmetry,8,15
+stable_lcb,mean fractal dimension,6,15
+stable_lcb,radius error,8,15
+stable_lcb,texture error,5,15
+stable_lcb,perimeter error,4,15
+stable_lcb,area error,4,15
+stable_lcb,smoothness error,1,15
+stable_lcb,compactness error,6,15
+stable_lcb,concavity error,0,15
+stable_lcb,concave points error,5,15
+stable_lcb,symmetry error,0,15
+stable_lcb,fractal dimension error,0,15
+stable_lcb,worst radius,9,15
+stable_lcb,worst texture,9,15
+stable_lcb,worst perimeter,11,15
+stable_lcb,worst area,7,15
+stable_lcb,worst smoothness,7,15
+stable_lcb,worst compactness,4,15
+stable_lcb,worst concavity,3,15
+stable_lcb,worst concave points,13,15
+stable_lcb,worst symmetry,3,15
+stable_lcb,worst fractal dimension,6,15

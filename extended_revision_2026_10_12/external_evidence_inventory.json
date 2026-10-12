@@ -1,0 +1,10 @@
+{
+  "checked_directory": "C:\\Users\\a.ghafarian\\Downloads\\SUBMIT_TO_PROFESSOR_MOATTAR",
+  "checked_utc": "2026-10-12T12:33:06.342647+00:00",
+  "real_cost_data_found": false,
+  "independent_external_clinical_data_found": false,
+  "available_data": "Public UCI/OpenML benchmarks and derived synthetic lognormal feature costs; no new external cohort supplied",
+  "historical_records": "Current original config and result hashes available; no dated independent old registration or full original execution-failure/hardware evidence supplied",
+  "subject_identity": "UCI numeric recordings matched; 32 pseudonymous subject prefixes, clinical identity not independently confirmed",
+  "author_statement": "Truthful no-brand draft prepared; final author signoff and submission form requirements remain human responsibilities"
+}

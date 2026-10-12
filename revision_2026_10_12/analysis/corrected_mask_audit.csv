@@ -1,0 +1,11 @@
+dataset,method,rows,counts_match,max_cost_error,phi_error,budget_violations
+parkinsons,Budget-cheapest,6,True,8.881784197001252e-16,5.551115123125783e-17,0
+parkinsons,Budget-mi,6,True,8.881784197001252e-16,8.326672684688674e-17,0
+parkinsons,Budget-random,6,True,8.881784197001252e-16,2.7755575615628914e-17,0
+parkinsons,Budget-stable_lcb,6,True,8.881784197001252e-16,5.551115123125783e-17,0
+parkinsons,EHOA,6,True,1.7763568394002505e-15,0.0,6
+steel_plates_fault,Budget-cheapest,6,True,1.7763568394002505e-15,0.0,0
+steel_plates_fault,Budget-mi,6,True,1.7763568394002505e-15,0.0,0
+steel_plates_fault,Budget-random,6,True,1.7763568394002505e-15,0.0,0
+steel_plates_fault,Budget-stable_lcb,6,True,1.7763568394002505e-15,0.0,0
+steel_plates_fault,EHOA,6,True,3.552713678800501e-15,5.551115123125783e-17,6

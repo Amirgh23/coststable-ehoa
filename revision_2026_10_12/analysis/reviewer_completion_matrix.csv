@@ -1,0 +1,15 @@
+﻿reviewer_item,verified_status,location,evidence
+داور اول ۱,اصلاح متنی انجام شد؛ برتری عمومی تأیید نشد,عنوان، چکیده، بخش‌های 1 و 7 و 10,sources/manuscript_content.json؛ analysis/claim_audit.csv
+داور اول ۲,رفع شد,بخش‌های 6 و 7، جدول 6,analysis/eligible_friedman.csv؛ eligible_ranks.csv؛ eligible_paired.csv
+داور اول ۳,رفع شد,جدول‌های 2 و 5، شکل‌های 1 و 2,figures/eligible_comparison.*؛ breast_top_frequencies.*؛ analysis/selection_frequencies.csv
+داور اول ۴,رفع شد؛ 15 منبع مرتبط,بخش‌های 1 تا 6؛ جدول 1؛ فهرست 15 منبع,analysis/related_studies.csv؛ sources/reference_verification.csv
+داور اول ۵,رفع شد؛ انتساب ناشر اصلاح شد,مراجع، شماره 1؛ پیوست منابع,https://link.springer.com/article/10.1186/s12859-020-3361-9؛ references_for_submission.txt
+داور اول ۶,رفع شد؛ تفاوت snapshot و داده اصلی صریح است,بخش 5؛ جدول 3؛ پیوست داده‌ها,analysis/datasets.csv؛ steel_target_leakage.json
+داور اول ۷,رفع شد؛ اجرای اصلی با تنظیمات واقعی مستند شد,بخش 6؛ جدول 4؛ پیوست داده/پارامتر,configs/cost_stable_confirmatory.yaml؛ utils.py؛ analysis/feature_costs.csv
+داور اول ۸,رفع شد در حد مطالعه محاسباتی؛ اعتبار بالینی نیازمند داده است,بخش 8؛ جدول 7؛ شکل 2,analysis/breast_cancer_case.csv؛ selection_frequencies.csv؛ https://archive.ics.uci.edu/dataset/17
+داور اول ۹,بازنویسی انجام شد,تمام متن، به‌ویژه بخش‌های 1 و 4 و 7,نسخه‌های manuscript_fa و manuscript_en؛ منبع مشترک content.json
+داور دوم ۱,رفع شد در حد محور رسمی مرتبط,بخش 8,https://baic.um.ac.ir/fa/home/Content/12؛ مطالعه موردی
+داور دوم ۲,بازنویسی انجام شد,عنوان، چکیده و بخش‌های 1 تا 10,sources/manuscript_content.json
+داور دوم ۳,رفع ابهام شد؛ مدل هزینه واقعی هنوز موجود نیست,بخش 4؛ معادله‌های 3 تا 5,proposed/stability.py؛ analysis/feature_costs.csv؛ mask_audit.csv
+داور دوم ۴,رفع شد؛ شرح با کد اجراشده تطبیق دارد,بخش‌های 3 و 4؛ معادله‌های 1 و 2 و 4,ehoa.py؛ utils.py؛ proposed/cost_stable_ehoa.py
+داور دوم ۵,پاسخ آماده است؛ اظهارنامه نهایی نیازمند تأیید نویسنده است,این پاسخ؛ بخش بازتولیدپذیری؛ تأیید نهایی نویسنده,گزارش علمی، کد تحلیل و CSV/ماسک قابل‌بررسی؛ راهنمای رسمی ارسال

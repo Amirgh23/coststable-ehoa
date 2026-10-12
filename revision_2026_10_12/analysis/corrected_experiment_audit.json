@@ -1,0 +1,15 @@
+{
+  "new_runs": 60,
+  "new_masks": 60,
+  "old_eligible_runs": 240,
+  "corrected10_runs": 300,
+  "duplicates": 0,
+  "constrained_budget_violations": 0,
+  "outer_subject_overlap": 0,
+  "inner_subject_overlap": 0,
+  "unique_subject_prefixes": 32,
+  "steel_predictors": 27,
+  "steel_classes": 7,
+  "new_experiment_status": "exploratory; not preregistered",
+  "combined_status": "secondary sensitivity; heterogeneous recording/group protocols explicitly reported"
+}

@@ -1,0 +1,9 @@
+dataset,source,source_identifier,source_name,version,checksum,N,D,classes,class_counts,imbalance_ratio,missing_value_count,duplicate_row_count,constant_feature_count,approx_memory_bytes,license,path
+ionosphere,OpenML,59,ionosphere,1,f3bb694a4882773c6585f35a7641c2bd3179a4de42231aa8e117c3fdb88b6a8f,351,34,2,"{""0"": 126, ""1"": 225}",1.7857142857142858,0,1,1,50808,Public,data\benchmark_v2\ionosphere.csv
+sonar,OpenML,40,sonar,1,6ef9709e909b0e3ca483d857434960d1799108e82b439471dde484303dbb4a1d,208,60,2,"{""0"": 111, ""1"": 97}",1.1443298969072164,0,0,0,51848,Public,data\benchmark_v2\sonar.csv
+dermatology,OpenML,35,dermatology,1,875bc26964e83e81fadc62f1002d0879d7dd1fc48253e843fcadec8237d4e7fa,366,34,6,"{""0"": 112, ""1"": 61, ""2"": 72, ""3"": 49, ""4"": 52, ""5"": 20}",5.6,8,0,0,52968,Public,data\benchmark_v2\dermatology.csv
+spambase,OpenML,44,spambase,1,7fc46aba6066e3d24a89c8a756d4ce502adf665cbfc380af34f59902f44a7658,4601,57,2,"{""0"": 2788, ""1"": 1813}",1.5377826806398236,0,394,0,1086100,Public,data\benchmark_v2\spambase.csv
+parkinsons,OpenML,1488,parkinsons,1,7260b9623c17cbf67cb9a846f5d2f3b4d9329d6a75daa6af15217f89aa0bed3c,195,22,2,"{""0"": 48, ""1"": 147}",3.0625,0,0,0,18984,Public,data\benchmark_v2\parkinsons.csv
+hill_valley,OpenML,1479,hill-valley,1,4f29a7849be607b77c69c1f1c19febfe52cc30c63f67bad5ec74cafeea607a28,1212,100,2,"{""0"": 606, ""1"": 606}",1.0,0,0,0,494760,Public,data\benchmark_v2\hill_valley.csv
+steel_plates_fault,OpenML,1504,steel-plates-fault,1,157590616f323158a261c7d7502db85e54dd5bf867afaed58fb6b8c0465a736e,1941,33,2,"{""0"": 1268, ""1"": 673}",1.8841010401188707,0,0,0,272004,Public,data\benchmark_v2\steel_plates_fault.csv
+madelon,OpenML,1485,madelon,1,8cab10859f86b014b6da857be6acb7c0d84442eaf6ad3648528efa6c22a51beb,2600,500,2,"{""0"": 1300, ""1"": 1300}",1.0,0,0,0,5221064,Public,data\benchmark_v2\madelon.csv

@@ -1,0 +1,13 @@
+{
+  "rows": 300,
+  "expected_rows": 300,
+  "duplicate_keys": 0,
+  "missing_values": 0,
+  "datasets": 10,
+  "methods": 5,
+  "budget_violations": 0,
+  "status_values": [
+    "complete"
+  ],
+  "mask_files": 300
+}

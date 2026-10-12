@@ -1,0 +1,763 @@
+{
+  "title": {
+    "en": "Hard-Budget Feature Selection with Resampled Mutual-Information Repair in EHOA",
+    "fa": "انتخاب ویژگی با بودجه سخت و تعمیر مبتنی بر اطلاعات متقابل بازنمونه‌گیری‌شده در EHOA"
+  },
+  "abstract": {
+    "en": "We evaluate four hard-budget repairs within EHOA using a redesigned training pipeline. Mutual-information utility is fitted only on the training rows of each inner fold, and candidate repair, imputation, scaling and SMOTE use only that fold and its selected dimensions. The final mask uses outer-training utility; outer test data never enter selection. We complete 774 fresh runs: 450 primary runs on ten datasets and 324 sensitivity runs on three biomedical datasets. Steel uses 27 predictors and seven classes, while Parkinson recordings use subject-prefix-disjoint folds. At a 30% synthetic budget, resampled repair attains mean balanced accuracy 0.7943, cost ratio 0.2768 and Nogueira stability 0.2216. Friedman balanced-accuracy p is 0.09455. Pairwise effects, Holm corrections and descriptive dataset-bootstrap intervals qualify the conclusions. Sensitivity covers budgets, resample counts and utility penalties. All constrained final masks satisfy their budgets. The study evaluates an acquisition-constrained computational procedure with synthetic costs; it does not establish clinical validity or universal superiority. The protocol was frozen locally before execution, with prior archived findings already known.",
+    "fa": "چهار تعمیر بودجه سخت را در EHOA با پایپ‌لاین آموزش بازطراحی‌شده ارزیابی می‌کنیم. سودمندی اطلاعات متقابل فقط از ردیف‌های آموزش هر تقسیم درونی محاسبه می‌شود؛ تعمیر کاندید، جایگذاری، استانداردسازی و SMOTE نیز فقط از همان آموزش و ابعاد منتخب استفاده می‌کنند. ماسک نهایی از سودمندی آموزش بیرونی ساخته می‌شود و آزمون بیرونی وارد انتخاب نمی‌شود. ۷۷۴ اجرای تازه انجام شد: ۴۵۰ اجرای اصلی روی ده دیتاست و ۳۲۴ اجرای حساسیت روی سه دیتاست پزشکی. Steel با ۲۷ پیش‌بین و هفت کلاس و ضبط‌های Parkinson با تقسیم مستقل در سطح پیشوند فرد اجرا شدند. در بودجه مصنوعی ۳۰ درصد، تعمیر بازنمونه‌گیری‌شده میانگین دقت متوازن 0.7943، نسبت هزینه 0.2768 و پایداری نوگوئیرا 0.2216 دارد. مقدار p فریدمن دقت متوازن 0.09455 است. اثرهای زوجی، اصلاح هولم و فاصله توصیفی بازنمونه‌گیری دیتاستی، تفسیر نتایج را محدود می‌کنند. حساسیت بودجه، تعداد بازنمونه و جریمه سودمندی بررسی شد. همه ماسک‌های نهایی مقید بودجه را رعایت کردند. پژوهش یک روش محاسباتی با هزینه مصنوعی را ارزیابی می‌کند و اعتبار بالینی یا برتری عمومی را ثابت نمی‌کند. پروتکل پیش از اجرا به‌صورت محلی تثبیت شد، در حالی که نتایج آرشیوی قبلی شناخته‌شده بودند."
+  },
+  "keywords": {
+    "en": "feature selection, hard budget, resampled mutual information, subset stability",
+    "fa": "انتخاب ویژگی، بودجه سخت، اطلاعات متقابل بازنمونه‌گیری‌شده، پایداری زیرمجموعه"
+  },
+  "pages": [
+    [
+      {
+        "kind": "h",
+        "en": "1  Problem and contribution",
+        "fa": "۱  مسئله و سهم پژوهش"
+      },
+      {
+        "kind": "p",
+        "en": "A small feature set need not be inexpensive: acquisition costs can differ between variables. Hard-budget selection limits the sum of selected costs [1]. Subset stability measures how feature choices vary across training samples and random search, rather than how accuracy or convergence varies [2]. In biomedical classification, this distinction matters when investigators interpret a selected measurement panel.",
+        "fa": "زیرمجموعه کوچک الزاماً کم‌هزینه نیست؛ هزینه کسب ویژگی‌ها می‌تواند متفاوت باشد. انتخاب با بودجه سخت، مجموع هزینه ویژگی‌های منتخب را محدود می‌کند [1]. پایداری زیرمجموعه، تغییر انتخاب ویژگی در نمونه‌های آموزش و جست‌وجوی تصادفی را می‌سنجد؛ این مفهوم با ثبات دقت یا همگرایی متفاوت است [2]. این تمایز برای تفسیر مجموعه اندازه‌گیری‌های زیست‌پزشکی اهمیت دارد."
+      },
+      {
+        "kind": "p",
+        "en": "Medical feature selection spans imaging, signals and molecular data [3]. Predictive discrimination, reproducible feature identity and acquisition burden are separate objectives. Correlated descriptors can substitute for one another, so a changing mask need not imply poor prediction; conversely, a repeated mask does not establish a valid biomarker. This motivates reporting balanced accuracy, cost and chance-corrected subset stability together.",
+        "fa": "انتخاب ویژگی پزشکی در تصویربرداری، سیگنال و داده مولکولی کاربرد دارد [3]. قدرت تفکیک پیش‌بینی، تکرارپذیری هویت ویژگی و بار کسب اندازه‌گیری، هدف‌های جداگانه‌اند. توصیفگرهای هم‌بسته می‌توانند جای یکدیگر را بگیرند؛ بنابراین تغییر ماسک الزاماً به معنای پیش‌بینی ضعیف نیست و تکرار ماسک نیز اعتبار زیست‌نشانگر را ثابت نمی‌کند. به همین دلیل، دقت متوازن، هزینه و پایداری تصحیح‌شده نسبت به شانس را هم‌زمان گزارش می‌کنیم."
+      },
+      {
+        "kind": "p",
+        "en": "We retain the EHOA search [4] and compare unconstrained EHOA with four repairs using the same selected-dimension evaluation pipeline. Among constrained variants, only repair utility differs. FoldSafeEHOA implements fold-local utility and candidate-specific training; these fresh results are separate from the archived CostStableEHOA protocol. The contribution is a controlled, auditable comparison, not a new optimization family.",
+        "fa": "جست‌وجوی EHOA را حفظ می‌کنیم [4] و نسخه نامقید را با چهار تعمیر در پایپ‌لاین ارزیابی یکسان روی ابعاد منتخب مقایسه می‌کنیم. میان نسخه‌های مقید، فقط سودمندی تعمیر متفاوت است. پیاده‌سازی FoldSafeEHOA سودمندی محلی هر تقسیم و آموزش مختص هر کاندید را اجرا می‌کند؛ این نتایج تازه از پروتکل آرشیوی CostStableEHOA جدا هستند. سهم پژوهش، مقایسه کنترل‌شده و قابل‌ممیزی است، نه خانواده بهینه‌سازی تازه."
+      },
+      {
+        "kind": "h",
+        "en": "2  Related studies",
+        "fa": "۲  مطالعات مرتبط"
+      },
+      {
+        "kind": "p",
+        "en": "Stability metrics can reward reproducible yet weak predictors; importance-weighted stability addresses this concern [5]. Medical budget selection with penalized risk [6], sequential acquisition [7], and grouped costs with shadow features [8] solve related but different problems. Table 1 summarizes these distinctions; NR means not reported in the inspected source. Their numerical results are not directly comparable with our protocol.",
+        "fa": "شاخص پایداری ممکن است انتخاب‌های تکرارپذیر اما کم‌ارزش را مطلوب نشان دهد؛ پایداری وزن‌دار با اهمیت ویژگی به این مسئله می‌پردازد [5]. انتخاب پزشکی با ریسک جریمه‌شده [6]، کسب ترتیبی ویژگی [7] و هزینه گروهی با ویژگی سایه [8] مسائل مرتبط ولی متفاوتی‌اند. جدول ۱ تفاوت‌ها را نشان می‌دهد. NR یعنی گزارش نشده در منبع بررسی‌شده؛ نتایج عددی این مطالعات با پروتکل حاضر مستقیماً مقایسه نمی‌شوند."
+      },
+      {
+        "kind": "table",
+        "en": "Table 1. Related-work comparison. Full evaluation details are in the supplement.",
+        "fa": "جدول ۱. مقایسه مطالعات؛ جزئیات پروتکل در پیوست آمده است.",
+        "headers": [
+          "Study",
+          "Budget",
+          "Costs",
+          "Stability",
+          "Evaluation",
+          "Difference"
+        ],
+        "rows": [
+          [
+            "Jagdhuber [1]",
+            "Yes",
+            "Additive",
+            "NR",
+            "Simulation",
+            "Feasible GA"
+          ],
+          [
+            "Nogueira [2]",
+            "NR",
+            "NR",
+            "Chance-corrected",
+            "Resampling",
+            "Metric"
+          ],
+          [
+            "Hamer [5]",
+            "NR",
+            "NR",
+            "Importance-weighted",
+            "Resampling",
+            "Metric limits"
+          ],
+          [
+            "Klonecki [6]",
+            "Yes",
+            "Feature / proxy",
+            "NR",
+            "Medical data",
+            "Penalized ERM"
+          ],
+          [
+            "Valancius [7]",
+            "NR",
+            "Sequential",
+            "NR",
+            "AFA benchmarks",
+            "Patient-wise policy"
+          ],
+          [
+            "Klonecki [8]",
+            "Yes",
+            "Grouped",
+            "NR",
+            "MIMIC",
+            "Shadow stopping"
+          ],
+          [
+            "This work",
+            "Yes",
+            "Synthetic additive",
+            "Nogueira",
+            "3 x 3 outer",
+            "MI/cost repair"
+          ]
+        ],
+        "widths": null
+      },
+      {
+        "kind": "p",
+        "en": "Classical stability selection aggregates repeated subsample selections and, under specified assumptions and thresholds, controls false selections [9,10]. Our four MI resamples instead estimate a deletion utility before wrapper search. We neither threshold repeated selection probabilities nor inherit those error-control guarantees. Nogueira stability evaluates the final masks [2]; it is not the optimized fitness. Active acquisition [7] chooses measurements sequentially per case, whereas our repair returns a fixed feasible subset.",
+        "fa": "انتخاب پایدار کلاسیک، انتخاب‌های تکرارشده در زیرنمونه‌ها را تجمیع می‌کند و با فرض‌ها و آستانه‌های مشخص، انتخاب کاذب را کنترل می‌کند [9,10]. چهار بازنمونه اطلاعات متقابل در روش حاضر، صرفاً سودمندی حذف را پیش از جست‌وجوی پوششی برآورد می‌کنند. احتمال انتخاب تکرارشده را آستانه‌گذاری نمی‌کنیم و تضمین کنترل خطای آن روش‌ها به این تعمیر منتقل نمی‌شود. شاخص نوگوئیرا ماسک‌های نهایی را ارزیابی می‌کند [2] و تابع برازندگی بهینه‌شده نیست. کسب فعال [7] اندازه‌گیری را برای هر نمونه به‌صورت متوالی انتخاب می‌کند؛ تعمیر حاضر زیرمجموعه ثابت و شدنی برمی‌گرداند."
+      },
+      {
+        "kind": "h",
+        "en": "3  Implemented EHOA",
+        "fa": "۳  EHOA پیاده‌سازی‌شده"
+      },
+      {
+        "kind": "p",
+        "en": "Each hiker has a continuous position x and a velocity v; a binary mask z selects features. Initialization uses a tent sequence with initial value 0.7 and parameter 0.4, mapped to [-6,6]. Velocities start uniformly in [-1.2,1.2]. For iteration t of T=10, the implemented update is:",
+        "fa": "هر عضو جمعیت، موقعیت پیوسته x و سرعت v دارد؛ ماسک دودویی z ویژگی‌ها را انتخاب می‌کند. مقداردهی اولیه از دنباله tent با مقدار آغازین 0.7 و پارامتر 0.4 در بازه [-6,6] استفاده می‌کند. سرعت اولیه در [-1.2,1.2] یکنواخت است. به‌روزرسانی پیاده‌سازی در تکرار t از T=10 چنین است:"
+      },
+      {
+        "kind": "eq",
+        "tex": "\\begin{aligned}v_i\\leftarrow\\operatorname{clip}_{[-12,12]}\\big(&w_t v_i+SF_t[2r_1(p_i-x_i)\\\\&+2r_2(g-x_i)]\\big)\\end{aligned}",
+        "word": "vᵢ ← clip[−12,12](wₜvᵢ + SFₜ[2r₁(pᵢ−xᵢ)\n+ 2r₂(g−xᵢ)])"
+      },
+      {
+        "kind": "eq",
+        "tex": "\\begin{gathered}x_i\\leftarrow\\operatorname{clip}_{[-6,6]}(x_i+v_i)\\\\w_t=0.9-0.5t/T,\\quad SF_t=3-2t/T\\end{gathered}",
+        "word": "xᵢ ← clip[−6,6](xᵢ+vᵢ)\nwₜ = 0.9−0.5t/T; SFₜ = 3−2t/T"
+      },
+      {
+        "kind": "p",
+        "en": "Here p_i and g are personal and global best continuous positions, and r_1,r_2 are independent per-feature uniform draws. The sigmoid gives selection probability 1/(1+exp(-x_j)); an empty sampled mask restores the largest probability. The implementation keeps continuous leaders separate from repaired masks, caches fitness for duplicate masks, and stops after ten iterations without early stopping.",
+        "fa": "در این روابط p_i و g بهترین موقعیت پیوسته فردی و سراسری‌اند؛ r_1 و r_2 برای هر ویژگی مستقل و یکنواخت‌اند. احتمال انتخاب از سیگموئید 1/(1+exp(-x_j)) می‌آید. ماسک نمونه‌گیری‌شده تهی، ویژگی دارای بیشترین احتمال را بازمی‌گرداند. کد، رهبرهای پیوسته را از ماسک تعمیرشده جدا نگه می‌دارد، برازندگی ماسک تکراری را ذخیره می‌کند و پس از ده تکرار بدون توقف زودهنگام پایان می‌یابد."
+      }
+    ],
+    [
+      {
+        "kind": "h",
+        "en": "4  Fold-local budget repair and stability",
+        "fa": "۴  تعمیر بودجه محلی و پایداری"
+      },
+      {
+        "kind": "p",
+        "en": "Costs are fixed positive synthetic additive units, drawn with NumPy seed 1000+D from lognormal(0,0.7). The primary budget is B=0.30 sum(c); sensitivity uses 0.15 and 0.50. Costs are independent of labels and do not represent money. Every constrained nonempty mask must satisfy sum(z_j c_j)<=B. Shared acquisition costs require a different grouped model [6,8].",
+        "fa": "هزینه‌ها واحدهای مصنوعی مثبت و جمع‌پذیرند و با بذر 1000+D از lognormal(0,0.7) تولید می‌شوند. بودجه اصلی B=0.30 sum(c) است؛ حساسیت 0.15 و 0.50 نیز بررسی شد. هزینه از برچسب مستقل است و پول واقعی نیست. هر ماسک مقید ناتهی باید sum(z_j c_j)<=B را رعایت کند. کسب مشترک اندازه‌گیری به مدل هزینه گروهی متفاوت نیاز دارد [6,8]."
+      },
+      {
+        "kind": "eq",
+        "tex": "u_j=\\max(0,\\overline I_j-\\lambda s_j),\\quad q_j=u_j/c_j",
+        "word": "uⱼ = max(0, Īⱼ−λsⱼ); qⱼ = uⱼ/cⱼ"
+      },
+      {
+        "kind": "p",
+        "en": "For each inner fold, MI is fitted to its imputed training rows only. Four class-stratified samples draw ceil(0.8 n_class) rows with replacement (minimum two). The continuous-discrete estimator uses three neighbors [11]; Dermatology treats its first 33 categorical/ordinal inputs as discrete and age as continuous. MI is in nats and s_j is sample SD. Lambda=1 gives a conservative utility, not a calibrated confidence bound; there is no division by sqrt(R). Final outer-training utility is separate and never used to repair inner-validation candidates.",
+        "fa": "در هر تقسیم درونی، MI فقط روی ردیف‌های آموزش همان تقسیم پس از جایگذاری برازش می‌شود. چهار بازنمونه درون‌کلاسی، ceil(0.8 n_class) ردیف با جایگذاری می‌گیرند؛ حداقل دو ردیف. برآوردگر پیوسته–گسسته سه همسایه دارد [11]؛ در Dermatology، ۳۳ ورودی درجه‌ای/گسسته و سن پیوسته در نظر گرفته شدند. واحد MI نات و s_j انحراف معیار نمونه‌ای است. Lambda=1 سودمندی محافظه‌کارانه می‌دهد، نه کران اطمینان کالیبره‌شده؛ تقسیم بر sqrt(R) نداریم. سودمندی آموزش بیرونی جداست و برای تعمیر کاندیدهای اعتبارسنجی درونی استفاده نمی‌شود."
+      },
+      {
+        "kind": "table",
+        "en": "Table 2. Four repairs share the same deletion rule.",
+        "fa": "جدول ۲. هر چهار تعمیر، قاعده حذف یکسان دارند.",
+        "headers": [
+          "Repair",
+          "Utility u_j",
+          "Meaning"
+        ],
+        "rows": [
+          [
+            "Random/cost",
+            "U(0,1), fixed per training fold",
+            "Not uniform deletion"
+          ],
+          [
+            "Cheapest",
+            "1",
+            "Largest cost first"
+          ],
+          [
+            "MI/cost",
+            "Single-sample MI",
+            "Relevance per cost"
+          ],
+          [
+            "Resampled/cost",
+            "max(0, mean MI - SD)",
+            "Conservative heuristic"
+          ]
+        ],
+        "widths": null
+      },
+      {
+        "kind": "p",
+        "en": "Search samples a raw mask. Each inner fold repairs this candidate with its own training utility, then fits imputation, scaling and SMOTE on the selected columns [12]. Validation rows are only transformed and predicted. Fitness averages ordinary accuracy and selected size across three independently repaired folds. The winning raw candidate is finally repaired with outer-training utility; inner and final masks may differ. The outer classifier is refitted using only final selected columns. This evaluates a complete selection-and-repair procedure, not a fixed mask reused across all inner folds [13].",
+        "fa": "جست‌وجو ماسک خام را نمونه‌گیری می‌کند. هر تقسیم درونی کاندید را با سودمندی آموزش خودش تعمیر می‌کند؛ سپس جایگذاری، استانداردسازی و SMOTE فقط روی ستون‌های منتخب آموزش برازش می‌شوند [12]. ردیف اعتبارسنجی فقط تبدیل و پیش‌بینی می‌شود. برازندگی میانگین دقت معمولی و اندازه منتخب در سه تقسیم مستقل تعمیرشده است. کاندید خام برنده در پایان با سودمندی آموزش بیرونی تعمیر می‌شود؛ ماسک درونی و نهایی می‌توانند متفاوت باشند. طبقه‌بند بیرونی فقط روی ستون‌های منتخب نهایی دوباره برازش می‌شود. کل روش انتخاب و تعمیر ارزیابی می‌شود، نه یک ماسک ثابت مشترک میان همه تقسیم‌های درونی [13]."
+      },
+      {
+        "kind": "eq",
+        "tex": "\\begin{gathered}F(z)=\\frac13\\sum_{f=1}^3F_f(z)\\\\F_f(z)=0.99(1-Acc_f)+0.01k_f/D\\end{gathered}",
+        "word": "F(z) = mean_f F_f(z)\nF_f(z) = 0.99(1−Acc_f)+0.01k_f/D"
+      },
+      {
+        "kind": "p",
+        "en": "Deletion removes the active feature minimizing utility/cost while over budget. An unaffordable singleton is cleared; an empty mask restores the affordable highest-ratio feature. Positive costs and finite deletion ensure feasibility when one feature is affordable, as verified here. This guarantees budget compliance, not optimal prediction. MI remains marginal and can overlook interactions or redundancy.",
+        "fa": "تا زمان عبور از بودجه، ویژگی فعال با کمترین سودمندی به هزینه حذف می‌شود. تک‌ویژگی غیرقابل‌خرید پاک می‌شود؛ ماسک تهی، ویژگی قابل‌خرید با بیشترین نسبت را بازیابی می‌کند. مثبت‌بودن هزینه و حذف متناهی، در صورت وجود یک ویژگی قابل‌خرید، شدنی‌بودن را تضمین می‌کنند؛ این شرط بررسی شد. این تضمین مربوط به بودجه است، نه پیش‌بینی بهینه. MI همچنان حاشیه‌ای است و ممکن است تعامل یا افزونگی را نبیند."
+      },
+      {
+        "kind": "eq",
+        "tex": "\\Phi=\\operatorname{clip}_{[-1,1]}\\left(1-\\frac{\\frac M{M-1}\\frac1D\\sum_j p_j(1-p_j)}{(\\bar k/D)(1-\\bar k/D)}\\right)",
+        "word": "s²ⱼ = M/(M−1) · pⱼ(1−pⱼ)\nΦ = clip[−1,1](1−mean(s²ⱼ)/[(k̄/D)(1−k̄/D)])"
+      },
+      {
+        "kind": "p",
+        "en": "Nogueira stability [2] uses M=9 final masks per dataset/configuration, selection frequencies p_j and mean size k-bar. Identical full/empty masks return one in the code. The masks overlap in training data and are dependent; their copied stability values are not nine independent observations. Jaccard is a supplementary, uncorrected overlap measure.",
+        "fa": "پایداری نوگوئیرا [2] از M=9 ماسک نهایی هر دیتاست/تنظیم، فراوانی انتخاب p_j و میانگین اندازه استفاده می‌کند. ماسک‌های کامل/تهی یکسان در کد مقدار یک دارند. آموزش ماسک‌ها هم‌پوشانی دارد و مستقل نیستند؛ مقدار پایداری تکرارشده، نه مشاهده مستقل نیست. جاکارد شاخص مکمل هم‌پوشانی بدون تصحیح شانس است."
+      },
+      {
+        "kind": "h",
+        "en": "5  Datasets and source corrections",
+        "fa": "۵  دیتاست‌ها و اصلاح منبع"
+      },
+      {
+        "kind": "table",
+        "en": "Table 3. Fresh-run dataset specifications; U links to archive.ics.uci.edu/dataset/{id}.",
+        "fa": "جدول ۳. مشخصات داده اجرای تازه؛ U شناسه مستقیم دیتاست UCI است.",
+        "headers": [
+          "Dataset",
+          "N",
+          "D",
+          "K",
+          "Class counts",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Breast Cancer",
+            "569",
+            "30",
+            "2",
+            "212/ 357",
+            "U17"
+          ],
+          [
+            "Wine",
+            "178",
+            "13",
+            "3",
+            "59/ 71/ 48",
+            "U109"
+          ],
+          [
+            "Ionosphere",
+            "350",
+            "34",
+            "2",
+            "125/ 225",
+            "U52"
+          ],
+          [
+            "Sonar",
+            "208",
+            "60",
+            "2",
+            "111/ 97",
+            "U151"
+          ],
+          [
+            "Dermatology",
+            "366",
+            "34",
+            "6",
+            "112/ 61/ 72/ 49/ 52/ 20",
+            "U33"
+          ],
+          [
+            "Spambase",
+            "4210",
+            "57",
+            "2",
+            "2531/ 1679",
+            "U94"
+          ],
+          [
+            "Parkinson (grouped)",
+            "195",
+            "22",
+            "2",
+            "48/ 147",
+            "U174"
+          ],
+          [
+            "Hill Valley",
+            "1212",
+            "100",
+            "2",
+            "606/ 606",
+            "U147"
+          ],
+          [
+            "Steel (corrected)",
+            "1941",
+            "27",
+            "7",
+            "158/ 190/ 391/ 72/ 55/ 402/ 673",
+            "U198"
+          ],
+          [
+            "Madelon",
+            "2600",
+            "500",
+            "2",
+            "1300/ 1300",
+            "U171"
+          ]
+        ],
+        "widths": [
+          1.5,
+          0.45,
+          0.3,
+          0.3,
+          1.7,
+          0.5
+        ]
+      },
+      {
+        "kind": "p",
+        "en": "Exact (X,y) duplicates are removed: Ionosphere uses 350 rows and Spambase 4210. Steel removes six target-indicator inputs and reconstructs seven fault classes. Parkinson recordings match the UCI numeric file and use 32 subject prefixes in both outer and inner group splits. The UCI narrative states 31 participants, so clinical group identity remains unverified. Original raw data and earlier results are preserved.",
+        "fa": "تکرار دقیق (X,y) حذف شد: Ionosphere شامل ۳۵۰ و Spambase شامل ۴۲۱۰ ردیف است. شش نشانگر هدف از ورودی Steel حذف و هفت کلاس عیب بازسازی شد. ضبط‌های Parkinson به فایل عددی UCI تطبیق یافتند و ۳۲ پیشوند فرد در تقسیم گروهی درونی و بیرونی استفاده شدند. متن UCI تعداد ۳۱ فرد را می‌گوید؛ هویت بالینی گروه‌ها هنوز تأیید مستقل ندارد. داده خام و نتایج قبلی حفظ شدند."
+      }
+    ],
+    [
+      {
+        "kind": "h",
+        "en": "6  Fresh protocol and statistical analysis",
+        "fa": "۶  پروتکل تازه و تحلیل آماری"
+      },
+      {
+        "kind": "p",
+        "en": "The local protocol and code hashes were frozen before execution, after earlier archived results were known. This is a new exploratory study, not independent public preregistration. Three seeds and three outer folds yield 450 primary runs across ten datasets and five methods. We additionally complete 324 prespecified sensitivity runs on Breast Cancer, Dermatology and Parkinson. All methods share splits, cost vectors, search size and candidate-specific preprocessing. Inner utility uses training labels only; inner fitness remains an optimized selection score. Outer tests provide performance estimates.",
+        "fa": "پروتکل محلی و هش کد پیش از اجرا تثبیت شدند، در حالی که نتایج آرشیوی قبلی شناخته‌شده بودند. این مطالعه اکتشافی تازه است، نه ثبت پیشینی عمومی مستقل. سه بذر و سه تقسیم بیرونی، ۴۵۰ اجرای اصلی برای ده دیتاست و پنج روش می‌دهند. ۳۲۴ اجرای حساسیت ازپیش‌مشخص‌شده نیز روی سرطان پستان، Dermatology و Parkinson انجام شد. تقسیم، بردار هزینه، اندازه جست‌وجو و پیش‌پردازش مختص کاندید برای همه روش‌ها یکسان‌اند. سودمندی درونی فقط از برچسب آموزش استفاده می‌کند؛ برازندگی درونی همچنان امتیاز انتخاب بهینه‌شده است. عملکرد از آزمون بیرونی برآورد می‌شود."
+      },
+      {
+        "kind": "table",
+        "en": "Table 4. Actual frozen settings.",
+        "fa": "جدول ۴. تنظیم‌های واقعی تثبیت‌شده.",
+        "headers": [
+          "Parameter",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Population / iterations",
+            "8 / 10; no early stop"
+          ],
+          [
+            "Position / velocity clip",
+            "[-6,6] / [-12,12]"
+          ],
+          [
+            "Tent / sweep / inertia",
+            "0.7,p=0.4 / 3 to 1 / 0.9 to 0.4"
+          ],
+          [
+            "c1,c2 / alpha",
+            "2,2 / 0.99"
+          ],
+          [
+            "Outer / inner folds",
+            "3 / 3; Parkinson grouped"
+          ],
+          [
+            "Outer seeds",
+            "72001,72002,72003"
+          ],
+          [
+            "Selector seed",
+            "outer seed + fold index x 100003"
+          ],
+          [
+            "Primary R / fraction / lambda",
+            "4 / 0.8 with replacement / 1"
+          ],
+          [
+            "Sensitivity R / lambda",
+            "4,8,16 / 0,1,2; OFAT"
+          ],
+          [
+            "Cost / budgets",
+            "lognormal(0,0.7) / 15,30,50%"
+          ],
+          [
+            "Classifier",
+            "5-NN; uniform; Euclidean"
+          ],
+          [
+            "Imputation / scale / SMOTE",
+            "Training-selected columns only"
+          ],
+          [
+            "Timing",
+            "Includes utility and final classification"
+          ]
+        ],
+        "widths": null
+      },
+      {
+        "kind": "p",
+        "en": "Each dataset supplies one mean per method and one stability estimate [14]. Friedman tests use ten dataset blocks, tie correction and df=4. Two-sided Wilcoxon compares resampled repair with four controls, followed by Holm within each metric and across all 24 contrasts. Six omnibus tests are also corrected. Dataset-bootstrap intervals use 20,000 draws (seed 20261012) and are descriptive and unadjusted. Nine overlapping folds are never treated as independent replicates.",
+        "fa": "هر دیتاست یک میانگین هر روش و یک برآورد پایداری می‌دهد [14]. فریدمن از ده بلوک دیتاست، تصحیح تساوی و df=4 استفاده می‌کند. ویلکاکسون دوطرفه، تعمیر بازنمونه‌گیری‌شده را با چهار کنترل مقایسه می‌کند؛ هولم هم درون هر معیار و هم روی همه ۲۴ مقایسه اعمال شد. شش آزمون کلی نیز اصلاح شدند. فاصله‌های بازنمونه‌گیری دیتاستی با ۲۰٬۰۰۰ تکرار و بذر 20261012، توصیفی و بدون اصلاح‌اند. نه تقسیم هم‌پوشان، تکرارهای مستقل محسوب نمی‌شوند."
+      },
+      {
+        "kind": "h",
+        "en": "7  Results and sensitivity",
+        "fa": "۷  نتایج و حساسیت"
+      },
+      {
+        "kind": "table",
+        "en": "Table 5. Equal-weight means over ten datasets; V is budget exceedance.",
+        "fa": "جدول ۵. میانگین هم‌وزن ده دیتاست؛ V عبور از بودجه است.",
+        "headers": [
+          "Method",
+          "BA",
+          "Cost ratio",
+          "Size",
+          "Stability",
+          "V"
+        ],
+        "rows": [
+          [
+            "EHOA",
+            "0.7931",
+            "0.4923",
+            "42.70",
+            "0.1183",
+            "88/90"
+          ],
+          [
+            "Random/cost",
+            "0.7794",
+            "0.2717",
+            "31.43",
+            "0.1160",
+            "0/90"
+          ],
+          [
+            "Cheapest",
+            "0.7961",
+            "0.2758",
+            "34.90",
+            "0.2861",
+            "0/90"
+          ],
+          [
+            "MI/cost",
+            "0.7961",
+            "0.2773",
+            "27.28",
+            "0.2250",
+            "0/90"
+          ],
+          [
+            "Resamp./cost",
+            "0.7943",
+            "0.2768",
+            "31.31",
+            "0.2216",
+            "0/90"
+          ]
+        ],
+        "widths": null
+      },
+      {
+        "kind": "table",
+        "en": "Table 6. Friedman and mean ranks in E/R/C/M/S order; lower rank is better.",
+        "fa": "جدول ۶. فریدمن و رتبه میانگین به ترتیب E/R/C/M/S؛ رتبه کمتر بهتر است.",
+        "headers": [
+          "Metric",
+          "Chi2",
+          "p",
+          "E",
+          "R",
+          "C",
+          "M",
+          "S"
+        ],
+        "rows": [
+          [
+            "BA",
+            "7.9200",
+            "0.09455",
+            "3.00",
+            "4.20",
+            "2.70",
+            "2.40",
+            "2.70"
+          ],
+          [
+            "Cost",
+            "20.7200",
+            "0.00036",
+            "5.00",
+            "2.20",
+            "2.50",
+            "2.80",
+            "2.50"
+          ],
+          [
+            "Size",
+            "31.0359",
+            "<0.00001",
+            "5.00",
+            "1.65",
+            "3.55",
+            "1.80",
+            "3.00"
+          ],
+          [
+            "Stability",
+            "23.8400",
+            "0.00009",
+            "4.30",
+            "4.20",
+            "1.50",
+            "2.30",
+            "2.70"
+          ]
+        ],
+        "widths": null
+      },
+      {
+        "kind": "p",
+        "en": "Resampled minus EHOA changes BA by +0.00116, with W=27, within-metric Holm p=1.00000, rank-biserial r=0.018 and descriptive 95% interval [-0.01280,0.01570]. Stability changes by +0.10335 (Holm within metric 0.01758; all 24 contrasts 0.09375). Cost changes by -0.21541 (Holm within metric 0.00781; all 24 0.04688). These contrasts include imposing a budget on unconstrained EHOA, and do not isolate a resampling benefit. Nonsignificance does not prove equivalence.",
+        "fa": "دلتای تعمیر بازنمونه‌گیری‌شده نسبت به EHOA برای BA برابر +0.00116 است؛ W=27، هولم درون معیار 1.00000، اثر رتبه‌ای r=0.018 و فاصله توصیفی ۹۵ درصد [-0.01280,0.01570]. دلتای پایداری +0.10335 است؛ هولم درون معیار 0.01758 و همه ۲۴ مقایسه 0.09375. دلتای هزینه -0.21541 است؛ هولم درون معیار 0.00781 و همه ۲۴ مقایسه 0.04688. این مقایسه شامل اعمال بودجه بر EHOA نامقید است و اثر بازنمونه‌گیری را به‌تنهایی جدا نمی‌کند. عدم معناداری، هم‌ارزی را ثابت نمی‌کند."
+      },
+      {
+        "kind": "p",
+        "en": "Sensitivity varies budgets 0.15/0.30/0.50 for all four repairs and R=4/8/16 or lambda=0/1/2 for resampled repair on three biomedical datasets. It changes one factor at a time and does not estimate all interactions. We report every prespecified configuration in the supplement rather than choosing a winner using outer-test outcomes. Small-n sensitivity is descriptive. Full timing is available, but concurrent execution on one computer does not establish general speed superiority.",
+        "fa": "حساسیت بودجه‌های 0.15/0.30/0.50 برای چهار تعمیر و R=4/8/16 یا lambda=0/1/2 برای تعمیر بازنمونه‌گیری‌شده روی سه دیتاست پزشکی بررسی شد. هر بار یک عامل تغییر می‌کند و همه تعامل‌ها برآورد نمی‌شوند. همه تنظیم‌های ازپیش‌مشخص‌شده در پیوست آمده‌اند و از آزمون بیرونی برای انتخاب برنده استفاده نکردیم. حساسیت با تعداد دیتاست کم، توصیفی است. زمان کامل موجود است؛ اجرای هم‌زمان روی یک رایانه، برتری سرعت عمومی را ثابت نمی‌کند."
+      },
+      {
+        "kind": "p",
+        "en": "Cheapest repair has higher mean stability (0.2861) than resampled repair (0.2216); the paired delta is -0.06452, with within-metric Holm p=0.09766. Resampling therefore has no corrected stability advantage over Cheapest or single-MI repair. A descriptive improvement over an unconstrained baseline is not evidence of superiority over feasible simpler alternatives.",
+        "fa": "تعمیر ارزان‌ترین میانگین پایداری بیشتری دارد (0.2861) نسبت به تعمیر بازنمونه‌گیری‌شده (0.2216)؛ دلتای زوجی -0.06452 و هولم درون معیار 0.09766 است. بنابراین بازنمونه‌گیری برتری پایداری اصلاح‌شده نسبت به ارزان‌ترین یا تعمیر MI تک‌نمونه‌ای ندارد. بهبود توصیفی نسبت به پایه نامقید، شاهد برتری بر جایگزین ساده‌تر شدنی نیست."
+      },
+      {
+        "kind": "fig",
+        "path": "figures/eligible_comparison",
+        "en": "Figure 1. Fresh ten-dataset means; synthetic cost and descriptive subset stability.",
+        "fa": "شکل ۱. میانگین ده دیتاست اجرای تازه؛ هزینه مصنوعی و پایداری توصیفی زیرمجموعه."
+      }
+    ],
+    [
+      {
+        "kind": "h",
+        "en": "8  Biomedical case and congress relevance",
+        "fa": "۸  مطالعه پزشکی و ارتباط با کنگره"
+      },
+      {
+        "kind": "p",
+        "en": "Breast Cancer Wisconsin (Diagnostic) has 569 fine-needle-aspirate cases, 212 malignant and 357 benign, with 30 nuclear-image descriptors [15]. Table 7 and Figure 2 show nine fresh masks per method. Counts describe computational selections, not causal biomarkers. Several descriptors share the same image acquisition, so additive synthetic costs cannot be interpreted as biopsy-price savings. Label 0 is malignant and label 1 benign; class-specific recall is explicitly reported.",
+        "fa": "داده تشخیصی سرطان پستان شامل ۵۶۹ نمونه آسپیراسیون سوزن ظریف، ۲۱۲ بدخیم و ۳۵۷ خوش‌خیم، با ۳۰ توصیفگر تصویر هسته است [15]. جدول ۷ و شکل ۲، نه ماسک تازه هر روش را نشان می‌دهند. شمارش، انتخاب محاسباتی را توصیف می‌کند، نه زیست‌نشانگر علّی. چند توصیفگر از یک کسب تصویر مشترک می‌آیند؛ هزینه مصنوعی جمع‌پذیر، صرفه‌جویی در قیمت نمونه‌برداری نیست. برچسب 0 بدخیم و 1 خوش‌خیم است؛ بازخوانی هر کلاس صریح گزارش شد."
+      },
+      {
+        "kind": "table",
+        "en": "Table 7. Breast-cancer case: nine fresh runs per method.",
+        "fa": "جدول ۷. سرطان پستان: نه اجرای تازه هر روش.",
+        "headers": [
+          "Method",
+          "BA",
+          "Mal. sens.",
+          "Ben. spec.",
+          "Cost",
+          "Stability"
+        ],
+        "rows": [
+          [
+            "EHOA",
+            "0.9527",
+            "0.9465",
+            "0.9589",
+            "0.5302",
+            "0.0722"
+          ],
+          [
+            "Random/cost",
+            "0.9375",
+            "0.9245",
+            "0.9505",
+            "0.2387",
+            "0.1012"
+          ],
+          [
+            "Cheapest",
+            "0.9547",
+            "0.9449",
+            "0.9645",
+            "0.2703",
+            "0.2253"
+          ],
+          [
+            "MI/cost",
+            "0.9549",
+            "0.9433",
+            "0.9664",
+            "0.2692",
+            "0.1871"
+          ],
+          [
+            "Resamp./cost",
+            "0.9503",
+            "0.9323",
+            "0.9683",
+            "0.2781",
+            "0.1185"
+          ]
+        ],
+        "widths": null
+      },
+      {
+        "kind": "fig",
+        "path": "figures/breast_top_frequencies",
+        "en": "Figure 2. Top eight feature selection counts in nine fresh resampled-repair masks.",
+        "fa": "شکل ۲. شمار انتخاب هشت ویژگی پرتکرار در نه ماسک تازه تعمیر بازنمونه‌گیری‌شده."
+      },
+      {
+        "kind": "p",
+        "en": "The closest official BAIC2026 topic is Artificial Intelligence, Machine Learning and Data Science / Intelligent Disease Diagnosis Systems (baic.um.ac.ir/fa/home/Content/12). The contribution is computational measurement-panel selection; the study is not a clinically validated diagnostic system and makes no cognitive-mechanism claim.",
+        "fa": "نزدیک‌ترین محور رسمی BAIC2026، هوش مصنوعی، یادگیری ماشین و علم داده / سیستم‌های هوشمند تشخیص بیماری است (baic.um.ac.ir/fa/home/Content/12). سهم پژوهش انتخاب محاسباتی مجموعه اندازه‌گیری است؛ سامانه تشخیصی معتبر بالینی یا سازوکار شناختی ادعا نمی‌کنیم."
+      },
+      {
+        "kind": "h",
+        "en": "9  Limitations and reproducibility",
+        "fa": "۹  محدودیت‌ها و بازتولیدپذیری"
+      },
+      {
+        "kind": "p",
+        "en": "Fold-local utility and selected-dimension SMOTE fix two implementation limitations of the earlier protocol. However, costs remain synthetic; external clinical data and independent verification of subject identity are unavailable. Sensitivity covers three datasets, three seeds and a short search, not all interactions or optimizer settings. MI is marginal; mean-minus-SD has no calibrated coverage. Stability cannot certify clinical relevance. Earlier registration and failure logs cannot be reconstructed by locally freezing this new study.",
+        "fa": "سودمندی محلی و SMOTE روی ابعاد منتخب، دو محدودیت پیاده‌سازی پروتکل قبلی را رفع کردند. هزینه همچنان مصنوعی است؛ داده بالینی بیرونی و تأیید مستقل هویت افراد موجود نیست. حساسیت سه دیتاست، سه بذر و جست‌وجوی کوتاه را پوشش می‌دهد، نه همه تعامل‌ها یا تنظیم‌های بهینه‌ساز. MI حاشیه‌ای است و میانگین منهای انحراف معیار پوشش کالیبره‌شده ندارد. پایداری، اعتبار بالینی را تضمین نمی‌کند. تثبیت محلی مطالعه تازه، ثبت پیشینی و لاگ مفقود گذشته را بازسازی نمی‌کند."
+      },
+      {
+        "kind": "p",
+        "en": "The local package contains all 774 run records, masks, outer predictions, utility vectors, row indices, candidate-level audit files, full timing and environment versions. Audit checks mask counts, costs, repaired-candidate budgets, train/validation/test separation, group overlap and SMOTE dimensions. New and archived results remain separate. A public repository has not been released; local reproducibility is not public availability.",
+        "fa": "بسته محلی، هر ۷۷۴ رکورد اجرا، ماسک‌ها، پیش‌بینی بیرونی، بردار سودمندی، اندیس ردیف، ممیزی هر کاندید، زمان کامل و نسخه محیط را دارد. ممیزی تعداد ماسک، هزینه، بودجه کاندید تعمیرشده، تفکیک آموزش/اعتبارسنجی/آزمون، هم‌پوشانی گروه و ابعاد SMOTE را بررسی می‌کند. نتایج تازه و آرشیوی جدا هستند. مخزن عمومی منتشر نشده؛ بازتولید محلی، دسترسی عمومی نیست."
+      },
+      {
+        "kind": "h",
+        "en": "10  Conclusion",
+        "fa": "۱۰  نتیجه‌گیری"
+      },
+      {
+        "kind": "p",
+        "en": "The redesigned protocol evaluates the complete training-and-repair pipeline with training-local utility and selected-dimension resampling. All constrained masks are feasible. Interpretation must follow corrected pairwise evidence and compare against feasible simpler repairs. Clinical and monetary claims still require real grouped acquisition costs and independent clinical validation.",
+        "fa": "پروتکل بازطراحی‌شده، کل پایپ‌لاین آموزش و تعمیر را با سودمندی محلی و بازنمونه‌گیری روی ابعاد منتخب ارزیابی می‌کند. همه ماسک‌های مقید شدنی‌اند. تفسیر باید براساس شواهد زوجی اصلاح‌شده و مقایسه با تعمیرهای ساده‌تر شدنی باشد. ادعای بالینی و پولی همچنان به هزینه واقعی گروهی و اعتبارسنجی بالینی مستقل نیاز دارد."
+      },
+      {
+        "kind": "h",
+        "en": "References",
+        "fa": "مراجع"
+      },
+      {
+        "kind": "ref",
+        "en": "[1] R. Jagdhuber, M. Lang, A. Stenzl, J. Neuhaus, and J. Rahnenführer, \"Cost-Constrained feature selection in binary classification: adaptations for greedy forward selection and genetic algorithms,\" BMC Bioinformatics, vol. 21, art. 26, 2020.",
+        "fa": "[1] R. Jagdhuber, M. Lang, A. Stenzl, J. Neuhaus, and J. Rahnenführer, \"Cost-Constrained feature selection in binary classification: adaptations for greedy forward selection and genetic algorithms,\" BMC Bioinformatics, vol. 21, art. 26, 2020.",
+        "url": "https://doi.org/10.1186/s12859-020-3361-9"
+      },
+      {
+        "kind": "ref",
+        "en": "[2] S. Nogueira, K. Sechidis, and G. Brown, \"On the Stability of Feature Selection Algorithms,\" Journal of Machine Learning Research, vol. 18, no. 174, pp. 1-54, 2018.",
+        "fa": "[2] S. Nogueira, K. Sechidis, and G. Brown, \"On the Stability of Feature Selection Algorithms,\" Journal of Machine Learning Research, vol. 18, no. 174, pp. 1-54, 2018.",
+        "url": "https://jmlr.org/papers/v18/17-514.html"
+      },
+      {
+        "kind": "ref",
+        "en": "[3] B. Remeseiro and V. Bolon-Canedo, \"A review of feature selection methods in medical applications,\" Computers in Biology and Medicine, vol. 112, art. 103375, 2019.",
+        "fa": "[3] B. Remeseiro and V. Bolon-Canedo, \"A review of feature selection methods in medical applications,\" Computers in Biology and Medicine, vol. 112, art. 103375, 2019.",
+        "url": "https://doi.org/10.1016/j.compbiomed.2019.103375"
+      },
+      {
+        "kind": "ref",
+        "en": "[4] A. E. Hegazy, M. A. Makhlouf, O. A. M. Salem, and B. Hafiz, \"An enhanced Hiking optimization algorithm for accurate and interpretable feature selection in medical data classification,\" Cluster Computing, vol. 29, art. 244, 2026.",
+        "fa": "[4] A. E. Hegazy, M. A. Makhlouf, O. A. M. Salem, and B. Hafiz, \"An enhanced Hiking optimization algorithm for accurate and interpretable feature selection in medical data classification,\" Cluster Computing, vol. 29, art. 244, 2026.",
+        "url": "https://doi.org/10.1007/s10586-026-05946-9"
+      },
+      {
+        "kind": "ref",
+        "en": "[5] V. Hamer and P. Dupont, \"An Importance Weighted Feature Selection Stability Measure,\" Journal of Machine Learning Research, vol. 22, no. 116, pp. 1-57, 2021.",
+        "fa": "[5] V. Hamer and P. Dupont, \"An Importance Weighted Feature Selection Stability Measure,\" Journal of Machine Learning Research, vol. 22, no. 116, pp. 1-57, 2021.",
+        "url": "https://jmlr.org/papers/v22/20-366.html"
+      },
+      {
+        "kind": "ref",
+        "en": "[6] T. Klonecki and P. Teisseyre, \"Feature selection under budget constraint in medical applications: analysis of penalized empirical risk minimization methods,\" Applied Intelligence, vol. 53, pp. 29943-29973, 2023.",
+        "fa": "[6] T. Klonecki and P. Teisseyre, \"Feature selection under budget constraint in medical applications: analysis of penalized empirical risk minimization methods,\" Applied Intelligence, vol. 53, pp. 29943-29973, 2023.",
+        "url": "https://doi.org/10.1007/s10489-023-05063-9"
+      },
+      {
+        "kind": "ref",
+        "en": "[7] M. Valancius, M. Lennon, and J. Oliva, \"Acquisition Conditioned Oracle for Nongreedy Active Feature Acquisition,\" Proceedings of the 41st International Conference on Machine Learning, PMLR, vol. 235, pp. 48957-48975, 2024.",
+        "fa": "[7] M. Valancius, M. Lennon, and J. Oliva, \"Acquisition Conditioned Oracle for Nongreedy Active Feature Acquisition,\" Proceedings of the 41st International Conference on Machine Learning, PMLR, vol. 235, pp. 48957-48975, 2024.",
+        "url": "https://proceedings.mlr.press/v235/valancius24a.html"
+      },
+      {
+        "kind": "ref",
+        "en": "[8] T. Klonecki, P. Teisseyre, and J. Lee, \"Cost-Constrained Multi-label Group Feature Selection Using Shadow Features,\" in Advances in Artificial Intelligence Research, PP-RAI 2025, Lecture Notes in Networks and Systems, vol. 1599, pp. 3-16, Springer, 2026.",
+        "fa": "[8] T. Klonecki, P. Teisseyre, and J. Lee, \"Cost-Constrained Multi-label Group Feature Selection Using Shadow Features,\" in Advances in Artificial Intelligence Research, PP-RAI 2025, Lecture Notes in Networks and Systems, vol. 1599, pp. 3-16, Springer, 2026.",
+        "url": "https://doi.org/10.1007/978-3-032-04197-5_1"
+      },
+      {
+        "kind": "ref",
+        "en": "[9] N. Meinshausen and P. Buhlmann, \"Stability selection,\" Journal of the Royal Statistical Society: Series B, vol. 72, no. 4, pp. 417-473, 2010.",
+        "fa": "[9] N. Meinshausen and P. Buhlmann, \"Stability selection,\" Journal of the Royal Statistical Society: Series B, vol. 72, no. 4, pp. 417-473, 2010.",
+        "url": "https://doi.org/10.1111/j.1467-9868.2010.00740.x"
+      },
+      {
+        "kind": "ref",
+        "en": "[10] R. D. Shah and R. J. Samworth, \"Variable selection with error control: another look at stability selection,\" Journal of the Royal Statistical Society: Series B, vol. 75, no. 1, pp. 55-80, 2013.",
+        "fa": "[10] R. D. Shah and R. J. Samworth, \"Variable selection with error control: another look at stability selection,\" Journal of the Royal Statistical Society: Series B, vol. 75, no. 1, pp. 55-80, 2013.",
+        "url": "https://doi.org/10.1111/j.1467-9868.2011.01034.x"
+      },
+      {
+        "kind": "ref",
+        "en": "[11] B. C. Ross, \"Mutual Information between Discrete and Continuous Data Sets,\" PLOS ONE, vol. 9, no. 2, art. e87357, 2014.",
+        "fa": "[11] B. C. Ross, \"Mutual Information between Discrete and Continuous Data Sets,\" PLOS ONE, vol. 9, no. 2, art. e87357, 2014.",
+        "url": "https://doi.org/10.1371/journal.pone.0087357"
+      },
+      {
+        "kind": "ref",
+        "en": "[12] N. V. Chawla, K. W. Bowyer, L. O. Hall, and W. P. Kegelmeyer, \"SMOTE: Synthetic Minority Over-sampling Technique,\" Journal of Artificial Intelligence Research, vol. 16, pp. 321-357, 2002.",
+        "fa": "[12] N. V. Chawla, K. W. Bowyer, L. O. Hall, and W. P. Kegelmeyer, \"SMOTE: Synthetic Minority Over-sampling Technique,\" Journal of Artificial Intelligence Research, vol. 16, pp. 321-357, 2002.",
+        "url": "https://doi.org/10.1613/jair.953"
+      },
+      {
+        "kind": "ref",
+        "en": "[13] S. Varma and R. Simon, \"Bias in error estimation when using cross-validation for model selection,\" BMC Bioinformatics, vol. 7, art. 91, 2006.",
+        "fa": "[13] S. Varma and R. Simon, \"Bias in error estimation when using cross-validation for model selection,\" BMC Bioinformatics, vol. 7, art. 91, 2006.",
+        "url": "https://doi.org/10.1186/1471-2105-7-91"
+      },
+      {
+        "kind": "ref",
+        "en": "[14] J. Demšar, \"Statistical Comparisons of Classifiers over Multiple Data Sets,\" Journal of Machine Learning Research, vol. 7, pp. 1-30, 2006.",
+        "fa": "[14] J. Demšar, \"Statistical Comparisons of Classifiers over Multiple Data Sets,\" Journal of Machine Learning Research, vol. 7, pp. 1-30, 2006.",
+        "url": "https://jmlr.org/papers/v7/demsar06a.html"
+      },
+      {
+        "kind": "ref",
+        "en": "[15] W. Wolberg, O. Mangasarian, N. Street, and W. Street, \"Breast Cancer Wisconsin (Diagnostic),\" UCI Machine Learning Repository, 1993.",
+        "fa": "[15] W. Wolberg, O. Mangasarian, N. Street, and W. Street, \"Breast Cancer Wisconsin (Diagnostic),\" UCI Machine Learning Repository, 1993.",
+        "url": "https://doi.org/10.24432/C5DW2B"
+      }
+    ]
+  ]
+}

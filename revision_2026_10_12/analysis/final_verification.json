@@ -1,0 +1,76 @@
+{
+  "reference_count": 15,
+  "uncited_references": [],
+  "undefined_citations": [],
+  "submission_reference_lines": 15,
+  "tables": 7,
+  "figures": 2,
+  "body_prose_words": {
+    "en": 1787,
+    "fa": 1949
+  },
+  "page_counts": {
+    "manuscript_en.pdf": 4,
+    "manuscript_fa.pdf": 4,
+    "qa\\word_en.pdf": 4,
+    "qa\\word_fa.pdf": 4
+  },
+  "table5_all_values_match_source_rounding": true,
+  "table6_statistics_and_ranks_match_source_rounding": true,
+  "table7_all_values_match_source_rounding": true,
+  "archived_run_audit": {
+    "rows": 300,
+    "datasets": 10,
+    "methods": 5,
+    "duplicate_keys": 0,
+    "missing_cells": 0,
+    "status_values": [
+      "complete"
+    ],
+    "mask_count": 300,
+    "all_binary": true,
+    "all_counts_match": true,
+    "max_cost_error": 2.842170943040401e-14,
+    "max_stability_error": 9.020562075079397e-17,
+    "constrained_budget_violations": 0,
+    "unconstrained_budget_exceedances": 59,
+    "raw_sha256": "b2829efc20b85a4898256940d7e86c29c259f2584ba8c3764888e4e9c7f6638f",
+    "config_current_sha256": "7b9c1538a7a53cb74d162c6997983ee4ffb8c00cc0bfd3dd61538b0860c53fbf",
+    "run_config_hashes": [
+      "7b9c1538a7a53cb74d162c6997983ee4ffb8c00cc0bfd3dd61538b0860c53fbf"
+    ],
+    "execution_failure_logs_present": false,
+    "preregistration_evidence": "No dated immutable registration supplied",
+    "raw_reanalysis_only": true,
+    "python": "3.13.13 (tags/v3.13.13:01104ce, Apr  7 2026, 19:25:48) [MSC v.1944 64 bit (AMD64)]"
+  },
+  "corrected_run_audit": {
+    "new_runs": 60,
+    "new_masks": 60,
+    "old_eligible_runs": 240,
+    "corrected10_runs": 300,
+    "duplicates": 0,
+    "constrained_budget_violations": 0,
+    "outer_subject_overlap": 0,
+    "inner_subject_overlap": 0,
+    "unique_subject_prefixes": 32,
+    "steel_predictors": 27,
+    "steel_classes": 7,
+    "new_experiment_status": "exploratory; not preregistered",
+    "combined_status": "secondary sensitivity; heterogeneous recording/group protocols explicitly reported"
+  },
+  "reviewer_items": 14,
+  "docx_structure": {
+    "en": {
+      "native_equations": 5,
+      "tables": 7
+    },
+    "fa": {
+      "native_equations": 5,
+      "tables": 7
+    }
+  },
+  "pdf_english_words_before": 2579,
+  "pdf_english_words_after": 3229,
+  "visual_review": "All 16 final pages inspected; no cropped tables or equations. Figure 1 close labels separated with leader lines."
+}

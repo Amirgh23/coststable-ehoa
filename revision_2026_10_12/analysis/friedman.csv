@@ -1,0 +1,7 @@
+metric,n_datasets,n_methods,df,statistic,p_raw,analysis,p_holm_six_metrics
+balanced_accuracy,10,5,4,2.1599999999999966,0.706358693341474,Retrospective reanalysis; asymptotic Friedman p,1.0
+cost_ratio,10,5,4,22.640000000000015,0.00014941602301878198,Retrospective reanalysis; asymptotic Friedman p,0.0007470801150939099
+selected_features,10,5,4,30.343434343434335,4.166420396732676e-06,Retrospective reanalysis; asymptotic Friedman p,2.4998522380396057e-05
+nogueira_stability,10,5,4,18.319999999999993,0.001068455044188013,Retrospective reanalysis; asymptotic Friedman p,0.004273820176752052
+jaccard_stability,10,5,4,14.319999999999993,0.006340765154255485,Retrospective reanalysis; asymptotic Friedman p,0.019022295462766455
+runtime_seconds,10,5,4,1.8400000000000034,0.7651565588822666,Retrospective reanalysis; asymptotic Friedman p,1.0

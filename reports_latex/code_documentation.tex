@@ -1,0 +1,112 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[margin=2.1cm]{geometry}
+\usepackage{xcolor,graphicx,booktabs,longtable,array,amsmath,amssymb,listings,fancyhdr,tcolorbox,hyperref}
+\usepackage[bidi=basic]{babel}
+\babelprovide[main,import]{persian}
+\babelprovide[import]{english}
+\babelfont[persian]{rm}{Tahoma}
+\babelfont[english]{rm}{Arial}
+\newcommand{\lr}[1]{\foreignlanguage{english}{#1}}
+\newenvironment{latin}{\begin{otherlanguage}{english}}{\end{otherlanguage}}
+\definecolor{navy}{HTML}{17365D}\definecolor{cyan}{HTML}{2E75B6}\definecolor{pale}{HTML}{EAF2F8}\definecolor{codebg}{HTML}{F5F7FA}
+\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=cyan}
+\pagestyle{fancy}\fancyhf{}\rhead{مستندات فنی پیاده‌سازی}\lhead{پروژه درس کلان‌داده}\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\lstset{backgroundcolor=\color{codebg},basicstyle=\ttfamily\small,keywordstyle=\color{cyan}\bfseries,commentstyle=\color{gray},stringstyle=\color{red!60!black},breaklines=true,frame=single,rulecolor=\color{gray!30},numbers=left,numberstyle=\tiny\color{gray},xleftmargin=1em,showstringspaces=false,language=Python}
+\newtcolorbox{keybox}{colback=pale,colframe=cyan,boxrule=.7pt,arc=2mm}
+\begin{document}
+\begin{titlepage}
+\pagecolor{navy}\color{white}
+\centering\vspace*{2.3cm}
+{\Huge\bfseries مستندات کامل پیاده‌سازی\par}\vspace{.6cm}
+{\LARGE انتخاب ویژگی هزینه‌آگاه و پایدار مبتنی بر EHOA\par}\vspace{1.4cm}
+\rule{.78\textwidth}{1pt}\vspace{1.4cm}
+{\Large پروژه درس کلان‌داده - کارشناسی ارشد\par}\vfill
+\begin{tabular}{rl}دانشجو: & امیررضا غفاریان\\ استاد: & دکتر محمدحسین معطر\\ دانشگاه: & دانشگاه آزاد اسلامی\\ تاریخ تهیه: & مرداد ۱۴۰۵\end{tabular}
+\vfill\color{white!80}نسخه نهایی قابل بازتولید\end{titlepage}
+\nopagecolor\color{black}\tableofcontents\newpage
+
+\section{هدف و دامنه}
+این پروژه یک انتخاب‌گر ویژگی پوششی بر پایه الگوریتم بهینه‌سازی کوه‌پیمایی بهبود‌یافته (EHOA) را پیاده‌سازی می‌کند. توسعه پیشنهادی با نام \lr{CostStableEHOA} یک قید سخت بودجه را به فرایند جست‌وجو اضافه می‌کند و هنگام نقض بودجه، ویژگی‌ها را بر اساس نسبت «اطمینان محافظه‌کارانه از سودمندی» به هزینه حذف می‌کند. تابع برازندگی پایه تغییر نکرده است؛ در نتیجه اثر سازوکار تعمیر را می‌توان مستقل از تغییر هدف ارزیابی کرد.
+
+\begin{keybox}
+ادعای فنی محدود است: ترکیب تعمیر بودجه‌ای با امتیاز \lr{LCB} حاصل از بازنمونه‌گیری اطلاعات متقابل، درون EHOA. هزینه‌آگاهی، اطلاعات متقابل و تعمیر جواب به‌تنهایی نوآوری محسوب نمی‌شوند.
+\end{keybox}
+
+\section{ساختار نرم‌افزار}
+\begin{longtable}{>{\raggedleft\arraybackslash}p{.30\textwidth}p{.62\textwidth}}
+\toprule فایل & مسئولیت\\\midrule
+\lr{proposed/ehoa.py} & هسته EHOA، مقداردهی جمعیت، تبدیل دودویی، ارزیابی و به‌روزرسانی عامل‌ها.\\
+\lr{proposed/cost\_stable\_ehoa.py} & محاسبه سودمندی پایدار، تعمیر قید بودجه و کلاس روش پیشنهادی.\\
+\lr{run\_cost\_stable\_confirmatory.py} & اجرای ارزیابی تو‌در‌تو، ذخیره مرحله‌ای ردیف‌ها و ماسک‌ها و قابلیت ادامه اجرا.\\
+\lr{analyze\_cost\_stable\_confirmatory.py} & کنترل صحت، تجمیع، آزمون‌های فریدمن/ویلکاکسون/هولم و رسم نمودارها.\\
+\lr{configs/cost\_stable\_confirmatory.yaml} & تمام پارامترها، بذرها، دیتاست‌ها، بودجه و روش‌ها.\\
+\lr{tests/test\_proposed.py} & آزمون واحد تعمیر، رعایت بودجه، قطعیت و رفتار الگوریتم.\\\bottomrule
+\end{longtable}
+
+\section{منطق روش پیشنهادی}
+برای ویژگی $j$ و بازنمونه‌گیری $b$، اطلاعات متقابل $I_{jb}$ محاسبه می‌شود. امتیاز محافظه‌کارانه برابر است با
+\begin{equation}u_j=\max\left(0,\bar I_j-z\,s_j\right),\qquad r_j=\frac{u_j}{c_j}.\end{equation}
+اگر هزینه ماسک $\sum_j z_jc_j$ از بودجه $B$ بیشتر باشد، ویژگی فعال با کوچک‌ترین $r_j$ حذف می‌شود تا قید برقرار شود. استفاده از کران پایین باعث می‌شود ویژگی‌ای که میانگین سودمندی بالا ولی نوسان زیاد دارد، بی‌دلیل حفظ نشود.
+
+\subsection{تعمیر دقیق قید بودجه}
+\begin{latin}\begin{lstlisting}
+def repair_to_budget(mask, costs, budget, utility):
+    repaired = np.asarray(mask, dtype=bool).copy()
+    while costs[repaired].sum() > budget:
+        active = np.flatnonzero(repaired)
+        ratio = utility[active] / np.maximum(costs[active], 1e-12)
+        repaired[active[np.argmin(ratio)]] = False
+    if not repaired.any():
+        feasible = np.flatnonzero(costs <= budget)
+        repaired[feasible[np.argmax(utility[feasible] / costs[feasible])]] = True
+    return repaired
+\end{lstlisting}\end{latin}
+این قطعه ابتدا یک کپی بولی می‌سازد تا ورودی تغییر نکند. حلقه فقط تا زمان نقض بودجه ادامه دارد. در هر دور، ضعیف‌ترین ویژگی از نظر سودمندی به‌ازای هزینه حذف می‌شود. شرط پایانی از ماسک تهی جلوگیری می‌کند و ارزان‌ترین گزینه را کورکورانه انتخاب نمی‌کند؛ بهترین نسبت سودمندی به هزینه میان گزینه‌های شدنی انتخاب می‌شود.
+
+\subsection{برآورد سودمندی پایدار}
+\begin{latin}\begin{lstlisting}
+scores = []
+for _ in range(n_resamples):
+    idx = rng.choice(len(y), len(y), replace=True)
+    scores.append(mutual_info_classif(X[idx], y[idx], random_state=seed))
+scores = np.asarray(scores)
+utility = np.maximum(0.0, scores.mean(0) - lcb_z * scores.std(0, ddof=1))
+\end{lstlisting}\end{latin}
+بازنمونه‌گیری فقط روی بخش آموزش بیرونی انجام می‌شود؛ داده آزمون بیرونی در محاسبه امتیاز یا جست‌وجو حضور ندارد. میانگین، قدرت تقریبی رابطه و انحراف معیار، عدم‌قطعیت آن را نشان می‌دهد. پارامتر $z$ شدت محافظه‌کاری را کنترل می‌کند.
+
+\subsection{ادغام با EHOA}
+\begin{latin}\begin{lstlisting}
+class CostStableEHOA(EHOA):
+    def _repair(self, mask):
+        return repair_to_budget(mask, self.costs, self.budget, self.utility_)
+
+    def fit(self, X, y):
+        self.utility_ = resampled_lcb_utility(X, y, random_state=self.random_state)
+        return super().fit(X, y)
+\end{lstlisting}\end{latin}
+وراثت، تکرار کد پایه را کم می‌کند. تنها نقطه مداخله، تعمیر هر جواب کاندید پیش از ارزیابی است. بنابراین اندازه جمعیت، قوانین حرکت، تبدیل دودویی و تابع برازندگی همان EHOA باقی می‌مانند و مقایسه کنترل‌شده است.
+
+\section{پروتکل اجرا و جلوگیری از نشت داده}
+ده دیتاست، پنج روش، دو بذر مستقل و سه چین بیرونی به $10\times5\times2\times3=300$ اجرا منجر شده است. پیش‌پردازش و طبقه‌بند فقط با داده آموزش هر چین برازش می‌شوند. بودجه ۳۰ درصد مجموع هزینه‌هاست؛ هزینه‌ها به‌صورت قطعی از توزیع لگ‌نرمال و مستقل از برچسب تولید شده‌اند. هر ماسک، بذر انتخاب‌گر، هش پیکربندی، زمان و معیارهای آزمون ذخیره شده‌اند.
+
+\section{آزمون‌ها و کنترل کیفیت}
+مجموعه آزمون شامل رعایت قید، عدم تولید ماسک تهی، قطعیت در بذر ثابت، صحت ابعاد و سازگاری با EHOA است. نتیجه نهایی: ۲۸ آزمون از ۲۸ آزمون موفق. کنترل پس از اجرا نیز ۳۰۰ ردیف، ۳۰۰ ماسک، صفر کلید تکراری، صفر مقدار گم‌شده و صفر نقض بودجه را تأیید کرد.
+
+\section{روش بازتولید}
+\begin{latin}\begin{lstlisting}[numbers=none]
+python -m pip install -r requirements.txt
+python -m pytest -q
+python run_cost_stable_confirmatory.py \
+  --config configs/cost_stable_confirmatory.yaml \
+  --output results/cost_stable_confirmatory
+python analyze_cost_stable_confirmatory.py
+\end{lstlisting}\end{latin}
+فایل اجرا پس از هر آزمایش CSV را به‌روز می‌کند؛ در صورت قطع برق یا توقف برنامه، گزینه \lr{resume} فقط کلیدهای کامل‌شده را رد می‌کند. این ویژگی مانع از دست‌رفتن محاسبات طولانی می‌شود.
+
+\section{محدودیت‌های فنی}
+هزینه‌ها واقعیِ دامنه پزشکی یا صنعتی نیستند و برای کنترل آزمایش به‌صورت مصنوعی اما ثابت ساخته شده‌اند. تنها طبقه‌بند گزارش اصلی KNN است. تعداد بذرها دو و تعداد چین‌های بیرونی سه است؛ بنابراین واحد آزمون بین‌دیتاستی ده دیتاست است و نباید ۳۰۰ ردیف را به‌اشتباه ۳۰۰ مشاهده مستقل تلقی کرد.
+
+\section{جمع‌بندی}
+پیاده‌سازی نهایی آزمون‌پذیر، قابل ادامه و قابل ممیزی است. نوآوری در سطح سازوکار ترکیبی و افزایشی مطرح می‌شود و کد اجازه می‌دهد چهار تعمیر تصادفی، ارزان‌ترین، اطلاعات متقابل و \lr{Stable-LCB} تحت بودجه یکسان مقایسه شوند.
+\end{document}

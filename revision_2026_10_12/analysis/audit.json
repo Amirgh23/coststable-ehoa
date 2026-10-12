@@ -1,0 +1,26 @@
+{
+  "rows": 300,
+  "datasets": 10,
+  "methods": 5,
+  "duplicate_keys": 0,
+  "missing_cells": 0,
+  "status_values": [
+    "complete"
+  ],
+  "mask_count": 300,
+  "all_binary": true,
+  "all_counts_match": true,
+  "max_cost_error": 2.842170943040401e-14,
+  "max_stability_error": 9.020562075079397e-17,
+  "constrained_budget_violations": 0,
+  "unconstrained_budget_exceedances": 59,
+  "raw_sha256": "b2829efc20b85a4898256940d7e86c29c259f2584ba8c3764888e4e9c7f6638f",
+  "config_current_sha256": "7b9c1538a7a53cb74d162c6997983ee4ffb8c00cc0bfd3dd61538b0860c53fbf",
+  "run_config_hashes": [
+    "7b9c1538a7a53cb74d162c6997983ee4ffb8c00cc0bfd3dd61538b0860c53fbf"
+  ],
+  "execution_failure_logs_present": false,
+  "preregistration_evidence": "No dated immutable registration supplied",
+  "raw_reanalysis_only": true,
+  "python": "3.13.13 (tags/v3.13.13:01104ce, Apr  7 2026, 19:25:48) [MSC v.1944 64 bit (AMD64)]"
+}

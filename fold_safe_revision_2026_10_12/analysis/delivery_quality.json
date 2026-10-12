@@ -1,0 +1,39 @@
+{
+  "page_counts": {
+    "manuscript_fa.pdf": 4,
+    "manuscript_en.pdf": 4,
+    "qa\\word_fa.pdf": 4,
+    "qa\\word_en.pdf": 4
+  },
+  "references": 15,
+  "uncited_references": [],
+  "tables": 7,
+  "figures": 2,
+  "reviewer_items": 14,
+  "visual_review": "All final manuscript and Word-render pages inspected",
+  "scientific_audit": {
+    "planned_runs": 774,
+    "completed_runs": 774,
+    "primary_runs": 450,
+    "sensitivity_runs": 324,
+    "duplicate_jobs": 0,
+    "failed_attempts": 0,
+    "all_masks_binary": true,
+    "all_mask_counts_match": true,
+    "maximum_cost_error": 5.684341886080802e-14,
+    "inner_utility_training_overlap_with_inner_validation_or_outer_test": 0,
+    "outer_row_overlap": 0,
+    "outer_subject_overlap": 0,
+    "inner_subject_overlap": 0,
+    "smote_dimension_mismatches": 0,
+    "inner_candidate_budget_violations": 0,
+    "outer_constrained_budget_violations": 0,
+    "maximum_ba_recalculation_error": 1.1102230246251565e-16,
+    "maximum_accuracy_recalculation_error": 1.1102230246251565e-16,
+    "analysis": "Fresh redesigned protocol; locally frozen, exploratory, not independent public preregistration",
+    "stability": "Nine overlapping final masks per dataset/configuration, not nine independent samples",
+    "sensitivity": "Descriptive OFAT on three biomedical datasets; not exhaustive interactions or clinical validation"
+  },
+  "native_equations_en": 5,
+  "native_equations_fa": 5
+}

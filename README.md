@@ -24,4 +24,8 @@ Data attribution and redistribution permissions are documented separately. Publi
 
 The Hill-Valley UCI identifier was corrected to 166; id 147 is Statlog Image Segmentation. The exact OpenML 1479 numeric snapshot and numerical results were unchanged. Public dataset snapshots and attribution are now included.
 
-All 1,464 public benchmark job outputs include masks, predictions, split provenance and candidate audits. Extension audit and dataset-block statistical results are in `extended_revision_2026_10_12/analysis`. Recorded timings compare batches with different worker counts (three versus six) and are not a controlled speed benchmark. Manuscripts, reviewer correspondence and author declaration drafts are excluded from this repository.
+All 1,464 public benchmark job outputs include masks, predictions, split provenance and candidate audits. Extension audit and dataset-block statistical results are in `extended_revision_2026_10_12/analysis`. Recorded timings compare batches with different worker counts (three versus six) and are not a controlled speed benchmark. At the author’s explicit request, the complete research workspace now includes manuscripts, reviewer responses, author declaration drafts and prior versions. The latest authoritative version is extended_revision_2026_10_12; earlier results are archival.
+
+## Complete workspace transfer
+
+See CONTINUE_WORK_FA.md for continuation instructions. The complete ZIP in Releases also includes prior delivery ZIPs. COMPLETE_WORKSPACE_MANIFEST.json records every archived research file. Generated caches and internal Git files are excluded.

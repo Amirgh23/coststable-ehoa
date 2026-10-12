@@ -1,0 +1,16 @@
+{
+  "columns": [
+    "V28",
+    "V29",
+    "V30",
+    "V31",
+    "V32",
+    "V33"
+  ],
+  "target_recovered_fraction": 1.0,
+  "sum_indicators_with_target_unique": [
+    1.0
+  ],
+  "source": "https://archive.ics.uci.edu/dataset/198/steel+plates+faults",
+  "decision": "Exclude existing Steel results from primary reanalysis; regenerate 27-feature 7-class experiment before reuse"
+}

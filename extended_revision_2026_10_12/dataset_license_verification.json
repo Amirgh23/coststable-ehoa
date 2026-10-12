@@ -1,0 +1,62 @@
+[
+  {
+    "id": 17,
+    "source": "https://archive.ics.uci.edu/dataset/17",
+    "CC_BY_4_0_link": true,
+    "page_mentions_CC_BY": true
+  },
+  {
+    "id": 109,
+    "source": "https://archive.ics.uci.edu/dataset/109",
+    "CC_BY_4_0_link": true,
+    "page_mentions_CC_BY": true
+  },
+  {
+    "id": 52,
+    "source": "https://archive.ics.uci.edu/dataset/52",
+    "CC_BY_4_0_link": true,
+    "page_mentions_CC_BY": true
+  },
+  {
+    "id": 151,
+    "source": "https://archive.ics.uci.edu/dataset/151",
+    "CC_BY_4_0_link": true,
+    "page_mentions_CC_BY": true
+  },
+  {
+    "id": 33,
+    "source": "https://archive.ics.uci.edu/dataset/33",
+    "CC_BY_4_0_link": true,
+    "page_mentions_CC_BY": true
+  },
+  {
+    "id": 94,
+    "source": "https://archive.ics.uci.edu/dataset/94",
+    "CC_BY_4_0_link": true,
+    "page_mentions_CC_BY": true
+  },
+  {
+    "id": 174,
+    "source": "https://archive.ics.uci.edu/dataset/174",
+    "CC_BY_4_0_link": true,
+    "page_mentions_CC_BY": true
+  },
+  {
+    "id": 166,
+    "source": "https://archive.ics.uci.edu/dataset/166",
+    "CC_BY_4_0_link": true,
+    "page_mentions_CC_BY": true
+  },
+  {
+    "id": 198,
+    "source": "https://archive.ics.uci.edu/dataset/198",
+    "CC_BY_4_0_link": true,
+    "page_mentions_CC_BY": true
+  },
+  {
+    "id": 171,
+    "source": "https://archive.ics.uci.edu/dataset/171",
+    "CC_BY_4_0_link": true,
+    "page_mentions_CC_BY": true
+  }
+]

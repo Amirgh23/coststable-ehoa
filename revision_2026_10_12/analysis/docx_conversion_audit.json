@@ -1,0 +1,42 @@
+[
+  {
+    "file": "مقاله_آماده_ارسال_کنگره.docx",
+    "paragraphs": 73,
+    "native_math_count": 0,
+    "table_count": 1,
+    "latex_command_fragments": [],
+    "text_length": 8021
+  },
+  {
+    "file": "CostStableEHOA_English_BAIC2026_Native.docx",
+    "paragraphs": 145,
+    "native_math_count": 0,
+    "table_count": 2,
+    "latex_command_fragments": [],
+    "text_length": 11898
+  },
+  {
+    "file": "CostStableEHOA_English_BAIC2026_Compact.docx",
+    "paragraphs": 145,
+    "native_math_count": 0,
+    "table_count": 2,
+    "latex_command_fragments": [],
+    "text_length": 11898
+  },
+  {
+    "file": "manuscript_en.docx",
+    "paragraphs": 348,
+    "native_math_count": 5,
+    "table_count": 7,
+    "latex_command_fragments": [],
+    "text_length": 21641
+  },
+  {
+    "file": "manuscript_fa.docx",
+    "paragraphs": 348,
+    "native_math_count": 5,
+    "table_count": 7,
+    "latex_command_fragments": [],
+    "text_length": 20349
+  }
+]

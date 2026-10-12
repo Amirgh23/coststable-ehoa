@@ -1,0 +1,18 @@
+{
+  "pdf_pages": {
+    "manuscript_en.pdf": 4,
+    "manuscript_fa.pdf": 4,
+    "word_en.pdf": 4,
+    "word_fa.pdf": 4
+  },
+  "abstract_word_counts": {
+    "en": 176,
+    "fa": 189
+  },
+  "visual_review": "Every page of each final manuscript and both native Word renders inspected; see qa PNGs",
+  "word_equations": "Native editable OMML; multi-line displays; text and tables retained",
+  "format": "A4, official template header, margins 19/25.4/16/16 mm, two columns with 6 mm gap, no page numbers",
+  "font_metric_warning": "Bidi multicol emits two missing p warnings per Persian page from invisible depth/phantom probes in multicol-xetex-bidi.def; visible Latin text is rendered with Times New Roman",
+  "originals_preserved": true,
+  "automated_test_suites_run": false
+}
