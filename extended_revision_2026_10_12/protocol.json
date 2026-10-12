@@ -1,0 +1,76 @@
+{
+  "created_utc": "2026-10-12T12:08:56.290707+00:00",
+  "planned_runs": 690,
+  "extra_seed_runs": 300,
+  "factorial_runs": 240,
+  "larger_search_runs": 150,
+  "primary_total_seeds": [
+    72001,
+    72002,
+    72003,
+    72004,
+    72005
+  ],
+  "datasets": [
+    "breast_cancer",
+    "wine",
+    "ionosphere",
+    "sonar",
+    "dermatology",
+    "spambase",
+    "parkinsons",
+    "hill_valley",
+    "steel_plates_fault",
+    "madelon"
+  ],
+  "factorial": {
+    "design": "complete 2x2x2 at endpoints; no outer-test tuning",
+    "budget_levels": [
+      0.15,
+      0.5
+    ],
+    "R_levels": [
+      4,
+      8
+    ],
+    "lambda_levels": [
+      0,
+      2
+    ],
+    "seed": 72001,
+    "outer_folds": 3,
+    "analysis": "dataset-block descriptive factorial contrasts; one stochastic seed; not exhaustive continuous-space interactions"
+  },
+  "larger_search": {
+    "population": 16,
+    "iterations": 20,
+    "reference_population": 8,
+    "reference_iterations": 10,
+    "seed": 72001,
+    "methods": [
+      "EHOA",
+      "random",
+      "cheapest",
+      "mi",
+      "stable_lcb"
+    ],
+    "analysis": "paired dataset-block descriptive differences; not convergence proof"
+  },
+  "registration": "Prospective extension after prior outcomes known; publish protocol and code hash commit before execution; not retrospective preregistration",
+  "stats": {
+    "primary_unit": "dataset",
+    "primary_metric": "balanced_accuracy",
+    "friedman_df": 4,
+    "paired": "two-sided Wilcoxon; resampled versus four controls",
+    "multiplicity": "Holm within metric and all 24 contrasts",
+    "bootstrap": "20000 dataset-block draws; seed 20261012; descriptive unadjusted intervals"
+  },
+  "excluded_claims": [
+    "real medical prices",
+    "external clinical validity",
+    "independent clinical identity confirmation",
+    "confidence coverage of mean minus SD",
+    "false selection error control",
+    "guaranteed optimizer convergence"
+  ]
+}

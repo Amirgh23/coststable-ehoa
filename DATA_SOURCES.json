@@ -1,0 +1,42 @@
+[
+  {
+    "path": "data/breast_cancer.csv",
+    "sha256": "31d9ef5e091619aa2e970163522bffa9fbd9c173cd3ba0da1dbd0f8ab7900616"
+  },
+  {
+    "path": "data/wine.csv",
+    "sha256": "2cce9d95d7d95165a591b84741d15d3300f6862a135a28e3601249d42f303056"
+  },
+  {
+    "path": "data/benchmark_v2/dermatology.csv",
+    "sha256": "875bc26964e83e81fadc62f1002d0879d7dd1fc48253e843fcadec8237d4e7fa"
+  },
+  {
+    "path": "data/benchmark_v2/hill_valley.csv",
+    "sha256": "4f29a7849be607b77c69c1f1c19febfe52cc30c63f67bad5ec74cafeea607a28"
+  },
+  {
+    "path": "data/benchmark_v2/ionosphere.csv",
+    "sha256": "f3bb694a4882773c6585f35a7641c2bd3179a4de42231aa8e117c3fdb88b6a8f"
+  },
+  {
+    "path": "data/benchmark_v2/madelon.csv",
+    "sha256": "8cab10859f86b014b6da857be6acb7c0d84442eaf6ad3648528efa6c22a51beb"
+  },
+  {
+    "path": "data/benchmark_v2/parkinsons.csv",
+    "sha256": "7260b9623c17cbf67cb9a846f5d2f3b4d9329d6a75daa6af15217f89aa0bed3c"
+  },
+  {
+    "path": "data/benchmark_v2/sonar.csv",
+    "sha256": "6ef9709e909b0e3ca483d857434960d1799108e82b439471dde484303dbb4a1d"
+  },
+  {
+    "path": "data/benchmark_v2/spambase.csv",
+    "sha256": "7fc46aba6066e3d24a89c8a756d4ce502adf665cbfc380af34f59902f44a7658"
+  },
+  {
+    "path": "data/benchmark_v2/steel_plates_fault.csv",
+    "sha256": "157590616f323158a261c7d7502db85e54dd5bf867afaed58fb6b8c0465a736e"
+  }
+]

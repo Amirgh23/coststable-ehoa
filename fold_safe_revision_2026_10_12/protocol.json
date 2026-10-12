@@ -1,0 +1,59 @@
+{
+  "created_utc": "2026-10-12T11:22:56.860794+00:00",
+  "registration": "Locally frozen before this execution; not independent public preregistration; prior data results already known",
+  "primary_datasets": [
+    "breast_cancer",
+    "wine",
+    "ionosphere",
+    "sonar",
+    "dermatology",
+    "spambase",
+    "parkinsons",
+    "hill_valley",
+    "steel_plates_fault",
+    "madelon"
+  ],
+  "methods": [
+    "EHOA",
+    "random",
+    "cheapest",
+    "mi",
+    "stable_lcb"
+  ],
+  "seeds": [
+    72001,
+    72002,
+    72003
+  ],
+  "outer_folds": 3,
+  "inner_folds": 3,
+  "n_hikers": 8,
+  "max_iter": 10,
+  "alpha": 0.99,
+  "primary_budget": 0.3,
+  "primary_R": 4,
+  "primary_lambda": 1,
+  "planned_jobs": 774,
+  "primary_jobs": 450,
+  "sensitivity_datasets": [
+    "breast_cancer",
+    "dermatology",
+    "parkinsons"
+  ],
+  "changes": [
+    "inner utility fitted only on inner training rows",
+    "each candidate repaired separately in each inner fold; objective averages fold accuracies and subset sizes",
+    "final deployment mask repaired using outer-training-only utility",
+    "imputation/scaling/SMOTE fit on selected dimensions per candidate and final mask",
+    "Dermatology first 33 inputs discrete for MI, age continuous",
+    "complete timing includes utility and final classification"
+  ],
+  "scope": "All fresh runs; never combine with archived metrics as one identical protocol",
+  "remaining": [
+    "synthetic costs",
+    "unverified clinical identity of Parkinson subject prefixes",
+    "no external clinical validation",
+    "only three search seeds and short search",
+    "MI remains marginal; resampling score has no confidence coverage"
+  ]
+}
