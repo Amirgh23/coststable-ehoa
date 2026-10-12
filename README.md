@@ -19,3 +19,7 @@ Run `run_fold_safe_revision.py` and `analyze_fold_safe_revision.py` for the comp
 Clinical tariffs and independent external clinical observations are not present. Feature costs are synthetic. Parkinson recording groups are pseudonymous prefixes; the source narrative and file differ in reported group count. Code availability does not resolve that identity discrepancy. MI mean-minus-SD is a heuristic, without confidence coverage or false-selection error guarantees. Dataset blocks, rather than overlapping folds, are statistical units.
 
 Data attribution and redistribution permissions are documented separately. Publication does not invent a code license or a historical registration record. The author's writing disclosure must follow the actual conference submission policy.
+
+## Source erratum
+
+The Hill-Valley UCI identifier was corrected to 166; id 147 is Statlog Image Segmentation. The exact OpenML 1479 numeric snapshot and numerical results were unchanged. Public dataset snapshots and attribution are now included.

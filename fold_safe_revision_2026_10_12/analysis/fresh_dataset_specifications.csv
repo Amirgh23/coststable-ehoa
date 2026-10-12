@@ -5,7 +5,7 @@ ionosphere,350,34,2,"{""0"": 125, ""1"": 225}",,https://archive.ics.uci.edu/data
 sonar,208,60,2,"{""0"": 111, ""1"": 97}",,https://archive.ics.uci.edu/dataset/151,https://www.openml.org/d/40,6ef9709e909b0e3ca483d857434960d1799108e82b439471dde484303dbb4a1d
 dermatology,366,34,6,"{""0"": 112, ""1"": 61, ""2"": 72, ""3"": 49, ""4"": 52, ""5"": 20}",,https://archive.ics.uci.edu/dataset/33,https://www.openml.org/d/35,875bc26964e83e81fadc62f1002d0879d7dd1fc48253e843fcadec8237d4e7fa
 spambase,4210,57,2,"{""0"": 2531, ""1"": 1679}",,https://archive.ics.uci.edu/dataset/94,https://www.openml.org/d/44,7fc46aba6066e3d24a89c8a756d4ce502adf665cbfc380af34f59902f44a7658
-parkinsons,195,22,2,"{""0"": 48, ""1"": 147}",32,https://archive.ics.uci.edu/dataset/174,https://www.openml.org/d/1488,7260b9623c17cbf67cb9a846f5d2f3b4d9329d6a75daa6af15217f89aa0bed3c
-hill_valley,1212,100,2,"{""0"": 606, ""1"": 606}",,https://archive.ics.uci.edu/dataset/147,https://www.openml.org/d/1479,4f29a7849be607b77c69c1f1c19febfe52cc30c63f67bad5ec74cafeea607a28
+parkinsons,195,22,2,"{""0"": 48, ""1"": 147}",32.0,https://archive.ics.uci.edu/dataset/174,https://www.openml.org/d/1488,7260b9623c17cbf67cb9a846f5d2f3b4d9329d6a75daa6af15217f89aa0bed3c
+hill_valley,1212,100,2,"{""0"": 606, ""1"": 606}",,https://archive.ics.uci.edu/dataset/166/hill+valley,https://www.openml.org/d/1479,4f29a7849be607b77c69c1f1c19febfe52cc30c63f67bad5ec74cafeea607a28
 steel_plates_fault,1941,27,7,"{""0"": 158, ""1"": 190, ""2"": 391, ""3"": 72, ""4"": 55, ""5"": 402, ""6"": 673}",,https://archive.ics.uci.edu/dataset/198,https://www.openml.org/d/1504,194f9a6e1685cc084d85ce4bc4098af116f3d963ac6d94e95b358f0b24a4cbf8
 madelon,2600,500,2,"{""0"": 1300, ""1"": 1300}",,https://archive.ics.uci.edu/dataset/171,https://www.openml.org/d/1485,8cab10859f86b014b6da857be6acb7c0d84442eaf6ad3648528efa6c22a51beb
