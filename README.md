@@ -2,17 +2,17 @@
 
 Auditable feature selection with hard synthetic budgets, fold-local mutual-information repair, and selected-column imputation/scaling/SMOTE. Author: Amirreza Ghaffarian.
 
-The completed fold-safe study contains 774 runs: 450 primary and 324 biomedical sensitivity runs. `fold_safe_revision_2026_10_12/analysis/audit_summary.json` records recomputed mask costs, budgets, split separation and prediction checks. No universal predictive superiority or external clinical validity is claimed.
+The completed fold-safe study contains 1,464 runs: 750 primary runs with five seeds, 324 biomedical sensitivity runs, 240 factorial runs, and 150 larger-search runs. `fold_safe_revision_2026_10_12/analysis/audit_summary.json` records recomputed mask costs, budgets, split separation and prediction checks. No universal predictive superiority or external clinical validity is claimed.
 
 ## Prospective extension
 
-`extended_revision_2026_10_12/protocol.json` freezes 690 further runs before execution: 300 runs add two seeds to the primary comparison, 240 runs form a complete endpoint 2×2×2 budget/R/lambda factorial design across ten datasets, and 150 runs evaluate 16 hikers × 20 iterations. Factorial and larger-search experiments use one stochastic seed with three outer folds; they cannot establish all continuous-space interactions or convergence. Prior study results were known when this extension was designed. This public versioned protocol is not an independent formal preregistration of the earlier research.
+`extended_revision_2026_10_12/protocol.json` froze 690 further runs before execution; all 690 are completed: 300 runs add two seeds to the primary comparison, 240 runs form a complete endpoint 2×2×2 budget/R/lambda factorial design across ten datasets, and 150 runs evaluate 16 hikers × 20 iterations. Factorial and larger-search experiments use one stochastic seed with three outer folds; they cannot establish all continuous-space interactions or convergence. Prior study results were known when this extension was designed. This public versioned protocol is not an independent formal preregistration of the earlier research.
 
 ## Reproduce
 
 Use Python 3.13 and the package versions in `requirements.txt`. Exact dataset input hashes are listed in `DATA_SOURCES.json`. Original and snapshot URLs, dimensions and class counts are in `fold_safe_revision_2026_10_12/analysis/fresh_dataset_specifications.csv`.
 
-Run `run_fold_safe_revision.py` and `analyze_fold_safe_revision.py` for the completed study; run `run_extended_revision.py` for the extension once its public protocol commit has been recorded in `extended_revision_2026_10_12/publication.json`. Result records are saved per job and can be resumed. Protocol/code hashes are verified before execution.
+Run `run_fold_safe_revision.py` and `analyze_fold_safe_revision.py` for the completed study; run `run_extended_revision.py` and `analyze_extended_revision.py` for the extension. Its pre-execution public protocol commit is recorded in `extended_revision_2026_10_12/publication.json`. Result records are saved per job and can be resumed. Protocol/code hashes are verified before execution.
 
 ## Data and limitations
 
@@ -23,3 +23,5 @@ Data attribution and redistribution permissions are documented separately. Publi
 ## Source erratum
 
 The Hill-Valley UCI identifier was corrected to 166; id 147 is Statlog Image Segmentation. The exact OpenML 1479 numeric snapshot and numerical results were unchanged. Public dataset snapshots and attribution are now included.
+
+All 1,464 public benchmark job outputs include masks, predictions, split provenance and candidate audits. Extension audit and dataset-block statistical results are in `extended_revision_2026_10_12/analysis`. Recorded timings compare batches with different worker counts (three versus six) and are not a controlled speed benchmark. Manuscripts, reviewer correspondence and author declaration drafts are excluded from this repository.

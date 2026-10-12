@@ -1,0 +1,151 @@
+method,feature,selected_count,n_masks
+EHOA,mean radius,6,9
+EHOA,mean texture,5,9
+EHOA,mean perimeter,4,9
+EHOA,mean area,4,9
+EHOA,mean smoothness,6,9
+EHOA,mean compactness,1,9
+EHOA,mean concavity,4,9
+EHOA,mean concave points,5,9
+EHOA,mean symmetry,5,9
+EHOA,mean fractal dimension,5,9
+EHOA,radius error,2,9
+EHOA,texture error,4,9
+EHOA,perimeter error,3,9
+EHOA,area error,3,9
+EHOA,smoothness error,4,9
+EHOA,compactness error,2,9
+EHOA,concavity error,6,9
+EHOA,concave points error,1,9
+EHOA,symmetry error,5,9
+EHOA,fractal dimension error,2,9
+EHOA,worst radius,7,9
+EHOA,worst texture,8,9
+EHOA,worst perimeter,7,9
+EHOA,worst area,6,9
+EHOA,worst smoothness,4,9
+EHOA,worst compactness,3,9
+EHOA,worst concavity,2,9
+EHOA,worst concave points,8,9
+EHOA,worst symmetry,3,9
+EHOA,worst fractal dimension,4,9
+random,mean radius,5,9
+random,mean texture,8,9
+random,mean perimeter,1,9
+random,mean area,6,9
+random,mean smoothness,0,9
+random,mean compactness,2,9
+random,mean concavity,2,9
+random,mean concave points,2,9
+random,mean symmetry,3,9
+random,mean fractal dimension,4,9
+random,radius error,0,9
+random,texture error,4,9
+random,perimeter error,2,9
+random,area error,2,9
+random,smoothness error,2,9
+random,compactness error,6,9
+random,concavity error,3,9
+random,concave points error,2,9
+random,symmetry error,0,9
+random,fractal dimension error,1,9
+random,worst radius,4,9
+random,worst texture,5,9
+random,worst perimeter,5,9
+random,worst area,2,9
+random,worst smoothness,4,9
+random,worst compactness,2,9
+random,worst concavity,1,9
+random,worst concave points,3,9
+random,worst symmetry,3,9
+random,worst fractal dimension,3,9
+cheapest,mean radius,8,9
+cheapest,mean texture,5,9
+cheapest,mean perimeter,1,9
+cheapest,mean area,6,9
+cheapest,mean smoothness,0,9
+cheapest,mean compactness,2,9
+cheapest,mean concavity,0,9
+cheapest,mean concave points,7,9
+cheapest,mean symmetry,3,9
+cheapest,mean fractal dimension,7,9
+cheapest,radius error,5,9
+cheapest,texture error,2,9
+cheapest,perimeter error,3,9
+cheapest,area error,4,9
+cheapest,smoothness error,4,9
+cheapest,compactness error,2,9
+cheapest,concavity error,0,9
+cheapest,concave points error,1,9
+cheapest,symmetry error,0,9
+cheapest,fractal dimension error,5,9
+cheapest,worst radius,4,9
+cheapest,worst texture,8,9
+cheapest,worst perimeter,7,9
+cheapest,worst area,0,9
+cheapest,worst smoothness,6,9
+cheapest,worst compactness,3,9
+cheapest,worst concavity,4,9
+cheapest,worst concave points,5,9
+cheapest,worst symmetry,3,9
+cheapest,worst fractal dimension,5,9
+mi,mean radius,4,9
+mi,mean texture,6,9
+mi,mean perimeter,2,9
+mi,mean area,4,9
+mi,mean smoothness,1,9
+mi,mean compactness,2,9
+mi,mean concavity,4,9
+mi,mean concave points,2,9
+mi,mean symmetry,4,9
+mi,mean fractal dimension,1,9
+mi,radius error,4,9
+mi,texture error,3,9
+mi,perimeter error,3,9
+mi,area error,2,9
+mi,smoothness error,0,9
+mi,compactness error,3,9
+mi,concavity error,1,9
+mi,concave points error,0,9
+mi,symmetry error,0,9
+mi,fractal dimension error,0,9
+mi,worst radius,7,9
+mi,worst texture,6,9
+mi,worst perimeter,7,9
+mi,worst area,2,9
+mi,worst smoothness,5,9
+mi,worst compactness,2,9
+mi,worst concavity,2,9
+mi,worst concave points,8,9
+mi,worst symmetry,0,9
+mi,worst fractal dimension,4,9
+stable_lcb,mean radius,5,9
+stable_lcb,mean texture,5,9
+stable_lcb,mean perimeter,2,9
+stable_lcb,mean area,5,9
+stable_lcb,mean smoothness,0,9
+stable_lcb,mean compactness,1,9
+stable_lcb,mean concavity,5,9
+stable_lcb,mean concave points,3,9
+stable_lcb,mean symmetry,5,9
+stable_lcb,mean fractal dimension,4,9
+stable_lcb,radius error,4,9
+stable_lcb,texture error,4,9
+stable_lcb,perimeter error,3,9
+stable_lcb,area error,4,9
+stable_lcb,smoothness error,1,9
+stable_lcb,compactness error,4,9
+stable_lcb,concavity error,0,9
+stable_lcb,concave points error,3,9
+stable_lcb,symmetry error,0,9
+stable_lcb,fractal dimension error,0,9
+stable_lcb,worst radius,6,9
+stable_lcb,worst texture,5,9
+stable_lcb,worst perimeter,6,9
+stable_lcb,worst area,3,9
+stable_lcb,worst smoothness,5,9
+stable_lcb,worst compactness,3,9
+stable_lcb,worst concavity,2,9
+stable_lcb,worst concave points,8,9
+stable_lcb,worst symmetry,1,9
+stable_lcb,worst fractal dimension,3,9

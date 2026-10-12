@@ -1,0 +1,281 @@
+dataset,term,order,metric,effect
+breast_cancer,budget_ratio,1,balanced_accuracy,0.030931668442024773
+breast_cancer,budget_ratio,1,cost_ratio,0.2873669854459687
+breast_cancer,budget_ratio,1,selected_features,6.666666666666667
+breast_cancer,budget_ratio,1,nogueira_stability,-0.24686920561474598
+breast_cancer,evidence_resamples,1,balanced_accuracy,0.003211425415236502
+breast_cancer,evidence_resamples,1,cost_ratio,0.020127197789914536
+breast_cancer,evidence_resamples,1,selected_features,0.8333333333333348
+breast_cancer,evidence_resamples,1,nogueira_stability,-0.005132967024960605
+breast_cancer,lambda_penalty,1,balanced_accuracy,0.009306821320077291
+breast_cancer,lambda_penalty,1,cost_ratio,0.019758316265804272
+breast_cancer,lambda_penalty,1,selected_features,-0.1666666666666663
+breast_cancer,lambda_penalty,1,nogueira_stability,0.15642573393591447
+breast_cancer,budget_ratio x evidence_resamples,2,balanced_accuracy,0.0006233479307215517
+breast_cancer,budget_ratio x evidence_resamples,2,cost_ratio,0.014087023903751467
+breast_cancer,budget_ratio x evidence_resamples,2,selected_features,0.5000000000000009
+breast_cancer,budget_ratio x evidence_resamples,2,nogueira_stability,-0.11299594093652768
+breast_cancer,budget_ratio x lambda_penalty,2,balanced_accuracy,-0.004105022290606414
+breast_cancer,budget_ratio x lambda_penalty,2,cost_ratio,0.018215197800859194
+breast_cancer,budget_ratio x lambda_penalty,2,selected_features,0.5000000000000002
+breast_cancer,budget_ratio x lambda_penalty,2,nogueira_stability,-0.016999696842457612
+breast_cancer,evidence_resamples x lambda_penalty,2,balanced_accuracy,-0.00646920740127041
+breast_cancer,evidence_resamples x lambda_penalty,2,cost_ratio,-0.010438868120324026
+breast_cancer,evidence_resamples x lambda_penalty,2,selected_features,0.33333333333333326
+breast_cancer,evidence_resamples x lambda_penalty,2,nogueira_stability,-0.11062317862383406
+breast_cancer,budget_ratio x evidence_resamples x lambda_penalty,3,balanced_accuracy,-0.006715784905511585
+breast_cancer,budget_ratio x evidence_resamples x lambda_penalty,3,cost_ratio,-0.01837537736711272
+breast_cancer,budget_ratio x evidence_resamples x lambda_penalty,3,selected_features,-0.33333333333333326
+breast_cancer,budget_ratio x evidence_resamples x lambda_penalty,3,nogueira_stability,0.06280225215453786
+dermatology,budget_ratio,1,balanced_accuracy,0.0978549814834001
+dermatology,budget_ratio,1,cost_ratio,0.3367172955181384
+dermatology,budget_ratio,1,selected_features,8.916666666666666
+dermatology,budget_ratio,1,nogueira_stability,0.008783468059650856
+dermatology,evidence_resamples,1,balanced_accuracy,0.008644226057474336
+dermatology,evidence_resamples,1,cost_ratio,-0.001502175687316601
+dermatology,evidence_resamples,1,selected_features,0.5833333333333304
+dermatology,evidence_resamples,1,nogueira_stability,0.11344674811793365
+dermatology,lambda_penalty,1,balanced_accuracy,0.011173567373580273
+dermatology,lambda_penalty,1,cost_ratio,-0.005473094926229501
+dermatology,lambda_penalty,1,selected_features,-1.0833333333333335
+dermatology,lambda_penalty,1,nogueira_stability,-0.007644920585628712
+dermatology,budget_ratio x evidence_resamples,2,balanced_accuracy,-0.006018738728039652
+dermatology,budget_ratio x evidence_resamples,2,cost_ratio,0.00010524956074471625
+dermatology,budget_ratio x evidence_resamples,2,selected_features,-0.7500000000000018
+dermatology,budget_ratio x evidence_resamples,2,nogueira_stability,-0.05414740864339207
+dermatology,budget_ratio x lambda_penalty,2,balanced_accuracy,-0.006781607689437863
+dermatology,budget_ratio x lambda_penalty,2,cost_ratio,-0.006864849383631237
+dermatology,budget_ratio x lambda_penalty,2,selected_features,-0.4166666666666665
+dermatology,budget_ratio x lambda_penalty,2,nogueira_stability,0.07674414161491072
+dermatology,evidence_resamples x lambda_penalty,2,balanced_accuracy,-0.004089430771254843
+dermatology,evidence_resamples x lambda_penalty,2,cost_ratio,-0.004534531113691946
+dermatology,evidence_resamples x lambda_penalty,2,selected_features,-0.08333333333333437
+dermatology,evidence_resamples x lambda_penalty,2,nogueira_stability,0.03488178606364861
+dermatology,budget_ratio x evidence_resamples x lambda_penalty,3,balanced_accuracy,0.0067149181006895264
+dermatology,budget_ratio x evidence_resamples x lambda_penalty,3,cost_ratio,0.0031376049871200615
+dermatology,budget_ratio x evidence_resamples x lambda_penalty,3,selected_features,-0.08333333333333348
+dermatology,budget_ratio x evidence_resamples x lambda_penalty,3,nogueira_stability,0.024417553410892967
+hill_valley,budget_ratio,1,balanced_accuracy,-0.005363036303630331
+hill_valley,budget_ratio,1,cost_ratio,0.33146464137358955
+hill_valley,budget_ratio,1,selected_features,23.25
+hill_valley,budget_ratio,1,nogueira_stability,-0.3014063335028391
+hill_valley,evidence_resamples,1,balanced_accuracy,-0.006188118811881194
+hill_valley,evidence_resamples,1,cost_ratio,-0.002771939973552101
+hill_valley,evidence_resamples,1,selected_features,-0.0833333333333357
+hill_valley,evidence_resamples,1,nogueira_stability,0.0276319692574081
+hill_valley,lambda_penalty,1,balanced_accuracy,0.006600660066006625
+hill_valley,lambda_penalty,1,cost_ratio,0.006784128834018785
+hill_valley,lambda_penalty,1,selected_features,0.41666666666666785
+hill_valley,lambda_penalty,1,nogueira_stability,0.0773763494429869
+hill_valley,budget_ratio x evidence_resamples,2,balanced_accuracy,0.0070132013201320564
+hill_valley,budget_ratio x evidence_resamples,2,cost_ratio,-0.0015965677781546728
+hill_valley,budget_ratio x evidence_resamples,2,selected_features,0.0833333333333357
+hill_valley,budget_ratio x evidence_resamples,2,nogueira_stability,0.011656480031014965
+hill_valley,budget_ratio x lambda_penalty,2,balanced_accuracy,-0.007425742574257432
+hill_valley,budget_ratio x lambda_penalty,2,cost_ratio,0.008017087522053809
+hill_valley,budget_ratio x lambda_penalty,2,selected_features,0.9166666666666679
+hill_valley,budget_ratio x lambda_penalty,2,nogueira_stability,-0.03630552937363814
+hill_valley,evidence_resamples x lambda_penalty,2,balanced_accuracy,-0.005775577557755762
+hill_valley,evidence_resamples x lambda_penalty,2,cost_ratio,-0.0010261874765590123
+hill_valley,evidence_resamples x lambda_penalty,2,selected_features,0.2500000000000018
+hill_valley,evidence_resamples x lambda_penalty,2,nogueira_stability,0.04838966126347359
+hill_valley,budget_ratio x evidence_resamples x lambda_penalty,3,balanced_accuracy,0.007425742574257432
+hill_valley,budget_ratio x evidence_resamples x lambda_penalty,3,cost_ratio,-0.0015498292279288312
+hill_valley,budget_ratio x evidence_resamples x lambda_penalty,3,selected_features,1.083333333333334
+hill_valley,budget_ratio x evidence_resamples x lambda_penalty,3,nogueira_stability,-0.007318841194124834
+ionosphere,budget_ratio,1,balanced_accuracy,0.005993999225706537
+ionosphere,budget_ratio,1,cost_ratio,0.27689690605709916
+ionosphere,budget_ratio,1,selected_features,4.416666666666666
+ionosphere,budget_ratio,1,nogueira_stability,-0.23113861340187852
+ionosphere,evidence_resamples,1,balanced_accuracy,0.008705962059620598
+ionosphere,evidence_resamples,1,cost_ratio,0.01353887106459968
+ionosphere,evidence_resamples,1,selected_features,0.5833333333333339
+ionosphere,evidence_resamples,1,nogueira_stability,-0.03204592705590267
+ionosphere,lambda_penalty,1,balanced_accuracy,-0.0005797522260936605
+ionosphere,lambda_penalty,1,cost_ratio,0.01607020721589634
+ionosphere,lambda_penalty,1,selected_features,0.9166666666666674
+ionosphere,lambda_penalty,1,nogueira_stability,-0.07161183568431136
+ionosphere,budget_ratio x evidence_resamples,2,balanced_accuracy,0.008758226867982888
+ionosphere,budget_ratio x evidence_resamples,2,cost_ratio,0.014030040124247065
+ionosphere,budget_ratio x evidence_resamples,2,selected_features,0.9166666666666661
+ionosphere,budget_ratio x evidence_resamples,2,nogueira_stability,0.060154392664368256
+ionosphere,budget_ratio x lambda_penalty,2,balanced_accuracy,-0.010790747193186151
+ionosphere,budget_ratio x lambda_penalty,2,cost_ratio,0.013971296004994686
+ionosphere,budget_ratio x lambda_penalty,2,selected_features,0.9166666666666665
+ionosphere,budget_ratio x lambda_penalty,2,nogueira_stability,-0.09888819912493411
+ionosphere,evidence_resamples x lambda_penalty,2,balanced_accuracy,0.014371854432830039
+ionosphere,evidence_resamples x lambda_penalty,2,cost_ratio,0.015013479133500464
+ionosphere,evidence_resamples x lambda_penalty,2,selected_features,1.0833333333333335
+ionosphere,evidence_resamples x lambda_penalty,2,nogueira_stability,-0.00626059375061809
+ionosphere,budget_ratio x evidence_resamples x lambda_penalty,3,balanced_accuracy,0.0030923344947735576
+ionosphere,budget_ratio x evidence_resamples x lambda_penalty,3,cost_ratio,0.01255543205534631
+ionosphere,budget_ratio x evidence_resamples x lambda_penalty,3,selected_features,0.4166666666666665
+ionosphere,budget_ratio x evidence_resamples x lambda_penalty,3,nogueira_stability,0.03436905935908367
+madelon,budget_ratio,1,balanced_accuracy,-0.029124228846720168
+madelon,budget_ratio,1,cost_ratio,0.3117074797836228
+madelon,budget_ratio,1,selected_features,126.0
+madelon,budget_ratio,1,nogueira_stability,-0.21167359719095566
+madelon,evidence_resamples,1,balanced_accuracy,0.0025977089785479412
+madelon,evidence_resamples,1,cost_ratio,0.004390063443594799
+madelon,evidence_resamples,1,selected_features,1.83333333333335
+madelon,evidence_resamples,1,nogueira_stability,0.02044895130824989
+madelon,lambda_penalty,1,balanced_accuracy,-0.0020407403071487362
+madelon,lambda_penalty,1,cost_ratio,-0.0016998817725643114
+madelon,lambda_penalty,1,selected_features,-11.000000000000004
+madelon,lambda_penalty,1,nogueira_stability,-0.023751691641493072
+madelon,budget_ratio x evidence_resamples,2,balanced_accuracy,0.012408073562435451
+madelon,budget_ratio x evidence_resamples,2,cost_ratio,0.004904983969026305
+madelon,budget_ratio x evidence_resamples,2,selected_features,0.3333333333333357
+madelon,budget_ratio x evidence_resamples,2,nogueira_stability,-0.0341057193108337
+madelon,budget_ratio x lambda_penalty,2,balanced_accuracy,-0.0014336621931794746
+madelon,budget_ratio x lambda_penalty,2,cost_ratio,-0.0021664106236376143
+madelon,budget_ratio x lambda_penalty,2,selected_features,7.833333333333332
+madelon,budget_ratio x lambda_penalty,2,nogueira_stability,-0.011378548534408034
+madelon,evidence_resamples x lambda_penalty,2,balanced_accuracy,0.006820205546272717
+madelon,evidence_resamples x lambda_penalty,2,cost_ratio,0.002691508087715018
+madelon,evidence_resamples x lambda_penalty,2,selected_features,-2.9999999999999964
+madelon,evidence_resamples x lambda_penalty,2,nogueira_stability,-0.004273480630296339
+madelon,budget_ratio x evidence_resamples x lambda_penalty,3,balanced_accuracy,-0.004882788249025272
+madelon,budget_ratio x evidence_resamples x lambda_penalty,3,cost_ratio,0.0017833360756923308
+madelon,budget_ratio x evidence_resamples x lambda_penalty,3,selected_features,2.166666666666668
+madelon,budget_ratio x evidence_resamples x lambda_penalty,3,nogueira_stability,-0.02150714469873441
+parkinsons,budget_ratio,1,balanced_accuracy,-0.017715419501133756
+parkinsons,budget_ratio,1,cost_ratio,0.26577722953363014
+parkinsons,budget_ratio,1,selected_features,4.583333333333333
+parkinsons,budget_ratio,1,nogueira_stability,-0.19168401043401054
+parkinsons,evidence_resamples,1,balanced_accuracy,0.029620181405895618
+parkinsons,evidence_resamples,1,cost_ratio,-0.013693536650301957
+parkinsons,evidence_resamples,1,selected_features,-0.5833333333333328
+parkinsons,evidence_resamples,1,nogueira_stability,0.04016885891885902
+parkinsons,lambda_penalty,1,balanced_accuracy,0.040202191987906255
+parkinsons,lambda_penalty,1,cost_ratio,-0.023530089056312122
+parkinsons,lambda_penalty,1,selected_features,-0.2499999999999999
+parkinsons,lambda_penalty,1,nogueira_stability,0.03441905316905319
+parkinsons,budget_ratio x evidence_resamples,2,balanced_accuracy,0.02215608465608465
+parkinsons,budget_ratio x evidence_resamples,2,cost_ratio,-0.01495993577723001
+parkinsons,budget_ratio x evidence_resamples,2,selected_features,-0.5833333333333333
+parkinsons,budget_ratio x evidence_resamples,2,nogueira_stability,-0.12688862063862066
+parkinsons,budget_ratio x lambda_penalty,2,balanced_accuracy,-0.015069916855631083
+parkinsons,budget_ratio x lambda_penalty,2,cost_ratio,-0.009710882288598986
+parkinsons,budget_ratio x lambda_penalty,2,selected_features,0.08333333333333337
+parkinsons,budget_ratio x lambda_penalty,2,nogueira_stability,-0.08196502571502584
+parkinsons,evidence_resamples x lambda_penalty,2,balanced_accuracy,0.009023053665910774
+parkinsons,evidence_resamples x lambda_penalty,2,cost_ratio,-0.02557517475485265
+parkinsons,evidence_resamples x lambda_penalty,2,selected_features,-0.41666666666666685
+parkinsons,evidence_resamples x lambda_penalty,2,nogueira_stability,-0.025610731860731872
+parkinsons,budget_ratio x evidence_resamples x lambda_penalty,3,balanced_accuracy,-0.009778911564625847
+parkinsons,budget_ratio x evidence_resamples x lambda_penalty,3,cost_ratio,-0.015755882510184515
+parkinsons,budget_ratio x evidence_resamples x lambda_penalty,3,selected_features,-0.08333333333333359
+parkinsons,budget_ratio x evidence_resamples x lambda_penalty,3,nogueira_stability,-0.03290390165390167
+sonar,budget_ratio,1,balanced_accuracy,-0.000132234507234541
+sonar,budget_ratio,1,cost_ratio,0.30888965880033015
+sonar,budget_ratio,1,selected_features,14.249999999999998
+sonar,budget_ratio,1,nogueira_stability,-0.15831895127663187
+sonar,evidence_resamples,1,balanced_accuracy,0.02692251911001914
+sonar,evidence_resamples,1,cost_ratio,0.007601996446439135
+sonar,evidence_resamples,1,selected_features,1.416666666666666
+sonar,evidence_resamples,1,nogueira_stability,-0.08665008438792932
+sonar,lambda_penalty,1,balanced_accuracy,0.01068966693966697
+sonar,lambda_penalty,1,cost_ratio,-0.00902319129468266
+sonar,lambda_penalty,1,selected_features,-3.4166666666666665
+sonar,lambda_penalty,1,nogueira_stability,-0.137271858158741
+sonar,budget_ratio x evidence_resamples,2,balanced_accuracy,-0.0006249146874147127
+sonar,budget_ratio x evidence_resamples,2,cost_ratio,0.0010993196449788079
+sonar,budget_ratio x evidence_resamples,2,selected_features,0.08333333333333393
+sonar,budget_ratio x evidence_resamples,2,nogueira_stability,-0.00740236861559701
+sonar,budget_ratio x lambda_penalty,2,balanced_accuracy,0.011576917826917804
+sonar,budget_ratio x lambda_penalty,2,cost_ratio,-0.011612396359603365
+sonar,budget_ratio x lambda_penalty,2,selected_features,1.9166666666666665
+sonar,budget_ratio x lambda_penalty,2,nogueira_stability,0.12008960593423607
+sonar,evidence_resamples x lambda_penalty,2,balanced_accuracy,-0.0009235087360087435
+sonar,evidence_resamples x lambda_penalty,2,cost_ratio,-0.0077022263381101505
+sonar,evidence_resamples x lambda_penalty,2,selected_features,-0.24999999999999867
+sonar,evidence_resamples x lambda_penalty,2,nogueira_stability,-0.095937350819492
+sonar,budget_ratio x evidence_resamples x lambda_penalty,3,balanced_accuracy,-0.0008979149604149972
+sonar,budget_ratio x evidence_resamples x lambda_penalty,3,cost_ratio,-0.0009873561903169029
+sonar,budget_ratio x evidence_resamples x lambda_penalty,3,selected_features,1.4166666666666665
+sonar,budget_ratio x evidence_resamples x lambda_penalty,3,nogueira_stability,0.02356852081385119
+spambase,budget_ratio,1,balanced_accuracy,0.019837594909588363
+spambase,budget_ratio,1,cost_ratio,0.3436493311601989
+spambase,budget_ratio,1,selected_features,17.166666666666664
+spambase,budget_ratio,1,nogueira_stability,-0.2848758264418576
+spambase,evidence_resamples,1,balanced_accuracy,-0.00028305132271866373
+spambase,evidence_resamples,1,cost_ratio,0.00980567275743957
+spambase,evidence_resamples,1,selected_features,-0.6666666666666661
+spambase,evidence_resamples,1,nogueira_stability,-0.02540223194629132
+spambase,lambda_penalty,1,balanced_accuracy,0.0012395958931759599
+spambase,lambda_penalty,1,cost_ratio,0.013217626527131494
+spambase,lambda_penalty,1,selected_features,-0.6666666666666661
+spambase,lambda_penalty,1,nogueira_stability,-0.007434091039339716
+spambase,budget_ratio x evidence_resamples,2,balanced_accuracy,0.00010478559696769363
+spambase,budget_ratio x evidence_resamples,2,cost_ratio,0.011149316896771816
+spambase,budget_ratio x evidence_resamples,2,selected_features,-0.5000000000000018
+spambase,budget_ratio x evidence_resamples,2,nogueira_stability,-0.021421426323150028
+spambase,budget_ratio x lambda_penalty,2,balanced_accuracy,-0.0015195302701258018
+spambase,budget_ratio x lambda_penalty,2,cost_ratio,0.012711411292936257
+spambase,budget_ratio x lambda_penalty,2,selected_features,-0.16666666666666607
+spambase,budget_ratio x lambda_penalty,2,nogueira_stability,-0.06347507190857311
+spambase,evidence_resamples x lambda_penalty,2,balanced_accuracy,-0.001257378280560606
+spambase,evidence_resamples x lambda_penalty,2,cost_ratio,-0.007518368888118916
+spambase,evidence_resamples x lambda_penalty,2,selected_features,-0.666666666666667
+spambase,evidence_resamples x lambda_penalty,2,nogueira_stability,0.05660661150833522
+spambase,budget_ratio x evidence_resamples x lambda_penalty,3,balanced_accuracy,-0.001360298481561828
+spambase,budget_ratio x evidence_resamples x lambda_penalty,3,cost_ratio,-0.005154242582575873
+spambase,budget_ratio x evidence_resamples x lambda_penalty,3,selected_features,-0.5000000000000009
+spambase,budget_ratio x evidence_resamples x lambda_penalty,3,nogueira_stability,-0.009782953238893874
+steel_plates_fault,budget_ratio,1,balanced_accuracy,0.04566652361340362
+steel_plates_fault,budget_ratio,1,cost_ratio,0.3460027943828869
+steel_plates_fault,budget_ratio,1,selected_features,7.749999999999999
+steel_plates_fault,budget_ratio,1,nogueira_stability,-0.15150662741112597
+steel_plates_fault,evidence_resamples,1,balanced_accuracy,0.006566075047650555
+steel_plates_fault,evidence_resamples,1,cost_ratio,0.007972388761377472
+steel_plates_fault,evidence_resamples,1,selected_features,0.25
+steel_plates_fault,evidence_resamples,1,nogueira_stability,-0.033153087187632435
+steel_plates_fault,lambda_penalty,1,balanced_accuracy,-0.009102360234091306
+steel_plates_fault,lambda_penalty,1,cost_ratio,0.001182612350722638
+steel_plates_fault,lambda_penalty,1,selected_features,0.2500000000000002
+steel_plates_fault,lambda_penalty,1,nogueira_stability,-0.07721857644184586
+steel_plates_fault,budget_ratio x evidence_resamples,2,balanced_accuracy,-0.004082544568736413
+steel_plates_fault,budget_ratio x evidence_resamples,2,cost_ratio,0.0065100486252071404
+steel_plates_fault,budget_ratio x evidence_resamples,2,selected_features,0.08333333333333393
+steel_plates_fault,budget_ratio x evidence_resamples,2,nogueira_stability,0.03188357051449753
+steel_plates_fault,budget_ratio x lambda_penalty,2,balanced_accuracy,0.009709272687038056
+steel_plates_fault,budget_ratio x lambda_penalty,2,cost_ratio,-5.9252214883113996e-05
+steel_plates_fault,budget_ratio x lambda_penalty,2,selected_features,0.0833333333333337
+steel_plates_fault,budget_ratio x lambda_penalty,2,nogueira_stability,0.12533930367115015
+steel_plates_fault,evidence_resamples x lambda_penalty,2,balanced_accuracy,0.0019051095937210605
+steel_plates_fault,evidence_resamples x lambda_penalty,2,cost_ratio,0.002907573715992838
+steel_plates_fault,evidence_resamples x lambda_penalty,2,selected_features,-0.08333333333333282
+steel_plates_fault,evidence_resamples x lambda_penalty,2,nogueira_stability,-0.015836536203911303
+steel_plates_fault,budget_ratio x evidence_resamples x lambda_penalty,3,balanced_accuracy,0.0005784208851930817
+steel_plates_fault,budget_ratio x evidence_resamples x lambda_penalty,3,cost_ratio,0.011574863670591774
+steel_plates_fault,budget_ratio x evidence_resamples x lambda_penalty,3,selected_features,0.41666666666666674
+steel_plates_fault,budget_ratio x evidence_resamples x lambda_penalty,3,nogueira_stability,0.014567019530776396
+wine,budget_ratio,1,balanced_accuracy,-0.009772544283413787
+wine,budget_ratio,1,cost_ratio,0.26756000119874546
+wine,budget_ratio,1,selected_features,2.5
+wine,budget_ratio,1,nogueira_stability,-0.33621217859634656
+wine,evidence_resamples,1,balanced_accuracy,-0.0012077294685989837
+wine,evidence_resamples,1,cost_ratio,0.008545925122024484
+wine,evidence_resamples,1,selected_features,2.220446049250313e-16
+wine,evidence_resamples,1,nogueira_stability,0.05582663054772588
+wine,lambda_penalty,1,balanced_accuracy,0.0009057971014492516
+wine,lambda_penalty,1,cost_ratio,-0.01997990824499253
+wine,lambda_penalty,1,selected_features,-0.33333333333333304
+wine,lambda_penalty,1,nogueira_stability,-0.0094503288308668
+wine,budget_ratio x evidence_resamples,2,balanced_accuracy,-0.0025664251207729305
+wine,budget_ratio x evidence_resamples,2,cost_ratio,0.003530359325481097
+wine,budget_ratio x evidence_resamples,2,selected_features,-0.1666666666666663
+wine,budget_ratio x evidence_resamples,2,nogueira_stability,0.04403755755175634
+wine,budget_ratio x lambda_penalty,2,balanced_accuracy,0.002264492753623143
+wine,budget_ratio x lambda_penalty,2,cost_ratio,-0.014964342448449144
+wine,budget_ratio x lambda_penalty,2,selected_features,-0.16666666666666652
+wine,budget_ratio x lambda_penalty,2,nogueira_stability,0.0023387441651027407
+wine,evidence_resamples x lambda_penalty,2,balanced_accuracy,-0.0012077294685990114
+wine,evidence_resamples x lambda_penalty,2,cost_ratio,0.00854592512202447
+wine,evidence_resamples x lambda_penalty,2,selected_features,0.0
+wine,evidence_resamples x lambda_penalty,2,nogueira_stability,0.05582663054772588
+wine,budget_ratio x evidence_resamples x lambda_penalty,3,balanced_accuracy,-0.0025664251207729027
+wine,budget_ratio x evidence_resamples x lambda_penalty,3,cost_ratio,0.0035303593254810833
+wine,budget_ratio x evidence_resamples x lambda_penalty,3,selected_features,-0.16666666666666652
+wine,budget_ratio x evidence_resamples x lambda_penalty,3,nogueira_stability,0.04403755755175634
