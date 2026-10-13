@@ -33,3 +33,7 @@ See CONTINUE_WORK_FA.md for continuation instructions. The complete ZIP in Relea
 ## Public evidence supplement — 2026-10-13
 
 See external_evidence_2026_10_13/REPORT_FA.md. This adds 25 exploratory source-only fits evaluated on a separate public cohort in a restricted three-feature space, plus an official published FNA fee and shared-service cost scenario. Subject-level balanced accuracy was 0.575 with a descriptive 95% interval [0.475,0.675]; no clinical superiority is established. The original 1,464-run paper remains separate. Clinical identities, historical missing evidence and author signoff remain unresolved.
+
+## Integrated manuscript revision — 2026-10-13
+
+Latest authoritative manuscript: integrated_revision_2026_10_13. Both languages have four-page Word/PDF/LaTeX versions,17references,8tables and2figures. Transfer and shared-service-cost findings are integrated into the abstract, discussion,Table8,conclusion and14reviewer responses. See unresolved_items_fa.md and SUBMISSION_STATUS_FA.md: author approval was explicitly withheld and no conference submission occurred. The1464original runs and25transfer fits retain distinct protocols.

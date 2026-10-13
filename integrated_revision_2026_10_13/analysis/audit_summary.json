@@ -1,0 +1,31 @@
+{
+  "planned_extension_runs": 690,
+  "completed_extension_runs": 690,
+  "total_fold_safe_runs": 1464,
+  "primary_five_seed_runs": 750,
+  "primary_masks_per_dataset_method": 15,
+  "factorial_runs": 240,
+  "larger_search_runs": 150,
+  "duplicate_jobs": 0,
+  "failed_attempts": 0,
+  "all_masks_binary": true,
+  "all_mask_counts_match": true,
+  "maximum_cost_error": 2.842170943040401e-14,
+  "inner_train_validation_outer_test_overlap": 0,
+  "outer_row_overlap": 0,
+  "inner_subject_overlap": 0,
+  "outer_subject_overlap": 0,
+  "smote_dimension_mismatches": 0,
+  "candidate_budget_violations": 0,
+  "final_constrained_budget_violations": 0,
+  "maximum_ba_error": 1.1102230246251565e-16,
+  "maximum_accuracy_error": 1.1102230246251565e-16,
+  "publication": {
+    "repository": "https://github.com/Amirgh23/coststable-ehoa",
+    "protocol_commit": "72c87b6a44fb236225eef18e6cfca196b14fbdee",
+    "verified_public": true,
+    "recorded_before_execution_utc": "2026-10-12T12:12:32.783322+00:00",
+    "protocol_url": "https://github.com/Amirgh23/coststable-ehoa/blob/72c87b6a44fb236225eef18e6cfca196b14fbdee/extended_revision_2026_10_12/protocol.json"
+  },
+  "scope": "Prior 774 fold-safe runs plus 690 prospective extension runs; original leaked archival results excluded"
+}

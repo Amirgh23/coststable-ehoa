@@ -1,0 +1,70 @@
+{
+  "checked_utc": "2026-10-13T08:23:30.021232+00:00",
+  "page_counts": {
+    "manuscript_fa.pdf": 4,
+    "manuscript_en.pdf": 4,
+    "qa\\word_fa.pdf": 4,
+    "qa\\word_en.pdf": 4
+  },
+  "references": 17,
+  "tables": 8,
+  "figures": 2,
+  "word_equations": {
+    "manuscript_fa.docx": 5,
+    "manuscript_en.docx": 5
+  },
+  "word_tables": {
+    "manuscript_fa.docx": 8,
+    "manuscript_en.docx": 8
+  },
+  "visual_review": "All sixteen final rendered manuscript pages inspected",
+  "author_approval": false,
+  "submitted": false,
+  "submission_reason": "Author explicitly said submission must not take place on 2026-10-13",
+  "study_runs": 1464,
+  "separate_transfer_fits": 25,
+  "external_audit": {
+    "source_recordings": 195,
+    "source_prefixes": 32,
+    "source_pd_prefixes": 24,
+    "target_recordings": 240,
+    "target_subjects": 80,
+    "target_recordings_per_subject": [
+      3
+    ],
+    "target_class_subject_counts": {
+      "0": 40,
+      "1": 40
+    },
+    "common_features": [
+      "RPDE",
+      "DFA",
+      "PPE"
+    ],
+    "source_inner_subject_overlap": 0,
+    "target_fit_calls": 0,
+    "external_runs": 25,
+    "clinical_identity_confirmed": false,
+    "max_subject_ba_recalculation_error": 0.0,
+    "all_target_subjects_three_recordings": true,
+    "all_constrained_masks_within_one_feature": true
+  },
+  "group_cost": {
+    "source_url": "https://dphhs.mt.gov/assets/publichealth/Cancer/MCCP2025FeeSchedule.pdf",
+    "document_effective_date": "2024-06-30",
+    "page": 3,
+    "currency": "USD",
+    "code": "88173",
+    "global_fna_interpretation_fee": 164.34,
+    "technical_fee": 98.21,
+    "professional_fee": 66.13,
+    "mapping": "Illustrative shared-service grouping of all 30 WDBC image-derived columns; not a validated patient invoice or WDBC feature-extraction tariff",
+    "excluded": "Needle collection, imaging, additional visits, feature-computation time and risk; unknown marginal charges",
+    "cost_function": "C(S)=164.34 if S is nonempty, else 0",
+    "implication": "Nonempty subsets cannot save this shared-service fee; budget30% infeasible under this group-only cost model",
+    "primary_masks_audited": 75,
+    "nonempty_masks": 75,
+    "claims": "No Iran/current-2026 tariff claim; no measured per-feature time/risk or clinical saving claim"
+  },
+  "reviewer_items": 14
+}

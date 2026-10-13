@@ -1,0 +1,330 @@
+[
+  {
+    "path": "AUTHOR_APPROVAL_STATUS.json",
+    "sha256": "88472a1af93013f129a820a476f08d328e187831da6aad8a5680a6525b17da20"
+  },
+  {
+    "path": "author_declaration_draft_fa.md",
+    "sha256": "58b11d4525d4897a8a3181b2ec64c722747c8b9236a27976f6a13e4dcbeb0c26"
+  },
+  {
+    "path": "baic2026_header.png",
+    "sha256": "0f1640b970c3950160e9b57b253cc048e8535bb62f72f9e89ca4c1f0d42c7d12"
+  },
+  {
+    "path": "evidence_requests_drafts.md",
+    "sha256": "e63454bfe493d8175ac7caaf7e20e1b458ff9e2b8f0f083333fa51bd55c6b099"
+  },
+  {
+    "path": "manuscript_en.docx",
+    "sha256": "08278eef6f2ce84f9b5de6c322f5f1e5ef2372a0a28e6a923bcc9eee46f43217"
+  },
+  {
+    "path": "manuscript_en.pdf",
+    "sha256": "84be4d00a1cf951ecbe8bcb6987838f6a3e3583418430bdead37bb6c8ecf2e18"
+  },
+  {
+    "path": "manuscript_en.tex",
+    "sha256": "7e7516157854b0b56e55561769f3d3abd1cad241c8e12725fb0f5f7c6eb67df1"
+  },
+  {
+    "path": "manuscript_fa.docx",
+    "sha256": "5c687f1ed66b81ca4bb033902fcffe0fba83bbcf52fd2c0a5d895a8ccbfe4740"
+  },
+  {
+    "path": "manuscript_fa.pdf",
+    "sha256": "ecd6f6a2aeae6c1072a8ad782c22833f18fe59736385f95d9279b4785b49121b"
+  },
+  {
+    "path": "manuscript_fa.tex",
+    "sha256": "43d3e3293b0302870379e42b89c6650cf99100934479319c2d80ddbe9795abb1"
+  },
+  {
+    "path": "README_FA.md",
+    "sha256": "b375c099514b1087ed94a348b6d9d21a9d77da1b25b8543ab641707a40940c07"
+  },
+  {
+    "path": "references_for_submission.txt",
+    "sha256": "eae42285a075cf9141f3dce2276367d3ae052b43313ba188185270d682f6d070"
+  },
+  {
+    "path": "response_to_reviewers_fa.md",
+    "sha256": "423aee674f2de65c79945f238b1dff7253b668e65b71ff1f6403bfde9114fdf8"
+  },
+  {
+    "path": "scientific_report_fa.md",
+    "sha256": "c4721041fb199a0593ad60145bf157f1e63a7dce328317558bd6e726e47f323f"
+  },
+  {
+    "path": "SUBMISSION_STATUS_FA.md",
+    "sha256": "43beccef12b4891efef519ce2f95ebe070afd9840cca089dcdfec78b685c92b4"
+  },
+  {
+    "path": "unresolved_items_fa.md",
+    "sha256": "b735bd95fc2aa04d948e117af9ba1041c3067498050fba3e85a941bcd095956f"
+  },
+  {
+    "path": "analysis/audit_summary.json",
+    "sha256": "79255ff7e442538e335e86f93e2ab5b937ecb732ff5e7abb6b0b67eca41f7222"
+  },
+  {
+    "path": "analysis/breast_cancer_case.csv",
+    "sha256": "578a203c9aecea5eba86ede86db9ce8c5e67a12831a58cfd6cfb2de65d7d166b"
+  },
+  {
+    "path": "analysis/breast_class_specific_metrics.csv",
+    "sha256": "1dcf13ecd1eaba14ebc883d08288590f0a61947c77f275399431cf3482a12ae0"
+  },
+  {
+    "path": "analysis/breast_selection_frequencies.csv",
+    "sha256": "10cee391437b1d0847433c5c8f61339adc33e6c5f151c5cc78bd6ee048b8c0c8"
+  },
+  {
+    "path": "analysis/delivery_quality.json",
+    "sha256": "d2fbc9bad1bc2e7e2987fad651fef9b30658b790b3fec18a99fa2c51c6226775"
+  },
+  {
+    "path": "analysis/extended_run_audit.csv",
+    "sha256": "13039c645467518288f297cdfdbbcd71034f53466a7e6bbceddfa9aea340ff94"
+  },
+  {
+    "path": "analysis/factorial_cells.csv",
+    "sha256": "c1abe73a1e2deb4f3a1c79ace4f4c007eae199106493905d66471568c05ce903"
+  },
+  {
+    "path": "analysis/factorial_dataset_effects.csv",
+    "sha256": "15249d7943a44beb02e61b1c75cc9a8107c930fa4381889351c7104f51b6f779"
+  },
+  {
+    "path": "analysis/factorial_effects.csv",
+    "sha256": "26dddfe7c1de483036e67ff2636c354d85426341b85d435b7173a73f137f3adb"
+  },
+  {
+    "path": "analysis/fresh_dataset_specifications.csv",
+    "sha256": "503eb25366126137a5cdeefaf8dd12caa96be3374a06bb5149fb13559fb3c60d"
+  },
+  {
+    "path": "analysis/primary_dataset_means.csv",
+    "sha256": "697a2587a9e8d35d9f30ae21569e2ff1bb9b9abcae4b09bc3928f093a628ec97"
+  },
+  {
+    "path": "analysis/primary_five_seed_runs.csv",
+    "sha256": "a045be736cb390c8f12fa33f78fedb6750d5e9bd10fb71ea939e7bbf83c99147"
+  },
+  {
+    "path": "analysis/primary_friedman.csv",
+    "sha256": "bbb6897577499f0c86ffa2d4b3c643f13a792cd8f12d25ca27fadca43ebf5daf"
+  },
+  {
+    "path": "analysis/primary_overall.csv",
+    "sha256": "3da19c78d8c4ad80f35b405a1286ff07660c8b1d6f57ca6a3c520ef7b6e23695"
+  },
+  {
+    "path": "analysis/primary_paired.csv",
+    "sha256": "459bb8a94a55a70d9961e6f356589a53422c93109f1f55d17b797599f80cfc7c"
+  },
+  {
+    "path": "analysis/primary_ranks.csv",
+    "sha256": "e7c19360cad6c72d0a2baed96efcfca60a76bef3ae283d79f79faf66ba938d8e"
+  },
+  {
+    "path": "analysis/reviewer_response.csv",
+    "sha256": "0fa55e696ec0974698e19d8a6a4390cf72f337902126f8a1f7d0852dcff204eb"
+  },
+  {
+    "path": "analysis/search_profile_dataset_means.csv",
+    "sha256": "e320805573acf094a7196bbf4f69f87bd1ec1b4612965a74a8eba9c498395b19"
+  },
+  {
+    "path": "analysis/search_profile_effects.csv",
+    "sha256": "7a135e120c607fbdf6a1f217b2cd5a89a55fbe23dc9a2e182a73bbfaff868727"
+  },
+  {
+    "path": "figures/breast_top_frequencies.pdf",
+    "sha256": "fee9d020599d502fa4b3c631eada8430524ea04cc078c36b11416214b4f4a889"
+  },
+  {
+    "path": "figures/breast_top_frequencies.png",
+    "sha256": "04bbde76034e561d889fdfa877ef006712b532e766e30a008dda71faff635f97"
+  },
+  {
+    "path": "figures/breast_top_frequencies.svg",
+    "sha256": "4ed210c857ea831be49243d92d56c4028e96d319487d6f766aa3b690d06791e1"
+  },
+  {
+    "path": "figures/breast_top_frequencies.tiff",
+    "sha256": "7ba3b50b3b26df5765626306345a26cc398472c3eac0056daa26493c93c48491"
+  },
+  {
+    "path": "figures/eligible_comparison.pdf",
+    "sha256": "02e5fff74fca19137e6588ee6eeec184f2a9908c3bb87be24bca588ba74308ca"
+  },
+  {
+    "path": "figures/eligible_comparison.png",
+    "sha256": "b083cb2324c31c13d27626ce649d1f25d25a81a83d3cba0f983c1320f02a81f2"
+  },
+  {
+    "path": "figures/eligible_comparison.svg",
+    "sha256": "38694976d5cca2c5cd109bdbda471bd572b81bcee5614ec6717f4e0fbefdadcc"
+  },
+  {
+    "path": "figures/eligible_comparison.tiff",
+    "sha256": "a64e10e52631d91512a0a6064492e546ed5f6ed84b193c2f8b2ca8b113d4dddd"
+  },
+  {
+    "path": "qa/doc_en-1.png",
+    "sha256": "c19f4681c8e73e95c5fad6172fae8753f09414d091b5a531e0ca9988a154d226"
+  },
+  {
+    "path": "qa/doc_en-2.png",
+    "sha256": "495ce03e113454246c8e656d05ff7d17f7bbafe2fd48786463304aa2f7ebc0fb"
+  },
+  {
+    "path": "qa/doc_en-3.png",
+    "sha256": "ca21070e3eb7aa85e389fa698e4a1f5adc7840154518af74c401b6e95dd417d6"
+  },
+  {
+    "path": "qa/doc_en-4.png",
+    "sha256": "3d3f68e2d6bc6f2320d3b0289cc485c4077c56e7e6313a3301b395f1f11b0223"
+  },
+  {
+    "path": "qa/doc_fa-1.png",
+    "sha256": "bbc97e286af3081d87098a79e3f3efae157c0f74ade3d875e85e2ae9d5513246"
+  },
+  {
+    "path": "qa/doc_fa-2.png",
+    "sha256": "edbf8404d1acaa595c79b9d389d8c71d6592cbda3bbba4f7f3c8c880fdff3239"
+  },
+  {
+    "path": "qa/doc_fa-3.png",
+    "sha256": "0444f3dd4e8503c31f4a4e893521fba6eb7bd4a5994cb04fdcc8440fd1a93d44"
+  },
+  {
+    "path": "qa/doc_fa-4.png",
+    "sha256": "70542c99a19f2e15ec933227c6b3d6bdbd2698dec18e8deb979472821704a49b"
+  },
+  {
+    "path": "qa/tex_en-1.png",
+    "sha256": "bcf06850fbc702bf9ba4d2e0830bb277627328d2fdc123cde115df4db976b85e"
+  },
+  {
+    "path": "qa/tex_en-2.png",
+    "sha256": "69bdef70b0a82d3adbb09798e772e81fe2626fee603845f6d029d9b333a1ab7c"
+  },
+  {
+    "path": "qa/tex_en-3.png",
+    "sha256": "79c47efe06177f50e7323e0fde4879cccf9f81f77666a6b14ebc0abf5e9ff483"
+  },
+  {
+    "path": "qa/tex_en-4.png",
+    "sha256": "7010ddb41001c565ab7ed5010d25a457f31d99634479aacf2d8fe79a4b6a46ae"
+  },
+  {
+    "path": "qa/tex_fa-1.png",
+    "sha256": "3143f7a334ef329fbe4bd4c40a3dcb07f898856c62731eb25585cd6a1a9f3f5c"
+  },
+  {
+    "path": "qa/tex_fa-2.png",
+    "sha256": "5910adafe21df6f6e020bd6214180a006672c8feff388bebfd0722404dc8c842"
+  },
+  {
+    "path": "qa/tex_fa-3.png",
+    "sha256": "2a0d6a100c04dda1044fb25527a7633d75b834bba53f2fab644805246a564633"
+  },
+  {
+    "path": "qa/tex_fa-4.png",
+    "sha256": "6abaf6a5b1a99c6e8b226f8251eba3280b132d2ca75a6fdbeae89b29be4384c1"
+  },
+  {
+    "path": "qa/word_en.pdf",
+    "sha256": "e768ff780cd9bd686358a40a37e542c6a10948d7a1868814e0295ee3686f3aca"
+  },
+  {
+    "path": "qa/word_fa.pdf",
+    "sha256": "551371d4f0ada5c0001c3e36bde9d6903ef09eee7fd0482a7e2405ccaa58d6e9"
+  },
+  {
+    "path": "sources/analyze_extended_revision.py",
+    "sha256": "605723bab12271170522b77b0cb686e1250f505c283ac91bcf25e0857f57ab2b"
+  },
+  {
+    "path": "sources/analyze_fold_safe_revision.py",
+    "sha256": "5c0166223094514bbaa7c2bc387f83921b9d4ab485e3b5aec5e8f7ba6541ae56"
+  },
+  {
+    "path": "sources/build_extended_documents.py",
+    "sha256": "43d12402b9f782423caa24aa606357e67e17050041f35db96caf61754624fc20"
+  },
+  {
+    "path": "sources/build_fold_safe_documents.py",
+    "sha256": "8acad6875b8a6cc468869fbad83cc0fc2f3ed4319b110dd54acdf2aa7af7cc8a"
+  },
+  {
+    "path": "sources/build_integrated_documents.py",
+    "sha256": "ab54b26a47f6a90f9407339067137a25c7558b81cdb77fb6ea950ce1dd489314"
+  },
+  {
+    "path": "sources/build_revision_documents.py",
+    "sha256": "5e5466415a4094a80905eaeeee5c17e76edbfbffec98f93b693fcecd315a9793"
+  },
+  {
+    "path": "sources/congress_article_instructions.html",
+    "sha256": "713da8b46215a79ef3dd45688c8b7a7d1b477ee0d44996e5ce9e378da169cd81"
+  },
+  {
+    "path": "sources/congress_article_instructions.txt",
+    "sha256": "66c5bb15540bf17417ec7414099b5fe374365c6fa9a5562a31a8ead4d0450a2b"
+  },
+  {
+    "path": "sources/congress_current_page.html",
+    "sha256": "0a49f5f33a4cbf7763664813b756bfc9589f2571727e415e98902b1c413367cd"
+  },
+  {
+    "path": "sources/congress_submission_check.json",
+    "sha256": "1ad53fe96c725bde9585d0634377a936cd92df361d65a1e9d9528e926978a449"
+  },
+  {
+    "path": "sources/congress_template.docx",
+    "sha256": "a4e5b64a52f568cd5aab21066de59a248724f5ca7acf12d627d09978aedfae5a"
+  },
+  {
+    "path": "sources/draw_extended_figures.py",
+    "sha256": "6feed061a47214091b399d1e28efbf4fc569685973a08dc0d02fc0d6c36743ab"
+  },
+  {
+    "path": "sources/draw_fold_safe_figures.py",
+    "sha256": "58521fb18d7c60e4eef53a366cbf0faf312003beda8de60c80cc03e4238fcbbb"
+  },
+  {
+    "path": "sources/ehoa.py",
+    "sha256": "abc047bac978fc2fde2fd638580ef3adb7eab01f5755ff43be40dc3b86ce6b95"
+  },
+  {
+    "path": "sources/finalize_integrated_revision.py",
+    "sha256": "65e430578ae2608ae520ae02f2921aab25b34d4a0fc126f084a1b0b07c8f7df3"
+  },
+  {
+    "path": "sources/manuscript_content.json",
+    "sha256": "b68b911bca3f498b44ae4e973cf83bc3292d94449e09862d48c96565bb04a406"
+  },
+  {
+    "path": "sources/package_extended_revision.py",
+    "sha256": "2813f136fa063889dfc3a35ef27b0f0c58265be35be14b11b67de7f0d83c0d8c"
+  },
+  {
+    "path": "sources/reference_verification.csv",
+    "sha256": "eb377c0d0109afb81904a5b19ebbda98e3f78e71eda4194da754140ccc3d44f8"
+  },
+  {
+    "path": "sources/run_extended_revision.py",
+    "sha256": "5ff4949d40409c606122a66f3a48cc0674c034a0f909f12145bd7747dd4cbb9a"
+  },
+  {
+    "path": "sources/run_fold_safe_revision.py",
+    "sha256": "9a70eebf18a58aae169780e964d8df4290bd5054914be7fbe73901811a21a458"
+  },
+  {
+    "path": "sources/utils.py",
+    "sha256": "d9b8ff05838fe315499d7959aa1746224d657fb27a48a6463904f62c55134c2b"
+  }
+]

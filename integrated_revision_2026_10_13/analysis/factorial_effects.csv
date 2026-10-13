@@ -1,0 +1,29 @@
+term,metric,mean_effect,ci95_low,ci95_high,n_datasets,stochastic_seeds,interpretation
+budget_ratio,balanced_accuracy,0.013817730423199082,-0.005824141162012946,0.03776051674895048,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
+budget_ratio,cost_ratio,0.3076032323254211,0.2891407048972636,0.32597105239898594,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
+budget_ratio,nogueira_stability,-0.21049018758107413,-0.2632022849548159,-0.14946204715894046,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
+budget_ratio,selected_features,21.55,6.991666666666667,46.0,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
+budget_ratio x evidence_resamples,balanced_accuracy,0.0037771096829360582,-0.0009469265781030332,0.009209106824632489,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
+budget_ratio x evidence_resamples,cost_ratio,0.0038859838494823733,-0.0015579498372820962,0.008656982308312303,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
+budget_ratio x evidence_resamples,nogueira_stability,-0.020922948370648405,-0.05942469306945873,0.014269727675130055,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
+budget_ratio x evidence_resamples,selected_features,3.108624468950438e-16,-0.30000000000000027,0.30833333333333335,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
+budget_ratio x evidence_resamples x lambda_penalty,balanced_accuracy,-0.0008390707226998834,-0.0040637231898583755,0.002454830127000874,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
+budget_ratio x evidence_resamples x lambda_penalty,cost_ratio,-0.0009241091763887283,-0.007076199130203955,0.004843264979295452,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
+budget_ratio x evidence_resamples x lambda_penalty,nogueira_stability,0.013224912203524364,-0.004623728622089717,0.031209722276029413,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
+budget_ratio x evidence_resamples x lambda_penalty,selected_features,0.4333333333333334,-0.04166666666666694,0.9833333333333334,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
+budget_ratio x lambda_penalty,balanced_accuracy,-0.0023575545798845215,-0.007152191269073317,0.002781937846392853,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
+budget_ratio x lambda_penalty,cost_ratio,0.0007536859302040486,-0.005990785109687912,0.0077640159754351745,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
+budget_ratio x lambda_penalty,nogueira_stability,0.0015499723886362824,-0.04324799313824662,0.049688142325033643,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
+budget_ratio x lambda_penalty,selected_features,1.1500000000000001,0.10000000000000017,2.7916666666666665,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
+evidence_resamples,balanced_accuracy,0.007858919847124585,0.0015350459022086909,0.015266744932773095,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
+evidence_resamples,cost_ratio,0.005401446307421902,-0.00027944300844423645,0.010727651482320607,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
+evidence_resamples,nogueira_stability,0.007513886054746019,-0.025066975513346135,0.04120122904909262,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
+evidence_resamples,selected_features,0.416666666666668,-0.04166666666666681,0.9000000000000045,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
+evidence_resamples x lambda_penalty,balanced_accuracy,0.0012397391023285214,-0.002532534549633919,0.0055109907810006725,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
+evidence_resamples x lambda_penalty,cost_ratio,-0.0027636870632423913,-0.009529018697006075,0.003662882288076052,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
+evidence_resamples x lambda_penalty,nogueira_stability,-0.006283718250570036,-0.04370310407118061,0.026597966961995036,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
+evidence_resamples x lambda_penalty,selected_features,-0.28333333333333277,-0.983541666666666,0.2416666666666673,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
+lambda_penalty,balanced_accuracy,0.006839544791452892,8.340424549644066e-05,0.015529860897688182,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
+lambda_penalty,cost_ratio,-0.0002693274101207597,-0.00906855267618634,0.00803955533710706,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
+lambda_penalty,nogueira_stability,-0.006616216583427197,-0.05341524753176456,0.04365601366386869,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
+lambda_penalty,selected_features,-1.5333333333333332,-3.891666666666667,0.03333333333333399,10,1,descriptive endpoint factorial contrast; not all continuous-space interactions
