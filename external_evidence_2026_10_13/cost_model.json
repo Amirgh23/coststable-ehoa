@@ -1,0 +1,17 @@
+{
+  "source_url": "https://dphhs.mt.gov/assets/publichealth/Cancer/MCCP2025FeeSchedule.pdf",
+  "document_effective_date": "2024-06-30",
+  "page": 3,
+  "currency": "USD",
+  "code": "88173",
+  "global_fna_interpretation_fee": 164.34,
+  "technical_fee": 98.21,
+  "professional_fee": 66.13,
+  "mapping": "Illustrative shared-service grouping of all 30 WDBC image-derived columns; not a validated patient invoice or WDBC feature-extraction tariff",
+  "excluded": "Needle collection, imaging, additional visits, feature-computation time and risk; unknown marginal charges",
+  "cost_function": "C(S)=164.34 if S is nonempty, else 0",
+  "implication": "Nonempty subsets cannot save this shared-service fee; budget30% infeasible under this group-only cost model",
+  "primary_masks_audited": 75,
+  "nonempty_masks": 75,
+  "claims": "No Iran/current-2026 tariff claim; no measured per-feature time/risk or clinical saving claim"
+}

@@ -1,0 +1,26 @@
+{
+  "source_recordings": 195,
+  "source_prefixes": 32,
+  "source_pd_prefixes": 24,
+  "target_recordings": 240,
+  "target_subjects": 80,
+  "target_recordings_per_subject": [
+    3
+  ],
+  "target_class_subject_counts": {
+    "0": 40,
+    "1": 40
+  },
+  "common_features": [
+    "RPDE",
+    "DFA",
+    "PPE"
+  ],
+  "source_inner_subject_overlap": 0,
+  "target_fit_calls": 0,
+  "external_runs": 25,
+  "clinical_identity_confirmed": false,
+  "max_subject_ba_recalculation_error": 0.0,
+  "all_target_subjects_three_recordings": true,
+  "all_constrained_masks_within_one_feature": true
+}

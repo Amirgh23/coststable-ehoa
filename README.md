@@ -29,3 +29,7 @@ All 1,464 public benchmark job outputs include masks, predictions, split provena
 ## Complete workspace transfer
 
 See CONTINUE_WORK_FA.md for continuation instructions. The complete ZIP in Releases also includes prior delivery ZIPs. COMPLETE_WORKSPACE_MANIFEST.json records every archived research file. Generated caches and internal Git files are excluded.
+
+## Public evidence supplement — 2026-10-13
+
+See external_evidence_2026_10_13/REPORT_FA.md. This adds 25 exploratory source-only fits evaluated on a separate public cohort in a restricted three-feature space, plus an official published FNA fee and shared-service cost scenario. Subject-level balanced accuracy was 0.575 with a descriptive 95% interval [0.475,0.675]; no clinical superiority is established. The original 1,464-run paper remains separate. Clinical identities, historical missing evidence and author signoff remain unresolved.
