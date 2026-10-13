@@ -1,0 +1,34 @@
+{
+  "created_utc": "2026-10-13T08:05:12.801993+00:00",
+  "source": "UCI174 Oxford",
+  "target": "UCI489 replicated acoustic features",
+  "features": [
+    "RPDE",
+    "DFA",
+    "PPE"
+  ],
+  "feature_mapping": "Exact shared names only; extraction/calibration equivalence not established",
+  "seeds": [
+    72001,
+    72002,
+    72003,
+    72004,
+    72005
+  ],
+  "methods": [
+    "EHOA",
+    "random",
+    "cheapest",
+    "mi",
+    "stable_lcb"
+  ],
+  "source_fit": "All source observations, inner 3-fold StratifiedGroupKFold, 8 hikers x10 iterations; source-only utility/imputation/scaling/SMOTE",
+  "budget": "One of three common columns, equal synthetic costs; EHOA unconstrained comparator",
+  "target_use": "Prediction and evaluation only; no target fitting, tuning or feature selection",
+  "classifier": "5-neighbor Euclidean KNN",
+  "subject_unit": "Mean predicted probability across three target recordings; threshold >=0.5",
+  "bootstrap": "10000 stratified subject resamples seed20261013, descriptive 95% intervals for five-seed mean-probability ensemble per method",
+  "scope": "Exploratory external public-dataset transfer on a restricted common feature space; not original 22-feature model validation or prospective clinical validation",
+  "historical_records": "Cannot create missing past evidence",
+  "author_signoff": "Not approved by author"
+}
