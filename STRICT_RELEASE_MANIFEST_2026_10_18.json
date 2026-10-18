@@ -16,8 +16,8 @@
   },
   {
     "path": "CONTINUE_WORK_FA.md",
-    "bytes": 6251,
-    "sha256": "3d2305fc65a7053cdf91107deb5f6b532dd1b325b03e6ec614aab197c0e0abf5"
+    "bytes": 6247,
+    "sha256": "71e312fdf7e629c94db1b6adeebe54090cc2233f3d0243371acce86ec76d3dda"
   },
   {
     "path": "CostStableEHOA_English_BAIC2026_Compact.docx",
@@ -22131,8 +22131,8 @@
   },
   {
     "path": "finalize_strict_revision_2026_10_18.py",
-    "bytes": 18152,
-    "sha256": "5e6e15e9a9d913d0804ac04599235a395548cbb861e0cef958546b95a72457d9"
+    "bytes": 18327,
+    "sha256": "9493a678f71882250fc6b7e4dc7d06ecc94a6ff7722a0473f4492d0a45765788"
   },
   {
     "path": "finish_public_results.py",
@@ -61682,7 +61682,7 @@
   {
     "path": "strict_revision_2026_10_18/SHA256_MANIFEST.json",
     "bytes": 10331,
-    "sha256": "2a6bb4ea159d40a58672bbb2e0bae5074e28731d6b7e236c2ca96fab15efffba"
+    "sha256": "4f29ca0a78f0ee5d62175ff6d6482d06a9ee693af97cc34111bebb6857729d8b"
   },
   {
     "path": "strict_revision_2026_10_18/SUBMISSION_STATUS_FA.md",
@@ -61991,8 +61991,8 @@
   },
   {
     "path": "strict_revision_2026_10_18/sources/finalize_strict_revision_2026_10_18.py",
-    "bytes": 18152,
-    "sha256": "5e6e15e9a9d913d0804ac04599235a395548cbb861e0cef958546b95a72457d9"
+    "bytes": 18327,
+    "sha256": "9493a678f71882250fc6b7e4dc7d06ecc94a6ff7722a0473f4492d0a45765788"
   },
   {
     "path": "strict_revision_2026_10_18/sources/manuscript_content.json",
