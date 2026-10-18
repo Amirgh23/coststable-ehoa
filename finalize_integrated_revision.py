@@ -1,5 +1,5 @@
 from pathlib import Path
-import json,csv,hashlib,shutil,zipfile
+import json,csv,hashlib,shutil,zipfile,re
 from datetime import datetime,timezone
 from pypdf import PdfReader
 from docx import Document
@@ -8,10 +8,13 @@ r=Path(__file__).resolve().parent
 p=r/'integrated_revision_2026_10_13'
 old=r/'extended_revision_2026_10_12'
 e=r/'external_evidence_2026_10_13'
-public=r/'public_coststable_ehoa'
+public=r/'public_coststable_ehoa' if (r/'public_coststable_ehoa').is_dir() else r
 content=json.loads((p/'sources/manuscript_content.json').read_text(encoding='utf-8'))
 refs=[b for page in content['pages'] for b in page if b['kind']=='ref']
-quality={'checked_utc':datetime.now(timezone.utc).isoformat(),'page_counts':{str(f.relative_to(p)):len(PdfReader(f).pages) for f in [p/'manuscript_fa.pdf',p/'manuscript_en.pdf',p/'qa/word_fa.pdf',p/'qa/word_en.pdf']},'references':len(refs),'tables':sum(b['kind']=='table' for page in content['pages'] for b in page),'figures':sum(b['kind']=='fig' for page in content['pages'] for b in page),'word_equations':{f.name:len(Document(f).element.xpath('.//m:oMath')) for f in [p/'manuscript_fa.docx',p/'manuscript_en.docx']},'word_tables':{f.name:len(Document(f).tables) for f in [p/'manuscript_fa.docx',p/'manuscript_en.docx']},'visual_review':'All sixteen final rendered manuscript pages inspected','author_approval':False,'submitted':False,'submission_reason':'Author explicitly said submission must not take place on 2026-10-13','study_runs':1464,'separate_transfer_fits':25,'external_audit':json.loads((e/'external_audit.json').read_text()),'group_cost':json.loads((e/'cost_model.json').read_text())}
+study_runs=json.loads((p/'analysis/audit_summary.json').read_text(encoding='utf-8'))['total_fold_safe_runs']
+with (e/'external_runs.csv').open(encoding='utf-8',newline='') as f:
+    transfer_fits=sum(1 for _ in csv.DictReader(f))
+quality={'checked_utc':datetime.now(timezone.utc).isoformat(),'page_counts':{str(f.relative_to(p)):len(PdfReader(f).pages) for f in [p/'manuscript_fa.pdf',p/'manuscript_en.pdf',p/'qa/word_fa.pdf',p/'qa/word_en.pdf']},'references':len(refs),'tables':sum(b['kind']=='table' for page in content['pages'] for b in page),'figures':sum(b['kind']=='fig' for page in content['pages'] for b in page),'word_equations':{f.name:len(Document(f).element.xpath('.//m:oMath')) for f in [p/'manuscript_fa.docx',p/'manuscript_en.docx']},'word_tables':{f.name:len(Document(f).tables) for f in [p/'manuscript_fa.docx',p/'manuscript_en.docx']},'visual_review':'Not performed by this packaging script; inspect the current rendered pages before release','author_approval':False,'submitted':False,'submission_reason':'Author explicitly said submission must not take place on 2026-10-13','study_runs':study_runs,'separate_transfer_fits':transfer_fits,'external_audit':json.loads((e/'external_audit.json').read_text()),'group_cost':json.loads((e/'cost_model.json').read_text())}
 if any(n!=4 for n in quality['page_counts'].values()):raise ValueError('Page-count mismatch')
 if quality['references']!=17 or quality['tables']!=8:raise ValueError('Structural mismatch')
 updates={
@@ -86,24 +89,35 @@ shutil.copy2(old/'author_declaration_draft_fa.md',p/'author_declaration_draft_fa
 
 کد و همه خروجی‌ها در مخزن عمومی هستند. فایل‌های قبلی برای تاریخچه حفظ شده‌اند. وضعیت شواهد حل‌نشده و منع ارسال نویسنده در unresolved_items_fa.md و SUBMISSION_STATUS_FA.md روشن است. این نسخه هیچ ادعای تأیید بالینی کامل یا امضای نویسنده ندارد.
 ''',encoding='utf-8')
-with (p/'sources/reference_verification.csv').open('a',encoding='utf-8') as f:
+reference_file=p/'sources/reference_verification.csv'
+with reference_file.open(encoding='utf-8',newline='') as f:
+    reference_rows=list(csv.reader(f))
+with reference_file.open('w',encoding='utf-8',newline='') as f:
+    csv.writer(f).writerows(row for row in reference_rows if not row or row[0] not in ['16','17'])
+with reference_file.open('a',encoding='utf-8') as f:
     f.write('16,"https://doi.org/10.24432/C5701F",2026-10-13,"Official UCI dataset verified"\n17,"https://dphhs.mt.gov/assets/publichealth/Cancer/MCCP2025FeeSchedule.pdf",2026-10-13,"Official published service fee, effective 2024-06-30; not current local marginal cost"\n')
 shutil.copy2(r/'build_integrated_documents.py',p/'sources/build_integrated_documents.py')
 shutil.copy2(Path(__file__),p/'sources/finalize_integrated_revision.py')
 manifest=[{'path':f.relative_to(p).as_posix(),'sha256':hashlib.sha256(f.read_bytes()).hexdigest()} for f in p.rglob('*') if f.is_file() and f.name!='SHA256_MANIFEST.json' and f.suffix not in ['.aux','.log','.out']]
 (p/'SHA256_MANIFEST.json').write_text(json.dumps(manifest,indent=2),encoding='utf-8')
-shutil.copytree(p,public/p.name,dirs_exist_ok=True)
-for name in ['build_integrated_documents.py','finalize_integrated_revision.py']:shutil.copy2(r/name,public/name)
+if public!=r:
+    shutil.copytree(p,public/p.name,dirs_exist_ok=True)
+    for name in ['build_integrated_documents.py','finalize_integrated_revision.py']:shutil.copy2(r/name,public/name)
 readme=public/'README.md'
 s=readme.read_text(encoding='utf-8')
-s+='\n## Integrated manuscript revision — 2026-10-13\n\nLatest authoritative manuscript: integrated_revision_2026_10_13. Both languages have four-page Word/PDF/LaTeX versions,17references,8tables and2figures. Transfer and shared-service-cost findings are integrated into the abstract, discussion,Table8,conclusion and14reviewer responses. See unresolved_items_fa.md and SUBMISSION_STATUS_FA.md: author approval was explicitly withheld and no conference submission occurred. The1464original runs and25transfer fits retain distinct protocols.\n'
+section='\n## Integrated manuscript revision — 2026-10-13\n\nLatest authoritative manuscript: integrated_revision_2026_10_13. Both languages have four-page Word/PDF/LaTeX versions,17references,8tables and2figures. Transfer and shared-service-cost findings are integrated into the abstract, discussion,Table8,conclusion and14reviewer responses. See unresolved_items_fa.md and SUBMISSION_STATUS_FA.md: author approval was explicitly withheld and no conference submission occurred. The1464original runs and25transfer fits retain distinct protocols.\n'
+pattern=r'\n## Integrated manuscript revision — 2026-10-13\n.*?(?=\n## |\Z)'
+s=re.sub(pattern,lambda _:section,s,flags=re.S) if re.search(pattern,s,flags=re.S) else s+section
 readme.write_text(s,encoding='utf-8')
 guide=public/'CONTINUE_WORK_FA.md'
-guide.write_text('آخرین مقاله ادغام‌شده: integrated_revision_2026_10_13. برای ادامه، README_FA.md و گزارش وضعیت این پوشه را بخوانید. مقاله قبلی extended_revision_2026_10_12 نسخه تاریخی است.\n\n'+guide.read_text(encoding='utf-8'),encoding='utf-8')
-archive=r/'CostStableEHOA_Integrated_2026_10_13.zip'
+guide_text=guide.read_text(encoding='utf-8')
+guide_text=guide_text.replace('آخرین نسخه معتبر: extended_revision_2026_10_12.','آخرین نسخه معتبر: integrated_revision_2026_10_13؛ extended_revision_2026_10_12 نسخه تاریخی است.')
+guide_text=guide_text.replace('ساخت سند با build_extended_documents.py انجام می‌شود','ساخت سند با build_integrated_documents.py انجام می‌شود')
+guide.write_text(guide_text,encoding='utf-8')
+archive=r/'CostStableEHOA_Integrated_Rebuild.zip'
 with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED,compresslevel=6) as z:
     for f in public.rglob('*'):
-        if f.is_file() and not any(x in f.relative_to(public).parts for x in ['.git','__pycache__']) and f.suffix not in ['.aux','.log','.out']:z.write(f,f.relative_to(public))
+        if f.is_file() and not f.match('CostStableEHOA_Integrated_Rebuild*.zip') and not any(x in f.relative_to(public).parts for x in ['.git','__pycache__']) and f.suffix not in ['.aux','.log','.out']:z.write(f,f.relative_to(public))
 with zipfile.ZipFile(archive) as z:
     if z.testzip():raise ValueError('ZIP corruption')
 print(json.dumps({'quality':quality,'archive_bytes':archive.stat().st_size},ensure_ascii=False))

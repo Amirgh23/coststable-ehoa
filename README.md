@@ -16,7 +16,7 @@ Run `run_fold_safe_revision.py` and `analyze_fold_safe_revision.py` for the comp
 
 ## Data and limitations
 
-Clinical tariffs and independent external clinical observations are not present. Feature costs are synthetic. Parkinson recording groups are pseudonymous prefixes; the source narrative and file differ in reported group count. Code availability does not resolve that identity discrepancy. MI mean-minus-SD is a heuristic, without confidence coverage or false-selection error guarantees. Dataset blocks, rather than overlapping folds, are statistical units.
+Primary-study feature costs are synthetic. The separately versioned supplement contains an illustrative published shared-service fee and restricted three-feature transfer evaluation; validated marginal feature costs and full external clinical validation remain unavailable. Parkinson recording groups are pseudonymous prefixes; the source narrative and file differ in reported group count. Code availability does not resolve that identity discrepancy. MI mean-minus-SD is a heuristic, without confidence coverage or false-selection error guarantees. Dataset blocks, rather than overlapping folds, are statistical units.
 
 Data attribution and redistribution permissions are documented separately. Publication does not invent a code license or a historical registration record. The author's writing disclosure must follow the actual conference submission policy.
 
@@ -24,7 +24,7 @@ Data attribution and redistribution permissions are documented separately. Publi
 
 The Hill-Valley UCI identifier was corrected to 166; id 147 is Statlog Image Segmentation. The exact OpenML 1479 numeric snapshot and numerical results were unchanged. Public dataset snapshots and attribution are now included.
 
-All 1,464 public benchmark job outputs include masks, predictions, split provenance and candidate audits. Extension audit and dataset-block statistical results are in `extended_revision_2026_10_12/analysis`. Recorded timings compare batches with different worker counts (three versus six) and are not a controlled speed benchmark. At the author’s explicit request, the complete research workspace now includes manuscripts, reviewer responses, author declaration drafts and prior versions. The latest authoritative version is extended_revision_2026_10_12; earlier results are archival.
+All 1,464 public benchmark job outputs include masks, predictions, split provenance and candidate audits. Extension audit and dataset-block statistical results are in `extended_revision_2026_10_12/analysis`. Recorded timings compare batches with different worker counts (three versus six) and are not a controlled speed benchmark. At the author’s explicit request, the complete research workspace now includes manuscripts, reviewer responses, author declaration drafts and prior versions. The latest authoritative manuscript is integrated_revision_2026_10_13; extended_revision_2026_10_12 and earlier results are archival.
 
 ## Complete workspace transfer
 

@@ -1,0 +1,100 @@
+[
+  {
+    "layout": "clone",
+    "rounds": [
+      {
+        "round": 1,
+        "exit_code": 0,
+        "reference_rows": 17,
+        "reference_16_rows": 1,
+        "reference_17_rows": 1,
+        "readme_integrated_sections": 1,
+        "readme_later_section_preserved": true,
+        "guide_old_authoritative_statement": false,
+        "archive_corruption": null,
+        "archive_contains_itself": false,
+        "archive_nested_rebuilds": [],
+        "page_counts": {
+          "manuscript_fa.pdf": 4,
+          "manuscript_en.pdf": 4,
+          "qa\\word_fa.pdf": 4,
+          "qa\\word_en.pdf": 4
+        },
+        "visual_review": "Not performed by this packaging script; inspect the current rendered pages before release",
+        "study_runs": 1464,
+        "transfer_fits": 25
+      },
+      {
+        "round": 2,
+        "exit_code": 0,
+        "reference_rows": 17,
+        "reference_16_rows": 1,
+        "reference_17_rows": 1,
+        "readme_integrated_sections": 1,
+        "readme_later_section_preserved": true,
+        "guide_old_authoritative_statement": false,
+        "archive_corruption": null,
+        "archive_contains_itself": false,
+        "archive_nested_rebuilds": [],
+        "page_counts": {
+          "manuscript_fa.pdf": 4,
+          "manuscript_en.pdf": 4,
+          "qa\\word_fa.pdf": 4,
+          "qa\\word_en.pdf": 4
+        },
+        "visual_review": "Not performed by this packaging script; inspect the current rendered pages before release",
+        "study_runs": 1464,
+        "transfer_fits": 25
+      }
+    ]
+  },
+  {
+    "layout": "staging",
+    "rounds": [
+      {
+        "round": 1,
+        "exit_code": 0,
+        "reference_rows": 17,
+        "reference_16_rows": 1,
+        "reference_17_rows": 1,
+        "readme_integrated_sections": 1,
+        "readme_later_section_preserved": true,
+        "guide_old_authoritative_statement": false,
+        "archive_corruption": null,
+        "archive_contains_itself": false,
+        "archive_nested_rebuilds": [],
+        "page_counts": {
+          "manuscript_fa.pdf": 4,
+          "manuscript_en.pdf": 4,
+          "qa\\word_fa.pdf": 4,
+          "qa\\word_en.pdf": 4
+        },
+        "visual_review": "Not performed by this packaging script; inspect the current rendered pages before release",
+        "study_runs": 1464,
+        "transfer_fits": 25
+      },
+      {
+        "round": 2,
+        "exit_code": 0,
+        "reference_rows": 17,
+        "reference_16_rows": 1,
+        "reference_17_rows": 1,
+        "readme_integrated_sections": 1,
+        "readme_later_section_preserved": true,
+        "guide_old_authoritative_statement": false,
+        "archive_corruption": null,
+        "archive_contains_itself": false,
+        "archive_nested_rebuilds": [],
+        "page_counts": {
+          "manuscript_fa.pdf": 4,
+          "manuscript_en.pdf": 4,
+          "qa\\word_fa.pdf": 4,
+          "qa\\word_en.pdf": 4
+        },
+        "visual_review": "Not performed by this packaging script; inspect the current rendered pages before release",
+        "study_runs": 1464,
+        "transfer_fits": 25
+      }
+    ]
+  }
+]

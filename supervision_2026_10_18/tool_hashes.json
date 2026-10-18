@@ -1,0 +1,10 @@
+{
+  "finalize_integrated_revision.py": {
+    "root_sha256": "9d93f0836b70e6dcb841dce08195d03c5884b3b6e375adec8df6b8b607242c61",
+    "public_sha256": "9d93f0836b70e6dcb841dce08195d03c5884b3b6e375adec8df6b8b607242c61"
+  },
+  "audit_packaging_2026_10_18.py": {
+    "root_sha256": "c5a7d8895aa94376607d65322f5340c0e2c5981624ae25634222d86eb5d5fcaa",
+    "public_sha256": "c5a7d8895aa94376607d65322f5340c0e2c5981624ae25634222d86eb5d5fcaa"
+  }
+}

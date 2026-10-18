@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-18",
+  "supervisor": "parent agent",
+  "independent_checks": {
+    "external_prediction_files": 25,
+    "target_id_and_label_alignment_errors": 0,
+    "method_model_counts": {
+      "EHOA": 5,
+      "random": 5,
+      "cheapest": 5,
+      "mi": 5,
+      "stable_lcb": 5
+    },
+    "external_subject_BA_all_methods": 0.575,
+    "external_AUC_EHOA": 0.579375,
+    "external_AUC_repairs": 0.55,
+    "integrated_manifest_files_checked": 82,
+    "integrated_local_hash_mismatches": 0,
+    "public_checkout_hash_mismatches": 0,
+    "original_fold_safe_frozen_inputs_checked": 5,
+    "extended_frozen_inputs_checked": 7,
+    "frozen_input_hash_mismatches": 0,
+    "external_code_hash_matches_frozen_protocol": true
+  },
+  "review_rounds": [
+    {
+      "round": 1,
+      "status": "changes_requested",
+      "findings": [
+        "A constant target_fit_calls field does not independently instrument training calls; describe evidence correctly.",
+        "Packaging relied on nested public_coststable_ehoa and did not support a normal repository clone.",
+        "Repeated finalization appended duplicate references and guide/README content.",
+        "Proposed README split discarded later sections; rejected pending scoped replacement.",
+        "Packaging must preserve historical archives and exclude recursive rebuild ZIPs.",
+        "Visual review must never be asserted automatically by packaging."
+      ]
+    },
+    {
+      "round": 2,
+      "status": "changes_requested",
+      "accepted_checks": {
+        "actual_clone_layout_snapshot_reference_rows": 17,
+        "references16and17_once": true,
+        "later_README_sentinel_retained": true,
+        "ZIP_CRC_clean": true,
+        "nested_Rebuild_ZIPs": 0,
+        "page_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "study_runs": 1464,
+        "transfer_fits": 25,
+        "packaging_does_not_claim_visual_review": true
+      },
+      "remaining_finding": "The newly added audit tool still requires root/public_coststable_ehoa and fails in a normal clone layout; fix and verify before publication.",
+      "scope_note": "Controlled clone-layout snapshots, not a fresh full Git clone or execution on another physical machine."
+    },
+    {
+      "round": 3,
+      "status": "accepted_for_computational_package_scope",
+      "checks": {
+        "audit_tool_executes_without_nested_public_directory": true,
+        "clone_and_staging_repeated_runs_exit_zero": true,
+        "references_stay17_and_later_README_preserved": true,
+        "actual_tool_hashes_match_record": true,
+        "physical_original_result_files": 774,
+        "physical_extension_result_files": 690,
+        "historical_integrated_manifest_mismatches": 0,
+        "clinical_or_author_approval_claims_added": false
+      },
+      "limitations": "Controlled clone-layout packaging smoke; no new physical-machine or clinical validation. Scientific blockers and author submission hold remain."
+    }
+  ],
+  "submission_hold": "Author explicitly withheld approval and prohibited submission; remains in force",
+  "scientific_blockers": [
+    "Full original22-feature external clinical validation",
+    "Actual marginal feature acquisition costs/time/risk",
+    "Authoritative Oxford subject identity mapping",
+    "Missing historical experiment evidence"
+  ],
+  "release_decision": "Approve publication of corrected packaging tools, continuation guide and supervision evidence; do not submit paper or mark clinical blockers resolved."
+}
