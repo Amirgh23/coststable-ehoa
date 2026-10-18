@@ -1,0 +1,12 @@
+{
+  "jobs": 450,
+  "maxima": {
+    "mask_error": 0.0,
+    "utility_error": 0.0,
+    "split_error": 0.0,
+    "label_error": 0.0,
+    "row_overlap": 0.0,
+    "group_overlap": 0.0
+  },
+  "stability_maximum_error": 1.1102230246251565e-16
+}

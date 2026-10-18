@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-18",
+  "reviewer": "Parent agent actual visual inspection",
+  "pages_inspected": 16,
+  "status": "All final sixteen Word and XeLaTeX page images inspected; no clipping or overlapping content",
+  "pdf_sha256": {
+    "manuscript_en.pdf": "eb34c2d8913199e9556d9d10e12cfcb4549a90c31487e9ae137d81a2abe7dc90",
+    "manuscript_fa.pdf": "750468db64e5acc5c6a49f0a7ae241108ee9fdabfc68e65dc88f4d6da72f4ead",
+    "qa/word_en.pdf": "3464eb52363cb0afb610bc3d281cfb79f66b38ecfedb77971ae23b5b17c6f4b6",
+    "qa/word_fa.pdf": "7b9378c6df1b0c8a5db4dc400288fee39ea3ce6ca9f8cb654ca854d30efd7bd4"
+  },
+  "docx_sha256": {
+    "manuscript_en.docx": "b539348e92c034b165d98900f9ab20b12bebe839a971d2bf8444a47b0456faca",
+    "manuscript_fa.docx": "1917c64480d5d15b9e493ba07338b266b76703c92bd2100277f79ca1701f0e29"
+  },
+  "content_sha256": "3a2348723fb8a0e7a544ef5e2c1ac3d35a9202b3f154b68039c65ed9684ee782"
+}

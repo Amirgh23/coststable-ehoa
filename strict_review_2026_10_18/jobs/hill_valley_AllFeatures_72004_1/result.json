@@ -1,0 +1,20 @@
+{
+  "dataset": "hill_valley",
+  "method": "AllFeatures",
+  "seed": 72004,
+  "fold": 1,
+  "source_directory": "extended_revision_2026_10_12/extra_seeds/jobs/hill_valley_EHOA_72004_1_b0.3_r4_l1.0",
+  "selected_features": 100,
+  "cost_ratio": 1.0,
+  "outer_overlap": 0,
+  "outer_group_overlap": 0,
+  "accuracy": 0.5321782178217822,
+  "precision": 0.5274261603375527,
+  "sensitivity": 0.6188118811881188,
+  "specificity": 0.44554455445544555,
+  "f1_score": 0.5694760820045558,
+  "balanced_accuracy": 0.5321782178217822,
+  "mcc": 0.06534478655866459,
+  "roc_auc": 0.5486962062542888,
+  "pr_auc": 0.5382262674674412
+}

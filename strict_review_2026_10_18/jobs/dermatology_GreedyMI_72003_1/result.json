@@ -1,0 +1,20 @@
+{
+  "dataset": "dermatology",
+  "method": "GreedyMI",
+  "seed": 72003,
+  "fold": 1,
+  "source_directory": "fold_safe_revision_2026_10_12/jobs/dermatology_mi_72003_1_b0.3_r4_l1.0",
+  "selected_features": 19,
+  "cost_ratio": 0.27600561215267955,
+  "outer_overlap": 0,
+  "outer_group_overlap": 0,
+  "accuracy": 0.9098360655737705,
+  "precision": 0.9093567251461989,
+  "sensitivity": 0.9086607616019381,
+  "specificity": 0.9822882288228824,
+  "f1_score": 0.9071400741371902,
+  "balanced_accuracy": 0.9086607616019381,
+  "mcc": 0.8881615649036461,
+  "roc_auc": 0.9692985105914634,
+  "pr_auc": 0.8935749893078726
+}

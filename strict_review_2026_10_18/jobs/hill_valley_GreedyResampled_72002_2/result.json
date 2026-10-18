@@ -1,0 +1,20 @@
+{
+  "dataset": "hill_valley",
+  "method": "GreedyResampled",
+  "seed": 72002,
+  "fold": 2,
+  "source_directory": "fold_safe_revision_2026_10_12/jobs/hill_valley_stable_lcb_72002_2_b0.3_r4_l1.0",
+  "selected_features": 52,
+  "cost_ratio": 0.2916596201281883,
+  "outer_overlap": 0,
+  "outer_group_overlap": 0,
+  "accuracy": 0.5074257425742574,
+  "precision": 0.5064935064935064,
+  "sensitivity": 0.5792079207920792,
+  "specificity": 0.43564356435643564,
+  "f1_score": 0.5404157043879908,
+  "balanced_accuracy": 0.5074257425742574,
+  "mcc": 0.015006942316603567,
+  "roc_auc": 0.5238702088030585,
+  "pr_auc": 0.5167073803382615
+}

@@ -1,0 +1,20 @@
+{
+  "dataset": "steel_plates_fault",
+  "method": "GreedyMI",
+  "seed": 72005,
+  "fold": 1,
+  "source_directory": "extended_revision_2026_10_12/extra_seeds/jobs/steel_plates_fault_mi_72005_1_b0.3_r4_l1.0",
+  "selected_features": 12,
+  "cost_ratio": 0.2917015044933265,
+  "outer_overlap": 0,
+  "outer_group_overlap": 0,
+  "accuracy": 0.633693972179289,
+  "precision": 0.6201720898803652,
+  "sensitivity": 0.7412864071888999,
+  "specificity": 0.9374593601116687,
+  "f1_score": 0.6522664377166233,
+  "balanced_accuracy": 0.7412864071888999,
+  "mcc": 0.5661913934251139,
+  "roc_auc": 0.8964027748655462,
+  "pr_auc": 0.6814231795938033
+}

@@ -1,0 +1,20 @@
+{
+  "dataset": "ionosphere",
+  "method": "AllFeatures",
+  "seed": 72004,
+  "fold": 2,
+  "source_directory": "extended_revision_2026_10_12/extra_seeds/jobs/ionosphere_EHOA_72004_2_b0.3_r4_l1.0",
+  "selected_features": 34,
+  "cost_ratio": 1.0,
+  "outer_overlap": 0,
+  "outer_group_overlap": 0,
+  "accuracy": 0.8717948717948718,
+  "precision": 0.875,
+  "sensitivity": 0.9333333333333333,
+  "specificity": 0.7619047619047619,
+  "f1_score": 0.9032258064516129,
+  "balanced_accuracy": 0.8476190476190476,
+  "mcc": 0.7172044613513217,
+  "roc_auc": 0.9082539682539683,
+  "pr_auc": 0.9202120786367362
+}

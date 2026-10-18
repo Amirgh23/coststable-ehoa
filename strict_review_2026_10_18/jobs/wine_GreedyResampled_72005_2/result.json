@@ -1,0 +1,20 @@
+{
+  "dataset": "wine",
+  "method": "GreedyResampled",
+  "seed": 72005,
+  "fold": 2,
+  "source_directory": "extended_revision_2026_10_12/extra_seeds/jobs/wine_stable_lcb_72005_2_b0.3_r4_l1.0",
+  "selected_features": 7,
+  "cost_ratio": 0.25052421712146666,
+  "outer_overlap": 0,
+  "outer_group_overlap": 0,
+  "accuracy": 0.9322033898305084,
+  "precision": 0.9326599326599326,
+  "sensitivity": 0.9420289855072465,
+  "specificity": 0.9674021069369907,
+  "f1_score": 0.9327731092436974,
+  "balanced_accuracy": 0.9420289855072465,
+  "mcc": 0.902783219919108,
+  "roc_auc": 0.9816851643001795,
+  "pr_auc": 0.9599312465357098
+}

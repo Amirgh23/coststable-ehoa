@@ -1,0 +1,141 @@
+{
+  "completed": 450,
+  "expected": 450,
+  "budget_violations": 0,
+  "row_overlap": 0,
+  "group_overlap": 0,
+  "macro_means": {
+    "AllFeatures": {
+      "balanced_accuracy": 0.7872874480647599,
+      "cost_ratio": 1.0,
+      "nogueira_stability": 1.0
+    },
+    "EHOA": {
+      "balanced_accuracy": 0.7946376627676914,
+      "cost_ratio": 0.4947278549349134,
+      "nogueira_stability": 0.10364935052416405
+    },
+    "GreedyMI": {
+      "balanced_accuracy": 0.7869280484941793,
+      "cost_ratio": 0.2772368216045655,
+      "nogueira_stability": 0.6708750602568866
+    },
+    "GreedyResampled": {
+      "balanced_accuracy": 0.7839651123108704,
+      "cost_ratio": 0.2829204783875882,
+      "nogueira_stability": 0.7998985618802433
+    },
+    "cheapest": {
+      "balanced_accuracy": 0.7944317540226673,
+      "cost_ratio": 0.27646265617692706,
+      "nogueira_stability": 0.24756216625370073
+    },
+    "mi": {
+      "balanced_accuracy": 0.7948572842360342,
+      "cost_ratio": 0.27873474094256734,
+      "nogueira_stability": 0.2203344557126254
+    },
+    "random": {
+      "balanced_accuracy": 0.78138986409261,
+      "cost_ratio": 0.27236592111456254,
+      "nogueira_stability": 0.12165734311200457
+    },
+    "stable_lcb": {
+      "balanced_accuracy": 0.7932251965309705,
+      "cost_ratio": 0.27740648167569215,
+      "nogueira_stability": 0.22409509671137245
+    }
+  },
+  "comparisons": [
+    {
+      "metric": "balanced_accuracy",
+      "reference": "GreedyMI",
+      "mean_delta": 0.006297148036791211,
+      "p_exact": 0.193359375,
+      "ci95_low": -0.0013705194947736742,
+      "ci95_high": 0.01398984744581539,
+      "datasets": 10,
+      "p_holm_9": 0.7734375
+    },
+    {
+      "metric": "balanced_accuracy",
+      "reference": "GreedyResampled",
+      "mean_delta": 0.00926008422010004,
+      "p_exact": 0.322265625,
+      "ci95_low": -0.0008529671997307745,
+      "ci95_high": 0.020787088912897343,
+      "datasets": 10,
+      "p_holm_9": 0.966796875
+    },
+    {
+      "metric": "balanced_accuracy",
+      "reference": "AllFeatures",
+      "mean_delta": 0.005937748466210535,
+      "p_exact": 0.921875,
+      "ci95_low": -0.007452576279196102,
+      "ci95_high": 0.02329203572721895,
+      "datasets": 10,
+      "p_holm_9": 1.0
+    },
+    {
+      "metric": "cost_ratio",
+      "reference": "GreedyMI",
+      "mean_delta": 0.00016966007112667047,
+      "p_exact": 0.625,
+      "ci95_low": -0.006191205746624836,
+      "ci95_high": 0.008296314979134356,
+      "datasets": 10,
+      "p_holm_9": 1.0
+    },
+    {
+      "metric": "cost_ratio",
+      "reference": "GreedyResampled",
+      "mean_delta": -0.005513996711896066,
+      "p_exact": 0.00390625,
+      "ci95_low": -0.008157890893201142,
+      "ci95_high": -0.003012945003003337,
+      "datasets": 10,
+      "p_holm_9": 0.0234375
+    },
+    {
+      "metric": "cost_ratio",
+      "reference": "AllFeatures",
+      "mean_delta": -0.7225935183243077,
+      "p_exact": 0.001953125,
+      "ci95_low": -0.731934891094755,
+      "ci95_high": -0.7144197420241586,
+      "datasets": 10,
+      "p_holm_9": 0.017578125
+    },
+    {
+      "metric": "nogueira_stability",
+      "reference": "GreedyMI",
+      "mean_delta": -0.44677996354551414,
+      "p_exact": 0.00390625,
+      "ci95_low": -0.5973099563232168,
+      "ci95_high": -0.2778380586886802,
+      "datasets": 10,
+      "p_holm_9": 0.0234375
+    },
+    {
+      "metric": "nogueira_stability",
+      "reference": "GreedyResampled",
+      "mean_delta": -0.5758034651688709,
+      "p_exact": 0.001953125,
+      "ci95_low": -0.6508755607596397,
+      "ci95_high": -0.4971272231620547,
+      "datasets": 10,
+      "p_holm_9": 0.017578125
+    },
+    {
+      "metric": "nogueira_stability",
+      "reference": "AllFeatures",
+      "mean_delta": -0.7759049032886276,
+      "p_exact": 0.001953125,
+      "ci95_low": -0.8309178866183649,
+      "ci95_high": -0.712061419827778,
+      "datasets": 10,
+      "p_holm_9": 0.017578125
+    }
+  ]
+}

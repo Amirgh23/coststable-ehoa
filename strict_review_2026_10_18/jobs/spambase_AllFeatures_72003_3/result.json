@@ -1,0 +1,20 @@
+{
+  "dataset": "spambase",
+  "method": "AllFeatures",
+  "seed": 72003,
+  "fold": 3,
+  "source_directory": "fold_safe_revision_2026_10_12/jobs/spambase_EHOA_72003_3_b0.3_r4_l1.0",
+  "selected_features": 57,
+  "cost_ratio": 1.0,
+  "outer_overlap": 0,
+  "outer_group_overlap": 0,
+  "accuracy": 0.894511760513186,
+  "precision": 0.8430717863105175,
+  "sensitivity": 0.9033989266547406,
+  "specificity": 0.8886255924170616,
+  "f1_score": 0.8721934369602763,
+  "balanced_accuracy": 0.8960122595359011,
+  "mcc": 0.7839246452571297,
+  "roc_auc": 0.9402739743448439,
+  "pr_auc": 0.8840150253920318
+}

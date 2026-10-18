@@ -1,0 +1,292 @@
+{
+  "date": "2026-10-18",
+  "page_counts": {
+    "manuscript_en.pdf": 4,
+    "manuscript_fa.pdf": 4,
+    "qa/word_en.pdf": 4,
+    "qa/word_fa.pdf": 4
+  },
+  "references": 18,
+  "tables": 9,
+  "figures": 2,
+  "reviewer_responses": 14,
+  "native_word_equations": {
+    "manuscript_en.docx": 5,
+    "manuscript_fa.docx": 5
+  },
+  "visual_review": {
+    "date": "2026-10-18",
+    "reviewer": "Parent agent actual visual inspection",
+    "pages_inspected": 16,
+    "status": "All final sixteen Word and XeLaTeX page images inspected; no clipping or overlapping content",
+    "pdf_sha256": {
+      "manuscript_en.pdf": "eb34c2d8913199e9556d9d10e12cfcb4549a90c31487e9ae137d81a2abe7dc90",
+      "manuscript_fa.pdf": "750468db64e5acc5c6a49f0a7ae241108ee9fdabfc68e65dc88f4d6da72f4ead",
+      "qa/word_en.pdf": "3464eb52363cb0afb610bc3d281cfb79f66b38ecfedb77971ae23b5b17c6f4b6",
+      "qa/word_fa.pdf": "7b9378c6df1b0c8a5db4dc400288fee39ea3ce6ca9f8cb654ca854d30efd7bd4"
+    },
+    "docx_sha256": {
+      "manuscript_en.docx": "b539348e92c034b165d98900f9ab20b12bebe839a971d2bf8444a47b0456faca",
+      "manuscript_fa.docx": "1917c64480d5d15b9e493ba07338b266b76703c92bd2100277f79ca1701f0e29"
+    },
+    "content_sha256": "3a2348723fb8a0e7a544ef5e2c1ac3d35a9202b3f154b68039c65ed9684ee782"
+  },
+  "controls": {
+    "completed": 450,
+    "expected": 450,
+    "budget_violations": 0,
+    "row_overlap": 0,
+    "group_overlap": 0,
+    "macro_means": {
+      "AllFeatures": {
+        "balanced_accuracy": 0.7872874480647599,
+        "cost_ratio": 1.0,
+        "nogueira_stability": 1.0
+      },
+      "EHOA": {
+        "balanced_accuracy": 0.7946376627676914,
+        "cost_ratio": 0.4947278549349134,
+        "nogueira_stability": 0.10364935052416405
+      },
+      "GreedyMI": {
+        "balanced_accuracy": 0.7869280484941793,
+        "cost_ratio": 0.2772368216045655,
+        "nogueira_stability": 0.6708750602568866
+      },
+      "GreedyResampled": {
+        "balanced_accuracy": 0.7839651123108704,
+        "cost_ratio": 0.2829204783875882,
+        "nogueira_stability": 0.7998985618802433
+      },
+      "cheapest": {
+        "balanced_accuracy": 0.7944317540226673,
+        "cost_ratio": 0.27646265617692706,
+        "nogueira_stability": 0.24756216625370073
+      },
+      "mi": {
+        "balanced_accuracy": 0.7948572842360342,
+        "cost_ratio": 0.27873474094256734,
+        "nogueira_stability": 0.2203344557126254
+      },
+      "random": {
+        "balanced_accuracy": 0.78138986409261,
+        "cost_ratio": 0.27236592111456254,
+        "nogueira_stability": 0.12165734311200457
+      },
+      "stable_lcb": {
+        "balanced_accuracy": 0.7932251965309705,
+        "cost_ratio": 0.27740648167569215,
+        "nogueira_stability": 0.22409509671137245
+      }
+    },
+    "comparisons": [
+      {
+        "metric": "balanced_accuracy",
+        "reference": "GreedyMI",
+        "mean_delta": 0.006297148036791211,
+        "p_exact": 0.193359375,
+        "ci95_low": -0.0013705194947736742,
+        "ci95_high": 0.01398984744581539,
+        "datasets": 10,
+        "p_holm_9": 0.7734375
+      },
+      {
+        "metric": "balanced_accuracy",
+        "reference": "GreedyResampled",
+        "mean_delta": 0.00926008422010004,
+        "p_exact": 0.322265625,
+        "ci95_low": -0.0008529671997307745,
+        "ci95_high": 0.020787088912897343,
+        "datasets": 10,
+        "p_holm_9": 0.966796875
+      },
+      {
+        "metric": "balanced_accuracy",
+        "reference": "AllFeatures",
+        "mean_delta": 0.005937748466210535,
+        "p_exact": 0.921875,
+        "ci95_low": -0.007452576279196102,
+        "ci95_high": 0.02329203572721895,
+        "datasets": 10,
+        "p_holm_9": 1.0
+      },
+      {
+        "metric": "cost_ratio",
+        "reference": "GreedyMI",
+        "mean_delta": 0.00016966007112667047,
+        "p_exact": 0.625,
+        "ci95_low": -0.006191205746624836,
+        "ci95_high": 0.008296314979134356,
+        "datasets": 10,
+        "p_holm_9": 1.0
+      },
+      {
+        "metric": "cost_ratio",
+        "reference": "GreedyResampled",
+        "mean_delta": -0.005513996711896066,
+        "p_exact": 0.00390625,
+        "ci95_low": -0.008157890893201142,
+        "ci95_high": -0.003012945003003337,
+        "datasets": 10,
+        "p_holm_9": 0.0234375
+      },
+      {
+        "metric": "cost_ratio",
+        "reference": "AllFeatures",
+        "mean_delta": -0.7225935183243077,
+        "p_exact": 0.001953125,
+        "ci95_low": -0.731934891094755,
+        "ci95_high": -0.7144197420241586,
+        "datasets": 10,
+        "p_holm_9": 0.017578125
+      },
+      {
+        "metric": "nogueira_stability",
+        "reference": "GreedyMI",
+        "mean_delta": -0.44677996354551414,
+        "p_exact": 0.00390625,
+        "ci95_low": -0.5973099563232168,
+        "ci95_high": -0.2778380586886802,
+        "datasets": 10,
+        "p_holm_9": 0.0234375
+      },
+      {
+        "metric": "nogueira_stability",
+        "reference": "GreedyResampled",
+        "mean_delta": -0.5758034651688709,
+        "p_exact": 0.001953125,
+        "ci95_low": -0.6508755607596397,
+        "ci95_high": -0.4971272231620547,
+        "datasets": 10,
+        "p_holm_9": 0.017578125
+      },
+      {
+        "metric": "nogueira_stability",
+        "reference": "AllFeatures",
+        "mean_delta": -0.7759049032886276,
+        "p_exact": 0.001953125,
+        "ci95_low": -0.8309178866183649,
+        "ci95_high": -0.712061419827778,
+        "datasets": 10,
+        "p_holm_9": 0.017578125
+      }
+    ]
+  },
+  "independent_audit": {
+    "jobs": 450,
+    "maxima": {
+      "mask_error": 0.0,
+      "utility_error": 0.0,
+      "split_error": 0.0,
+      "label_error": 0.0,
+      "row_overlap": 0.0,
+      "group_overlap": 0.0
+    },
+    "stability_maximum_error": 1.1102230246251565e-16
+  },
+  "combined_33_sensitivity": [
+    {
+      "metric": "balanced_accuracy",
+      "reference": "GreedyMI",
+      "mean_delta": 0.0062971480367912,
+      "p_exact": 0.193359375,
+      "ci95_low": -0.0013705194947736,
+      "ci95_high": 0.0139898474458153,
+      "datasets": 10,
+      "p_holm_9": 0.7734375,
+      "p_holm_combined_33": 1.0
+    },
+    {
+      "metric": "balanced_accuracy",
+      "reference": "GreedyResampled",
+      "mean_delta": 0.0092600842201,
+      "p_exact": 0.322265625,
+      "ci95_low": -0.0008529671997307,
+      "ci95_high": 0.0207870889128973,
+      "datasets": 10,
+      "p_holm_9": 0.966796875,
+      "p_holm_combined_33": 1.0
+    },
+    {
+      "metric": "balanced_accuracy",
+      "reference": "AllFeatures",
+      "mean_delta": 0.0059377484662105,
+      "p_exact": 0.921875,
+      "ci95_low": -0.0074525762791961,
+      "ci95_high": 0.0232920357272189,
+      "datasets": 10,
+      "p_holm_9": 1.0,
+      "p_holm_combined_33": 1.0
+    },
+    {
+      "metric": "cost_ratio",
+      "reference": "GreedyMI",
+      "mean_delta": 0.0001696600711266,
+      "p_exact": 0.625,
+      "ci95_low": -0.0061912057466248,
+      "ci95_high": 0.0082963149791343,
+      "datasets": 10,
+      "p_holm_9": 1.0,
+      "p_holm_combined_33": 1.0
+    },
+    {
+      "metric": "cost_ratio",
+      "reference": "GreedyResampled",
+      "mean_delta": -0.005513996711896,
+      "p_exact": 0.00390625,
+      "ci95_low": -0.0081578908932011,
+      "ci95_high": -0.0030129450030033,
+      "datasets": 10,
+      "p_holm_9": 0.0234375,
+      "p_holm_combined_33": 0.08203125
+    },
+    {
+      "metric": "cost_ratio",
+      "reference": "AllFeatures",
+      "mean_delta": -0.7225935183243077,
+      "p_exact": 0.001953125,
+      "ci95_low": -0.731934891094755,
+      "ci95_high": -0.7144197420241586,
+      "datasets": 10,
+      "p_holm_9": 0.017578125,
+      "p_holm_combined_33": 0.064453125
+    },
+    {
+      "metric": "nogueira_stability",
+      "reference": "GreedyMI",
+      "mean_delta": -0.4467799635455141,
+      "p_exact": 0.00390625,
+      "ci95_low": -0.5973099563232168,
+      "ci95_high": -0.2778380586886802,
+      "datasets": 10,
+      "p_holm_9": 0.0234375,
+      "p_holm_combined_33": 0.08203125
+    },
+    {
+      "metric": "nogueira_stability",
+      "reference": "GreedyResampled",
+      "mean_delta": -0.5758034651688709,
+      "p_exact": 0.001953125,
+      "ci95_low": -0.6508755607596397,
+      "ci95_high": -0.4971272231620547,
+      "datasets": 10,
+      "p_holm_9": 0.017578125,
+      "p_holm_combined_33": 0.064453125
+    },
+    {
+      "metric": "nogueira_stability",
+      "reference": "AllFeatures",
+      "mean_delta": -0.7759049032886276,
+      "p_exact": 0.001953125,
+      "ci95_low": -0.8309178866183649,
+      "ci95_high": -0.712061419827778,
+      "datasets": 10,
+      "p_holm_9": 0.017578125,
+      "p_holm_combined_33": 0.064453125
+    }
+  ],
+  "original_study_runs": 1464,
+  "separate_transfer_fits": 25,
+  "new_posthoc_controls": 450,
+  "submission": "Not authorized; not submitted"
+}

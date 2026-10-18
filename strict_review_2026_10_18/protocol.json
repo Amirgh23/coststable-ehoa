@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-10-18T10:23:33.439534+00:00",
+  "status": "Post-hoc controls; original outcomes already known; not preregistered",
+  "jobs": 450,
+  "design": "Same ten datasets, five seeds, three saved outer folds; fixed KNN5 and selected-column preprocessing/SMOTE. No search or test-label tuning. Greedy starts with all features and applies the exact existing utility/cost deletion repair once. Saved outer-training utility is reused, not fitted on test labels.",
+  "costs": "Same single synthetic cost draw per dimension as primary; no generalization over cost assignments",
+  "analysis": "Ten dataset means; Resampled EHOA minus three controls for BA, cost ratio and descriptive Nogueira stability. Exact conditional signed-rank; one Holm family of nine tests. Bootstrap 20000 dataset resamples, descriptive unadjusted intervals. AllFeatures stability is degenerate (one by convention), not evidence of useful biomarkers.",
+  "timing": "Utility is reused; no standalone runtime or speedup claim.",
+  "code_sha256": "df9f86f7d058bdf25ada1eb1adc57c6d6b263cc86f2c685078fed34cec46161a",
+  "environment": {
+    "python": "3.13.13",
+    "numpy": "2.5.0",
+    "pandas": "3.0.3"
+  }
+}

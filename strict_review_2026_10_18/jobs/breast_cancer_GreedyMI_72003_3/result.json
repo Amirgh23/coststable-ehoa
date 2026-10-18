@@ -1,0 +1,20 @@
+{
+  "dataset": "breast_cancer",
+  "method": "GreedyMI",
+  "seed": 72003,
+  "fold": 3,
+  "source_directory": "fold_safe_revision_2026_10_12/jobs/breast_cancer_mi_72003_3_b0.3_r4_l1.0",
+  "selected_features": 14,
+  "cost_ratio": 0.28910730306366483,
+  "outer_overlap": 0,
+  "outer_group_overlap": 0,
+  "accuracy": 0.9312169312169312,
+  "precision": 0.9732142857142857,
+  "sensitivity": 0.9159663865546218,
+  "specificity": 0.9571428571428572,
+  "f1_score": 0.9437229437229437,
+  "balanced_accuracy": 0.9365546218487395,
+  "mcc": 0.8580976506702369,
+  "roc_auc": 0.9728091236494598,
+  "pr_auc": 0.9773969349204166
+}

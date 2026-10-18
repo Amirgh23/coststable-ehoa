@@ -1,0 +1,20 @@
+{
+  "dataset": "madelon",
+  "method": "AllFeatures",
+  "seed": 72004,
+  "fold": 1,
+  "source_directory": "extended_revision_2026_10_12/extra_seeds/jobs/madelon_EHOA_72004_1_b0.3_r4_l1.0",
+  "selected_features": 500,
+  "cost_ratio": 1.0,
+  "outer_overlap": 0,
+  "outer_group_overlap": 0,
+  "accuracy": 0.538638985005767,
+  "precision": 0.5277777777777778,
+  "sensitivity": 0.7442396313364056,
+  "specificity": 0.3325635103926097,
+  "f1_score": 0.6175908221797323,
+  "balanced_accuracy": 0.5384015708645076,
+  "mcc": 0.08427950911483575,
+  "roc_auc": 0.5742888006726194,
+  "pr_auc": 0.5537049583197177
+}

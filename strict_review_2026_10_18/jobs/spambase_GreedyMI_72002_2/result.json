@@ -1,0 +1,20 @@
+{
+  "dataset": "spambase",
+  "method": "GreedyMI",
+  "seed": 72002,
+  "fold": 2,
+  "source_directory": "fold_safe_revision_2026_10_12/jobs/spambase_mi_72002_2_b0.3_r4_l1.0",
+  "selected_features": 25,
+  "cost_ratio": 0.28901578205590367,
+  "outer_overlap": 0,
+  "outer_group_overlap": 0,
+  "accuracy": 0.8766928011404134,
+  "precision": 0.8177339901477833,
+  "sensitivity": 0.8892857142857142,
+  "specificity": 0.8683274021352313,
+  "f1_score": 0.8520102651839179,
+  "balanced_accuracy": 0.8788065582104727,
+  "mcc": 0.7485768429863396,
+  "roc_auc": 0.9361580664294187,
+  "pr_auc": 0.8858035827765558
+}

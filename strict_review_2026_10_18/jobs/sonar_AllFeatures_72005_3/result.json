@@ -1,0 +1,20 @@
+{
+  "dataset": "sonar",
+  "method": "AllFeatures",
+  "seed": 72005,
+  "fold": 3,
+  "source_directory": "extended_revision_2026_10_12/extra_seeds/jobs/sonar_EHOA_72005_3_b0.3_r4_l1.0",
+  "selected_features": 60,
+  "cost_ratio": 1.0,
+  "outer_overlap": 0,
+  "outer_group_overlap": 0,
+  "accuracy": 0.7536231884057971,
+  "precision": 0.7142857142857143,
+  "sensitivity": 0.78125,
+  "specificity": 0.7297297297297297,
+  "f1_score": 0.746268656716418,
+  "balanced_accuracy": 0.7554898648648649,
+  "mcc": 0.5096899176690844,
+  "roc_auc": 0.8703547297297297,
+  "pr_auc": 0.82553358684273
+}

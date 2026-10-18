@@ -1,0 +1,20 @@
+{
+  "dataset": "parkinsons",
+  "method": "AllFeatures",
+  "seed": 72002,
+  "fold": 3,
+  "source_directory": "fold_safe_revision_2026_10_12/jobs/parkinsons_EHOA_72002_3_b0.3_r4_l1.0",
+  "selected_features": 22,
+  "cost_ratio": 1.0,
+  "outer_overlap": 0,
+  "outer_group_overlap": 0,
+  "accuracy": 0.6065573770491803,
+  "precision": 0.7659574468085106,
+  "sensitivity": 0.7346938775510204,
+  "specificity": 0.08333333333333333,
+  "f1_score": 0.75,
+  "balanced_accuracy": 0.4090136054421769,
+  "mcc": -0.1720212772031385,
+  "roc_auc": 0.6386054421768709,
+  "pr_auc": 0.8913161830821745
+}

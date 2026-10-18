@@ -1,0 +1,20 @@
+{
+  "dataset": "breast_cancer",
+  "method": "AllFeatures",
+  "seed": 72005,
+  "fold": 1,
+  "source_directory": "extended_revision_2026_10_12/extra_seeds/jobs/breast_cancer_EHOA_72005_1_b0.3_r4_l1.0",
+  "selected_features": 30,
+  "cost_ratio": 1.0,
+  "outer_overlap": 0,
+  "outer_group_overlap": 0,
+  "accuracy": 0.9578947368421052,
+  "precision": 0.9512195121951219,
+  "sensitivity": 0.9831932773109243,
+  "specificity": 0.9154929577464789,
+  "f1_score": 0.9669421487603306,
+  "balanced_accuracy": 0.9493431175287016,
+  "mcc": 0.909956827190137,
+  "roc_auc": 0.9873357793821754,
+  "pr_auc": 0.986212784689867
+}

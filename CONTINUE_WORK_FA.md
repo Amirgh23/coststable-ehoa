@@ -4,7 +4,7 @@
 
 نسخه کامل شامل مقاله‌ها، منابع، فایل‌های Word/PDF/LaTeX، پاسخ داوران، گزارش ممیزی، داده‌ها، کد، خروجی آزمایش‌ها و نسخه‌های قبلی است. فایل‌های ZIP قبلی نیز داخل فایل Complete Workspace در بخش Releases موجودند. کش Python، پوشه موقت Word و تاریخچه داخلی Git دوباره بایگانی نشده‌اند.
 
-آخرین نسخه معتبر: scientific_revision_2026_10_18؛ integrated_revision_2026_10_13 و extended_revision_2026_10_12 نسخه‌های تاریخی‌اند. نتایج اصلی پنج‌بذری 750 اجرا، تعامل‌ها 240 اجرا و جست‌وجوی بزرگ‌تر 150 اجرا هستند؛ با حساسیت قبلی، مجموع 1464 اجرا. مکمل انتقال 25 برازش جداگانه دارد. نتایج قدیمی در results و previous_delivery صرفاً آرشیوی‌اند و نباید با نتایج تازه ادغام شوند.
+آخرین نسخه معتبر: strict_revision_2026_10_18؛ integrated_revision_2026_10_13 و extended_revision_2026_10_12 نسخه‌های تاریخی‌اند. نتایج اصلی پنج‌بذری 750 اجرا، تعامل‌ها 240 اجرا و جست‌وجوی بزرگ‌تر 150 اجرا هستند؛ با حساسیت قبلی، مجموع 1464 اجرا. مکمل انتقال 25 برازش جداگانه دارد. نتایج قدیمی در results و previous_delivery صرفاً آرشیوی‌اند و نباید با نتایج تازه ادغام شوند.
 
 برای ادامه، مخزن را clone کنید یا فایل CostStableEHOA_Complete_Workspace.zip را از Releases دانلود و استخراج کنید. مسیرهای مطلق ثبت‌شده در لاگ‌های قدیمی متعلق به سیستم اولیه‌اند. اسکریپت‌های اصلی اجرا، ریشه را از محل خود فایل پیدا می‌کنند. Python 3.13 و نسخه‌های requirements.txt را استفاده کنید. run_fold_safe_revision.py و سپس run_extended_revision.py اجراها را بازتولید می‌کنند؛ analyze_fold_safe_revision.py و analyze_extended_revision.py گزارش‌های آماری را تولید می‌کنند. اجرای مجدد می‌تواند زمان‌بر باشد؛ خروجی کامل آماده موجود است.
 
@@ -17,3 +17,7 @@ finalize_integrated_revision.py اصلاح‌شده در clone و چیدمان s
 COMPLETE_WORKSPACE_MANIFEST.json مسیر، اندازه و SHA256 تمام فایل‌های بایگانی‌شده را ثبت می‌کند. آرشیو کامل و مخزن هر دو برای انتقال کار قابل استفاده‌اند.
 
 ممیزی علمی جدید در scientific_audit_2026_10_18 است. audit_final_predictions_2026_10_18.py همه1464+25طبقه‌بند را بازبرازش می‌کند و audit_optimizer_replay_2026_10_18.py فقط75جست‌وجوی ازپیش‌تعریف‌شده برای ممیزی را بازاجرا می‌کند؛ این اجراها جایگزین1464نتیجه تاریخی نیستند. بازسازی اسناد با سازندهscientificو بسته‌بندی با finalize_scientific_revision_2026_10_18.py است؛ qa_visual_review.json به هش PDFهای دیده‌شده متصل است و پس از تغییرPDF نیازمند بازبینی واقعی دوباره است. محیط ممیزی فعلی با محیط تاریخی pinned فرق دارد و نسخه‌ها ثبت شده‌اند.
+
+## Strict reviewer controls 2026-10-18
+
+Latest manuscript: `strict_revision_2026_10_18`; new evidence: `strict_review_2026_10_18`. 450 post-hoc no-search controls use the same 150 outer splits per method. EHOA predictive superiority and necessity are unestablished; no-search filters have higher descriptive subset stability. Both Holm9 and conservative combined Holm33 sensitivity are reported. All four manuscript PDFs have four pages, 18 references, nine tables and two figures. Run `run_strict_controls_2026_10_18.py`, then rebuild/render/review manuscripts; original historical inputs remain frozen. Author approval is absent and conference submission remains prohibited.

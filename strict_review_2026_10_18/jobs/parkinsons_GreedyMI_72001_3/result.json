@@ -1,0 +1,20 @@
+{
+  "dataset": "parkinsons",
+  "method": "GreedyMI",
+  "seed": 72001,
+  "fold": 3,
+  "source_directory": "fold_safe_revision_2026_10_12/jobs/parkinsons_mi_72001_3_b0.3_r4_l1.0",
+  "selected_features": 9,
+  "cost_ratio": 0.2991851511943087,
+  "outer_overlap": 0,
+  "outer_group_overlap": 0,
+  "accuracy": 0.8360655737704918,
+  "precision": 1.0,
+  "sensitivity": 0.7959183673469388,
+  "specificity": 1.0,
+  "f1_score": 0.8863636363636364,
+  "balanced_accuracy": 0.8979591836734694,
+  "mcc": 0.658890955530692,
+  "roc_auc": 0.9107142857142858,
+  "pr_auc": 0.9734191768098702
+}

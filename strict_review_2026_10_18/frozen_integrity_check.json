@@ -1,0 +1,62 @@
+[
+  {
+    "protocol": "fold_safe_revision_2026_10_12",
+    "file": "ehoa.py",
+    "matches": true
+  },
+  {
+    "protocol": "fold_safe_revision_2026_10_12",
+    "file": "utils.py",
+    "matches": true
+  },
+  {
+    "protocol": "fold_safe_revision_2026_10_12",
+    "file": "proposed/fold_safe_ehoa.py",
+    "matches": true
+  },
+  {
+    "protocol": "fold_safe_revision_2026_10_12",
+    "file": "run_fold_safe_revision.py",
+    "matches": true
+  },
+  {
+    "protocol": "fold_safe_revision_2026_10_12",
+    "file": "protocol.json",
+    "matches": true
+  },
+  {
+    "protocol": "extended_revision_2026_10_12",
+    "file": "run_extended_revision.py",
+    "matches": true
+  },
+  {
+    "protocol": "extended_revision_2026_10_12",
+    "file": "run_fold_safe_revision.py",
+    "matches": true
+  },
+  {
+    "protocol": "extended_revision_2026_10_12",
+    "file": "proposed/fold_safe_ehoa.py",
+    "matches": true
+  },
+  {
+    "protocol": "extended_revision_2026_10_12",
+    "file": "proposed/cost_stable_ehoa.py",
+    "matches": true
+  },
+  {
+    "protocol": "extended_revision_2026_10_12",
+    "file": "ehoa.py",
+    "matches": true
+  },
+  {
+    "protocol": "extended_revision_2026_10_12",
+    "file": "utils.py",
+    "matches": true
+  },
+  {
+    "protocol": "extended_revision_2026_10_12",
+    "file": "protocol.json",
+    "matches": true
+  }
+]

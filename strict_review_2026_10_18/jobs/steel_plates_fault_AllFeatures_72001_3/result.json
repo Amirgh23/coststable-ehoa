@@ -1,0 +1,20 @@
+{
+  "dataset": "steel_plates_fault",
+  "method": "AllFeatures",
+  "seed": 72001,
+  "fold": 3,
+  "source_directory": "fold_safe_revision_2026_10_12/jobs/steel_plates_fault_EHOA_72001_3_b0.3_r4_l1.0",
+  "selected_features": 27,
+  "cost_ratio": 1.0,
+  "outer_overlap": 0,
+  "outer_group_overlap": 0,
+  "accuracy": 0.7032457496136012,
+  "precision": 0.6764090821209633,
+  "sensitivity": 0.7934586909773477,
+  "specificity": 0.9489826713902666,
+  "f1_score": 0.7146874510834392,
+  "balanced_accuracy": 0.7934586909773477,
+  "mcc": 0.6443468911357936,
+  "roc_auc": 0.9127532546773571,
+  "pr_auc": 0.6949247813833851
+}

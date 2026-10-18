@@ -1,0 +1,302 @@
+[
+  {
+    "path": "AUTHOR_APPROVAL_STATUS.json",
+    "sha256": "88472a1af93013f129a820a476f08d328e187831da6aad8a5680a6525b17da20"
+  },
+  {
+    "path": "author_declaration_draft_fa.md",
+    "sha256": "58b11d4525d4897a8a3181b2ec64c722747c8b9236a27976f6a13e4dcbeb0c26"
+  },
+  {
+    "path": "baic2026_header.png",
+    "sha256": "0f1640b970c3950160e9b57b253cc048e8535bb62f72f9e89ca4c1f0d42c7d12"
+  },
+  {
+    "path": "delivery_quality.json",
+    "sha256": "451ad33fb450c2074949cfd8afd2e6723a92be7f721bf84dcc00b8f787031b8e"
+  },
+  {
+    "path": "evidence_requests_drafts.md",
+    "sha256": "e63454bfe493d8175ac7caaf7e20e1b458ff9e2b8f0f083333fa51bd55c6b099"
+  },
+  {
+    "path": "manuscript_en.docx",
+    "sha256": "b539348e92c034b165d98900f9ab20b12bebe839a971d2bf8444a47b0456faca"
+  },
+  {
+    "path": "manuscript_en.pdf",
+    "sha256": "eb34c2d8913199e9556d9d10e12cfcb4549a90c31487e9ae137d81a2abe7dc90"
+  },
+  {
+    "path": "manuscript_en.tex",
+    "sha256": "baaee73b583103c2f98e1e992f7d8b93ad1899b6e428435f9c21ce6238a06a20"
+  },
+  {
+    "path": "manuscript_fa.docx",
+    "sha256": "1917c64480d5d15b9e493ba07338b266b76703c92bd2100277f79ca1701f0e29"
+  },
+  {
+    "path": "manuscript_fa.pdf",
+    "sha256": "750468db64e5acc5c6a49f0a7ae241108ee9fdabfc68e65dc88f4d6da72f4ead"
+  },
+  {
+    "path": "manuscript_fa.tex",
+    "sha256": "661a2d08089376a2e13eacba053409a70dc3e63c13b82b5544677f28f8db6ef8"
+  },
+  {
+    "path": "qa_visual_review.json",
+    "sha256": "cc5771d380f44e8e40ee969a06c5964c4fdbf8c0fa398e948bc3fa622bf2662a"
+  },
+  {
+    "path": "README_FA.md",
+    "sha256": "aa6f380b80914563e8f30324d2e525c793c4106fc98ab5a69a8509124cd1eec0"
+  },
+  {
+    "path": "references_for_submission.txt",
+    "sha256": "f0e06c74ad7800227d99505cb62c64c14001c054a12e3cda12350809b819adac"
+  },
+  {
+    "path": "response_to_reviewers_fa.md",
+    "sha256": "f5f78abbb186b3d5f2b615001eac58ab4fc58b25bab7933df7da5918390bffdb"
+  },
+  {
+    "path": "reviewer_response.csv",
+    "sha256": "a8f4e34d90fde6370de47d75d69fdf63fe0b4beff80dc4af868ebb9db132a992"
+  },
+  {
+    "path": "SUBMISSION_STATUS_FA.md",
+    "sha256": "43beccef12b4891efef519ce2f95ebe070afd9840cca089dcdfec78b685c92b4"
+  },
+  {
+    "path": "unresolved_items_fa.md",
+    "sha256": "fd06c6d67117049657a7a230f879ecc9e4beb24a610dff8e3272c0621a4d48a9"
+  },
+  {
+    "path": "figures/breast_top_frequencies.pdf",
+    "sha256": "fee9d020599d502fa4b3c631eada8430524ea04cc078c36b11416214b4f4a889"
+  },
+  {
+    "path": "figures/breast_top_frequencies.png",
+    "sha256": "04bbde76034e561d889fdfa877ef006712b532e766e30a008dda71faff635f97"
+  },
+  {
+    "path": "figures/breast_top_frequencies.svg",
+    "sha256": "4ed210c857ea831be49243d92d56c4028e96d319487d6f766aa3b690d06791e1"
+  },
+  {
+    "path": "figures/breast_top_frequencies.tiff",
+    "sha256": "7ba3b50b3b26df5765626306345a26cc398472c3eac0056daa26493c93c48491"
+  },
+  {
+    "path": "figures/eligible_comparison.pdf",
+    "sha256": "02e5fff74fca19137e6588ee6eeec184f2a9908c3bb87be24bca588ba74308ca"
+  },
+  {
+    "path": "figures/eligible_comparison.png",
+    "sha256": "b083cb2324c31c13d27626ce649d1f25d25a81a83d3cba0f983c1320f02a81f2"
+  },
+  {
+    "path": "figures/eligible_comparison.svg",
+    "sha256": "38694976d5cca2c5cd109bdbda471bd572b81bcee5614ec6717f4e0fbefdadcc"
+  },
+  {
+    "path": "figures/eligible_comparison.tiff",
+    "sha256": "a64e10e52631d91512a0a6064492e546ed5f6ed84b193c2f8b2ca8b113d4dddd"
+  },
+  {
+    "path": "qa/doc_en-1.png",
+    "sha256": "7d6c7a5d9a1e8c83ee148ccb475d2fd38379061fd098f51ae2f008c07e78a463"
+  },
+  {
+    "path": "qa/doc_en-2.png",
+    "sha256": "f8aedf36cde43d30fdf969ccf0c91cb2dc4b0c59c101a4a22089920627d797fa"
+  },
+  {
+    "path": "qa/doc_en-3.png",
+    "sha256": "51d093ea51303ea7d62ad7031172c88101e805a5c8dcfce341e27699087a8c76"
+  },
+  {
+    "path": "qa/doc_en-4.png",
+    "sha256": "0f1423ab3a2e66d12229c394b2b924c4fdff6014bc223c368511190c2b05489f"
+  },
+  {
+    "path": "qa/doc_fa-1.png",
+    "sha256": "5e857941dffbc3384c7432f2dcd2cc694198ba0db62340ad46ec869348af30ce"
+  },
+  {
+    "path": "qa/doc_fa-2.png",
+    "sha256": "18f1f7968de8cf4057283bd3553b2f20af56b0cbe11983687dc728f4f622fead"
+  },
+  {
+    "path": "qa/doc_fa-3.png",
+    "sha256": "a01924a1fce9ee451e2b0f7dbcfdb2ef5a1a2ff1b9a1156b26216ee333b4365e"
+  },
+  {
+    "path": "qa/doc_fa-4.png",
+    "sha256": "95117ee9dbdfb128ecb93f4d786405230b4bd7e4ebcd48a6e426dd9b93cf4d76"
+  },
+  {
+    "path": "qa/tex_en-1.png",
+    "sha256": "e75fb737cfa3c0e723fd0f9084b141e4a1d64fe59ece25ad2c779fa03cae11a2"
+  },
+  {
+    "path": "qa/tex_en-2.png",
+    "sha256": "b2dcc80d75304c8b1fff2ef8b09b84394f0b5cb2eb1c603b5776f791d86e9daa"
+  },
+  {
+    "path": "qa/tex_en-3.png",
+    "sha256": "6b1f96e9654b4678db2399a73152c9d326cdc27e3158e4532370788fb451a685"
+  },
+  {
+    "path": "qa/tex_en-4.png",
+    "sha256": "cd466685a9cfd97865ced4e8d8bd6154dc60661f8818fee909cef4fec88193d6"
+  },
+  {
+    "path": "qa/tex_fa-1.png",
+    "sha256": "d5655e92bcfddfdf75550cea58c245a01e7a65786bf1fdbc2ad79a1e0b2a2273"
+  },
+  {
+    "path": "qa/tex_fa-2.png",
+    "sha256": "a4e99553f521d1ace077b1c52b2ffa4d5e98f69415c1ffb7dcfd4333715073b4"
+  },
+  {
+    "path": "qa/tex_fa-3.png",
+    "sha256": "572136d0d597a2dd94c585ac942173f7febd09a94a497506ffca0e1631c906a8"
+  },
+  {
+    "path": "qa/tex_fa-4.png",
+    "sha256": "84fbe2257dc634e03e16e3eebbb70006eb30a5b5d1bb40c40c3b3189738b1d03"
+  },
+  {
+    "path": "qa/word_en.pdf",
+    "sha256": "3464eb52363cb0afb610bc3d281cfb79f66b38ecfedb77971ae23b5b17c6f4b6"
+  },
+  {
+    "path": "qa/word_fa.pdf",
+    "sha256": "7b9378c6df1b0c8a5db4dc400288fee39ea3ce6ca9f8cb654ca854d30efd7bd4"
+  },
+  {
+    "path": "sources/analyze_extended_revision.py",
+    "sha256": "605723bab12271170522b77b0cb686e1250f505c283ac91bcf25e0857f57ab2b"
+  },
+  {
+    "path": "sources/analyze_fold_safe_revision.py",
+    "sha256": "5c0166223094514bbaa7c2bc387f83921b9d4ab485e3b5aec5e8f7ba6541ae56"
+  },
+  {
+    "path": "sources/audit_final_predictions_2026_10_18.py",
+    "sha256": "6ac10732d77d82782b17d9a2dd6641479523ba4a0946a20e25885788b85e0bec"
+  },
+  {
+    "path": "sources/audit_optimizer_replay_2026_10_18.py",
+    "sha256": "557d7644de5967004d54bd68cdaceb64db970ed95c708f56921c2ed063c9faaa"
+  },
+  {
+    "path": "sources/build_extended_documents.py",
+    "sha256": "43d12402b9f782423caa24aa606357e67e17050041f35db96caf61754624fc20"
+  },
+  {
+    "path": "sources/build_fold_safe_documents.py",
+    "sha256": "8acad6875b8a6cc468869fbad83cc0fc2f3ed4319b110dd54acdf2aa7af7cc8a"
+  },
+  {
+    "path": "sources/build_integrated_documents.py",
+    "sha256": "ab54b26a47f6a90f9407339067137a25c7558b81cdb77fb6ea950ce1dd489314"
+  },
+  {
+    "path": "sources/build_revision_documents.py",
+    "sha256": "5e5466415a4094a80905eaeeee5c17e76edbfbffec98f93b693fcecd315a9793"
+  },
+  {
+    "path": "sources/build_scientific_revision_2026_10_18.py",
+    "sha256": "b1ebbb5ee8ee1675b34ebe79cefbb5655ddd629496679317bfef9ccfe6a2278b"
+  },
+  {
+    "path": "sources/build_strict_revision_2026_10_18.py",
+    "sha256": "f367ff779966ae38f49333f6d3d27d119af8b2381d3a61baf490db13a766b399"
+  },
+  {
+    "path": "sources/congress_article_instructions.html",
+    "sha256": "713da8b46215a79ef3dd45688c8b7a7d1b477ee0d44996e5ce9e378da169cd81"
+  },
+  {
+    "path": "sources/congress_article_instructions.txt",
+    "sha256": "66c5bb15540bf17417ec7414099b5fe374365c6fa9a5562a31a8ead4d0450a2b"
+  },
+  {
+    "path": "sources/congress_current_page.html",
+    "sha256": "0a49f5f33a4cbf7763664813b756bfc9589f2571727e415e98902b1c413367cd"
+  },
+  {
+    "path": "sources/congress_submission_check.json",
+    "sha256": "1ad53fe96c725bde9585d0634377a936cd92df361d65a1e9d9528e926978a449"
+  },
+  {
+    "path": "sources/congress_template.docx",
+    "sha256": "a4e5b64a52f568cd5aab21066de59a248724f5ca7acf12d627d09978aedfae5a"
+  },
+  {
+    "path": "sources/draw_extended_figures.py",
+    "sha256": "6feed061a47214091b399d1e28efbf4fc569685973a08dc0d02fc0d6c36743ab"
+  },
+  {
+    "path": "sources/draw_fold_safe_figures.py",
+    "sha256": "58521fb18d7c60e4eef53a366cbf0faf312003beda8de60c80cc03e4238fcbbb"
+  },
+  {
+    "path": "sources/ehoa.py",
+    "sha256": "abc047bac978fc2fde2fd638580ef3adb7eab01f5755ff43be40dc3b86ce6b95"
+  },
+  {
+    "path": "sources/finalize_integrated_revision.py",
+    "sha256": "65e430578ae2608ae520ae02f2921aab25b34d4a0fc126f084a1b0b07c8f7df3"
+  },
+  {
+    "path": "sources/finalize_scientific_revision_2026_10_18.py",
+    "sha256": "4a9bafa0d85a7112cd52e6a35b9f41fe6d48274d6b4d50ad9b0dc6a86fbc8f33"
+  },
+  {
+    "path": "sources/finalize_strict_revision_2026_10_18.py",
+    "sha256": "5e6e15e9a9d913d0804ac04599235a395548cbb861e0cef958546b95a72457d9"
+  },
+  {
+    "path": "sources/manuscript_content.json",
+    "sha256": "3a2348723fb8a0e7a544ef5e2c1ac3d35a9202b3f154b68039c65ed9684ee782"
+  },
+  {
+    "path": "sources/package_extended_revision.py",
+    "sha256": "2813f136fa063889dfc3a35ef27b0f0c58265be35be14b11b67de7f0d83c0d8c"
+  },
+  {
+    "path": "sources/reference_verification.csv",
+    "sha256": "f9ebbb4b843ce0e0e37096ace4af5309151032a25357249bffc51e4a1c2fba12"
+  },
+  {
+    "path": "sources/run_extended_revision.py",
+    "sha256": "5ff4949d40409c606122a66f3a48cc0674c034a0f909f12145bd7747dd4cbb9a"
+  },
+  {
+    "path": "sources/run_fold_safe_revision.py",
+    "sha256": "9a70eebf18a58aae169780e964d8df4290bd5054914be7fbe73901811a21a458"
+  },
+  {
+    "path": "sources/run_strict_controls_2026_10_18.py",
+    "sha256": "df9f86f7d058bdf25ada1eb1adc57c6d6b263cc86f2c685078fed34cec46161a"
+  },
+  {
+    "path": "sources/scientific_robustness_audit_2026_10_18.py",
+    "sha256": "bae46e78bfcdcfab287b33f7b7ed2976d49e56c190429660598429920b2058bf"
+  },
+  {
+    "path": "sources/scientific_secondary_audit_2026_10_18.py",
+    "sha256": "b8070e1afe6de8c38c93f287c731e2337028e11b4e4f6f2c89de06803d34a1b3"
+  },
+  {
+    "path": "sources/scientific_statistical_audit_2026_10_18.py",
+    "sha256": "9767a1e36093e0fe6e75333e698e1a905e781f219a1a2a320785b80dcd2539cc"
+  },
+  {
+    "path": "sources/utils.py",
+    "sha256": "d9b8ff05838fe315499d7959aa1746224d657fb27a48a6463904f62c55134c2b"
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "dataset": "parkinsons",
+  "method": "GreedyResampled",
+  "seed": 72005,
+  "fold": 3,
+  "source_directory": "extended_revision_2026_10_12/extra_seeds/jobs/parkinsons_stable_lcb_72005_3_b0.3_r4_l1.0",
+  "selected_features": 9,
+  "cost_ratio": 0.28316390328426294,
+  "outer_overlap": 0,
+  "outer_group_overlap": 0,
+  "accuracy": 0.7213114754098361,
+  "precision": 0.8636363636363636,
+  "sensitivity": 0.7755102040816326,
+  "specificity": 0.5,
+  "f1_score": 0.8172043010752689,
+  "balanced_accuracy": 0.6377551020408163,
+  "mcc": 0.2442730486041477,
+  "roc_auc": 0.6071428571428571,
+  "pr_auc": 0.8291022317296708
+}

@@ -1,0 +1,20 @@
+{
+  "dataset": "madelon",
+  "method": "GreedyResampled",
+  "seed": 72001,
+  "fold": 2,
+  "source_directory": "fold_safe_revision_2026_10_12/jobs/madelon_stable_lcb_72001_2_b0.3_r4_l1.0",
+  "selected_features": 222,
+  "cost_ratio": 0.2992976870888851,
+  "outer_overlap": 0,
+  "outer_group_overlap": 0,
+  "accuracy": 0.5686274509803921,
+  "precision": 0.565410199556541,
+  "sensitivity": 0.5889145496535797,
+  "specificity": 0.5483870967741935,
+  "f1_score": 0.5769230769230769,
+  "balanced_accuracy": 0.5686508232138866,
+  "mcc": 0.13741356968198848,
+  "roc_auc": 0.596697033875757,
+  "pr_auc": 0.5778305656286136
+}

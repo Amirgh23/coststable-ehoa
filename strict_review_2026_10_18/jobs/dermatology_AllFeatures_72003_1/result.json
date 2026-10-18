@@ -1,0 +1,20 @@
+{
+  "dataset": "dermatology",
+  "method": "AllFeatures",
+  "seed": 72003,
+  "fold": 1,
+  "source_directory": "fold_safe_revision_2026_10_12/jobs/dermatology_EHOA_72003_1_b0.3_r4_l1.0",
+  "selected_features": 34,
+  "cost_ratio": 1.0,
+  "outer_overlap": 0,
+  "outer_group_overlap": 0,
+  "accuracy": 0.9754098360655737,
+  "precision": 0.9791666666666666,
+  "sensitivity": 0.9758876523582406,
+  "specificity": 0.995049504950495,
+  "f1_score": 0.9765047737650477,
+  "balanced_accuracy": 0.9758876523582406,
+  "mcc": 0.9697122802598703,
+  "roc_auc": 0.999953314659197,
+  "pr_auc": 0.9994553376906318
+}

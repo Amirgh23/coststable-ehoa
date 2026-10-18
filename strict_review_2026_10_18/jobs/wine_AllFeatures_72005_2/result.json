@@ -1,0 +1,20 @@
+{
+  "dataset": "wine",
+  "method": "AllFeatures",
+  "seed": 72005,
+  "fold": 2,
+  "source_directory": "extended_revision_2026_10_12/extra_seeds/jobs/wine_EHOA_72005_2_b0.3_r4_l1.0",
+  "selected_features": 13,
+  "cost_ratio": 1.0,
+  "outer_overlap": 0,
+  "outer_group_overlap": 0,
+  "accuracy": 0.9322033898305084,
+  "precision": 0.9314954051796157,
+  "sensitivity": 0.9420289855072465,
+  "specificity": 0.9681971774995031,
+  "f1_score": 0.9315524583817266,
+  "balanced_accuracy": 0.9420289855072465,
+  "mcc": 0.9033479367201352,
+  "roc_auc": 0.986504685443007,
+  "pr_auc": 0.9700468315543086
+}

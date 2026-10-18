@@ -1,0 +1,20 @@
+{
+  "dataset": "hill_valley",
+  "method": "GreedyMI",
+  "seed": 72004,
+  "fold": 2,
+  "source_directory": "extended_revision_2026_10_12/extra_seeds/jobs/hill_valley_mi_72004_2_b0.3_r4_l1.0",
+  "selected_features": 34,
+  "cost_ratio": 0.29055111237877546,
+  "outer_overlap": 0,
+  "outer_group_overlap": 0,
+  "accuracy": 0.5,
+  "precision": 0.5,
+  "sensitivity": 0.5247524752475248,
+  "specificity": 0.4752475247524752,
+  "f1_score": 0.5120772946859904,
+  "balanced_accuracy": 0.5,
+  "mcc": 0.0,
+  "roc_auc": 0.5134913243799627,
+  "pr_auc": 0.5108032533285951
+}

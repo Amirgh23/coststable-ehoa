@@ -1,0 +1,20 @@
+{
+  "dataset": "wine",
+  "method": "GreedyMI",
+  "seed": 72003,
+  "fold": 3,
+  "source_directory": "fold_safe_revision_2026_10_12/jobs/wine_mi_72003_3_b0.3_r4_l1.0",
+  "selected_features": 6,
+  "cost_ratio": 0.20779063719154256,
+  "outer_overlap": 0,
+  "outer_group_overlap": 0,
+  "accuracy": 0.9322033898305084,
+  "precision": 0.9349376114081996,
+  "sensitivity": 0.9444444444444445,
+  "specificity": 0.9672480620155038,
+  "f1_score": 0.9352057156935206,
+  "balanced_accuracy": 0.9444444444444445,
+  "mcc": 0.9029676444336812,
+  "roc_auc": 0.9863826232247286,
+  "pr_auc": 0.9681847166280707
+}
