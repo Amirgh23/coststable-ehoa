@@ -1,0 +1,11 @@
+{
+  "secondary_maximum_error": 2.842170943040401e-14,
+  "spambase_collision_rows": 6,
+  "spambase_collision_groups": 3,
+  "spambase_runs_audited": 114,
+  "spambase_runs_with_collision_across_outer_split": 94,
+  "collision_interpretation": "Identical feature vectors have discordant labels. This is not sufficient evidence of identical emails or a shared real-world source; do not claim established subject leakage.",
+  "parkinson_mapping_label_mismatches": 0,
+  "parkinson_prefixes": 32,
+  "parkinson_prefix_label_max_nunique": 1
+}

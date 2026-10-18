@@ -1,0 +1,104 @@
+{
+  "scope": "Independent content crosscheck only; no manuscript/code edits; visual review is not repeated here",
+  "source": "scientific_revision_2026_10_18\\sources\\manuscript_content.json",
+  "source_sha256": "013d40c8e5774271406f641c8e8ee4c37de6895b8eb8da30f26707bc726e58c6",
+  "counts": {
+    "references": 17,
+    "tables": 9,
+    "figures": 2
+  },
+  "table7": {
+    "file": "scientific_revision_2026_10_18\\sources\\manuscript_content.json",
+    "lines": "553-590",
+    "matches_csv": true,
+    "actual": [
+      [
+        "Original",
+        10,
+        "+0.12045",
+        "0.04688"
+      ],
+      [
+        "No Oxford",
+        9,
+        "+0.12035",
+        "0.09375"
+      ],
+      [
+        "Each omission",
+        9,
+        "[+0.10487,+0.12842]",
+        ">=0.09375"
+      ]
+    ],
+    "expected_from_csv": [
+      [
+        "Original",
+        10,
+        "+0.12045",
+        "0.04688"
+      ],
+      [
+        "No Oxford",
+        9,
+        "+0.12035",
+        "0.09375"
+      ],
+      [
+        "Each omission",
+        9,
+        "[+0.10487,+0.12842]",
+        ">=0.09375"
+      ]
+    ],
+    "evidence": [
+      "independent_paired_and_exact_sensitivity.csv",
+      "leave_one_dataset_out_paired.csv"
+    ]
+  },
+  "checks": [
+    {
+      "file": "scientific_revision_2026_10_18\\sources\\manuscript_content.json",
+      "lines": "548-549",
+      "status": "pass",
+      "claim": "Explicitly post-hoc; original10dataset analysis retained; minimum signed-rank resolution2/512 and observed Holm24=.09375; threshold fragility does not prove no effect."
+    },
+    {
+      "file": "scientific_revision_2026_10_18\\sources\\manuscript_content.json",
+      "lines": "618-624",
+      "status": "pass",
+      "claim": "Breast-cancer case and body crossreference consistently shifted toTable8;15masks per method retained."
+    },
+    {
+      "file": "scientific_revision_2026_10_18\\sources\\manuscript_content.json",
+      "lines": "695-718",
+      "status": "pass",
+      "claim": "Transfer is Table9; BA=.575, CI[.475,.675], sensitivity/specificity=.725/.425, AUC .5794/.5500 agree with independently checked predictions."
+    },
+    {
+      "file": "scientific_revision_2026_10_18\\sources\\manuscript_content.json",
+      "lines": "731-732",
+      "status": "pass",
+      "claim": "All1464fixed-mask classifiers and25external predictions audited; parent final_classifier_refit_summary andexternal CSV confirm0prediction disagreement.75selected optimizer replays match historical masks; stated limitation excludes replay of every historical search.",
+      "evidence": [
+        "final_classifier_refit_summary.json",
+        "external_classifier_refit_audit.csv",
+        "optimizer_replay_summary.json"
+      ]
+    },
+    {
+      "file": "scientific_revision_2026_10_18\\sources\\manuscript_content.json",
+      "lines": "726-727",
+      "status": "pass",
+      "claim": "No convergence/MIerror-control guarantee; one-seed factorial/search anddifferentworker timing limitations retained; no22feature or prospective clinical validation."
+    },
+    {
+      "file": "scientific_revision_2026_10_18\\sources\\manuscript_content.json",
+      "lines": "7-8,726-727,740-741",
+      "status": "pass",
+      "claim": "Clinical identity, original historical evidence, measured marginal costs andfullclinicalvalidation remain unresolved; no claim that fresh audit reconstructs missing historical evidence."
+    }
+  ],
+  "contradictions": [],
+  "verdict": "accepted_in_local_evidence_scope; S01interpretation addressed. GitHub availability of fresh probabilities/audits is contingent on parent publication before final delivery."
+}

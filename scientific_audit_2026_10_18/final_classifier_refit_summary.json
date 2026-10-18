@@ -1,0 +1,25 @@
+{
+  "recorded_runs": 1464,
+  "refitted_runs": 1464,
+  "refit_scope": "Fixed saved feature masks and outer splits; optimizer not rerun",
+  "prediction_disagreements": 0,
+  "record_order_mismatches": 0,
+  "true_label_mismatches": 0,
+  "maximum_metric_error": 1.1102230246251565e-16,
+  "maximum_cost_error": 5.684341886080802e-14,
+  "budget_violations": 0,
+  "outer_subject_overlap": 0,
+  "row_overlap": 0,
+  "incomplete_outer_partitions": 0,
+  "refit_classifier_fit_calls": 1464,
+  "probabilities_saved": 1464,
+  "environment": {
+    "python": "3.13.13",
+    "numpy": "2.5.0",
+    "pandas": "3.0.3",
+    "scipy": "1.18.0",
+    "sklearn": "1.9.0",
+    "imblearn": "0.14.2"
+  },
+  "code_sha256": "6ac10732d77d82782b17d9a2dd6641479523ba4a0946a20e25885788b85e0bec"
+}

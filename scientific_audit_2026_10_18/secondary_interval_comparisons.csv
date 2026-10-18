@@ -1,0 +1,7 @@
+table,column,maximum_absolute_error
+factorial_effects,mean_effect,3.0531133177191805e-15
+factorial_effects,ci95_low,7.993605777301127e-15
+factorial_effects,ci95_high,6.2727600891321345e-15
+search_profile_effects,mean_delta,1.6653345369377348e-16
+search_profile_effects,ci95_low,2.220446049250313e-16
+search_profile_effects,ci95_high,2.842170943040401e-14

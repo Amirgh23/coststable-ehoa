@@ -1,0 +1,32 @@
+[
+  {
+    "id": "S01",
+    "severity": "medium",
+    "category": "interpretation robustness",
+    "file": "analyze_extended_revision.py",
+    "lines": "43-65",
+    "finding": "Ten-dataset Holm24 p=.046875 is threshold-fragile to every leave-one-dataset-out analysis; positive stability effects remain but Holm24=.09375 for EHOA/Random.",
+    "evidence": "leave_one_dataset_out_paired.csv",
+    "status": "Independent post-hoc sensitivity completed; proposed manuscript wording prepared"
+  },
+  {
+    "id": "S02",
+    "severity": "low",
+    "category": "data ambiguity",
+    "file": "utils.py",
+    "lines": "135-150",
+    "finding": "Three pairs of identical Spambase feature vectors with discordant labels remain after X+y deduplication; crossing in94/114runs. Real-source identity and leakage are not established.",
+    "evidence": "spambase_collision_split_audit.csv",
+    "status": "Recorded; no arbitrary relabeling or removal"
+  },
+  {
+    "id": "S03",
+    "severity": "external evidence limitation",
+    "category": "clinical subject identity",
+    "file": "revision_2026_10_12/corrected_experiments/parkinson_subject_mapping.csv",
+    "lines": "1-196",
+    "finding": "195rows/32consistent pseudonymous prefixes; all split group overlaps0. The31-person narrative discrepancy cannot be resolved by this mapping.",
+    "evidence": "all_1464_prediction_and_group_checks.csv",
+    "status": "Public-data identity remains unverified; Oxford-exclusion sensitivity completed"
+  }
+]

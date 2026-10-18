@@ -1,0 +1,11 @@
+dataset,rows,features,classes,exact_duplicate_feature_rows_including_all_members,redundant_feature_rows,missing_feature_values,subject_prefixes
+breast_cancer,569,30,2,0,0,0,0
+dermatology,366,34,6,0,0,8,0
+hill_valley,1212,100,2,0,0,0,0
+ionosphere,350,34,2,0,0,0,0
+madelon,2600,500,2,0,0,0,0
+parkinsons,195,22,2,0,0,0,32
+sonar,208,60,2,0,0,0,0
+spambase,4210,57,2,6,3,0,0
+steel_plates_fault,1941,27,7,0,0,0,0
+wine,178,13,3,0,0,0,0

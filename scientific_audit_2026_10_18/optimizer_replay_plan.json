@@ -1,0 +1,656 @@
+{
+  "scope": "Post-hoc current-runtime source-code audit, not new efficacy evidence; all10datasets x5methods firstprimaryseed/fold plus25external fits; historical outputs preserved",
+  "code_sha256": "557d7644de5967004d54bd68cdaceb64db970ed95c708f56921c2ed063c9faaa",
+  "jobs": [
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/breast_cancer_EHOA_72001_1_b0.3_r4_l1.0",
+      "name": "breast_cancer_EHOA_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "breast_cancer",
+      "method": "EHOA",
+      "seed": 72001,
+      "historical_fitness": 0.0415841769778777
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/breast_cancer_random_72001_1_b0.3_r4_l1.0",
+      "name": "breast_cancer_random_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "breast_cancer",
+      "method": "random",
+      "seed": 72001,
+      "historical_fitness": 0.0408762654668167
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/breast_cancer_cheapest_72001_1_b0.3_r4_l1.0",
+      "name": "breast_cancer_cheapest_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "breast_cancer",
+      "method": "cheapest",
+      "seed": 72001,
+      "historical_fitness": 0.0327064116985377
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/breast_cancer_mi_72001_1_b0.3_r4_l1.0",
+      "name": "breast_cancer_mi_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "breast_cancer",
+      "method": "mi",
+      "seed": 72001,
+      "historical_fitness": 0.0450731158605174
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/breast_cancer_stable_lcb_72001_1_b0.3_r4_l1.0",
+      "name": "breast_cancer_stable_lcb_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "breast_cancer",
+      "method": "stable_lcb",
+      "seed": 72001,
+      "historical_fitness": 0.0358603924509436
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/wine_EHOA_72001_1_b0.3_r4_l1.0",
+      "name": "wine_EHOA_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "wine",
+      "method": "EHOA",
+      "seed": 72001,
+      "historical_fitness": 0.0497884615384615
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/wine_random_72001_1_b0.3_r4_l1.0",
+      "name": "wine_random_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "wine",
+      "method": "random",
+      "seed": 72001,
+      "historical_fitness": 0.0367115384615384
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/wine_cheapest_72001_1_b0.3_r4_l1.0",
+      "name": "wine_cheapest_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "wine",
+      "method": "cheapest",
+      "seed": 72001,
+      "historical_fitness": 0.0462884615384615
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/wine_mi_72001_1_b0.3_r4_l1.0",
+      "name": "wine_mi_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "wine",
+      "method": "mi",
+      "seed": 72001,
+      "historical_fitness": 0.0462884615384615
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/wine_stable_lcb_72001_1_b0.3_r4_l1.0",
+      "name": "wine_stable_lcb_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "wine",
+      "method": "stable_lcb",
+      "seed": 72001,
+      "historical_fitness": 0.0462884615384615
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/ionosphere_EHOA_72001_1_b0.3_r4_l1.0",
+      "name": "ionosphere_EHOA_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "ionosphere",
+      "method": "EHOA",
+      "seed": 72001,
+      "historical_fitness": 0.0865966386554622
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/ionosphere_random_72001_1_b0.3_r4_l1.0",
+      "name": "ionosphere_random_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "ionosphere",
+      "method": "random",
+      "seed": 72001,
+      "historical_fitness": 0.0917797888386124
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/ionosphere_cheapest_72001_1_b0.3_r4_l1.0",
+      "name": "ionosphere_cheapest_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "ionosphere",
+      "method": "cheapest",
+      "seed": 72001,
+      "historical_fitness": 0.0878862314156432
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/ionosphere_mi_72001_1_b0.3_r4_l1.0",
+      "name": "ionosphere_mi_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "ionosphere",
+      "method": "mi",
+      "seed": 72001,
+      "historical_fitness": 0.0842986425339365
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/ionosphere_stable_lcb_72001_1_b0.3_r4_l1.0",
+      "name": "ionosphere_stable_lcb_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "ionosphere",
+      "method": "stable_lcb",
+      "seed": 72001,
+      "historical_fitness": 0.1191919844861023
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/sonar_EHOA_72001_1_b0.3_r4_l1.0",
+      "name": "sonar_EHOA_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "sonar",
+      "method": "EHOA",
+      "seed": 72001,
+      "historical_fitness": 0.1760072463768114
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/sonar_random_72001_1_b0.3_r4_l1.0",
+      "name": "sonar_random_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "sonar",
+      "method": "random",
+      "seed": 72001,
+      "historical_fitness": 0.1759516908212559
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/sonar_cheapest_72001_1_b0.3_r4_l1.0",
+      "name": "sonar_cheapest_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "sonar",
+      "method": "cheapest",
+      "seed": 72001,
+      "historical_fitness": 0.1835144927536232
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/sonar_mi_72001_1_b0.3_r4_l1.0",
+      "name": "sonar_mi_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "sonar",
+      "method": "mi",
+      "seed": 72001,
+      "historical_fitness": 0.1894661835748791
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/sonar_stable_lcb_72001_1_b0.3_r4_l1.0",
+      "name": "sonar_stable_lcb_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "sonar",
+      "method": "stable_lcb",
+      "seed": 72001,
+      "historical_fitness": 0.1612705314009663
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/dermatology_EHOA_72001_1_b0.3_r4_l1.0",
+      "name": "dermatology_EHOA_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "dermatology",
+      "method": "EHOA",
+      "seed": 72001,
+      "historical_fitness": 0.0458361230671131
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/dermatology_random_72001_1_b0.3_r4_l1.0",
+      "name": "dermatology_random_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "dermatology",
+      "method": "random",
+      "seed": 72001,
+      "historical_fitness": 0.0608565811148307
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/dermatology_cheapest_72001_1_b0.3_r4_l1.0",
+      "name": "dermatology_cheapest_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "dermatology",
+      "method": "cheapest",
+      "seed": 72001,
+      "historical_fitness": 0.0810322014984856
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/dermatology_mi_72001_1_b0.3_r4_l1.0",
+      "name": "dermatology_mi_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "dermatology",
+      "method": "mi",
+      "seed": 72001,
+      "historical_fitness": 0.0645881821563314
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/dermatology_stable_lcb_72001_1_b0.3_r4_l1.0",
+      "name": "dermatology_stable_lcb_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "dermatology",
+      "method": "stable_lcb",
+      "seed": 72001,
+      "historical_fitness": 0.0570309261916149
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/spambase_EHOA_72001_1_b0.3_r4_l1.0",
+      "name": "spambase_EHOA_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "spambase",
+      "method": "EHOA",
+      "seed": 72001,
+      "historical_fitness": 0.0966466420576328
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/spambase_random_72001_1_b0.3_r4_l1.0",
+      "name": "spambase_random_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "spambase",
+      "method": "random",
+      "seed": 72001,
+      "historical_fitness": 0.1095918604958852
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/spambase_cheapest_72001_1_b0.3_r4_l1.0",
+      "name": "spambase_cheapest_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "spambase",
+      "method": "cheapest",
+      "seed": 72001,
+      "historical_fitness": 0.1271699015638644
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/spambase_mi_72001_1_b0.3_r4_l1.0",
+      "name": "spambase_mi_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "spambase",
+      "method": "mi",
+      "seed": 72001,
+      "historical_fitness": 0.1162313447646264
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/spambase_stable_lcb_72001_1_b0.3_r4_l1.0",
+      "name": "spambase_stable_lcb_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "spambase",
+      "method": "stable_lcb",
+      "seed": 72001,
+      "historical_fitness": 0.1022457198803947
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/parkinsons_EHOA_72001_1_b0.3_r4_l1.0",
+      "name": "parkinsons_EHOA_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "parkinsons",
+      "method": "EHOA",
+      "seed": 72001,
+      "historical_fitness": 0.1105259342323296
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/parkinsons_random_72001_1_b0.3_r4_l1.0",
+      "name": "parkinsons_random_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "parkinsons",
+      "method": "random",
+      "seed": 72001,
+      "historical_fitness": 0.1152473430089708
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/parkinsons_cheapest_72001_1_b0.3_r4_l1.0",
+      "name": "parkinsons_cheapest_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "parkinsons",
+      "method": "cheapest",
+      "seed": 72001,
+      "historical_fitness": 0.1330290054854009
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/parkinsons_mi_72001_1_b0.3_r4_l1.0",
+      "name": "parkinsons_mi_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "parkinsons",
+      "method": "mi",
+      "seed": 72001,
+      "historical_fitness": 0.1211714092528045
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/parkinsons_stable_lcb_72001_1_b0.3_r4_l1.0",
+      "name": "parkinsons_stable_lcb_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "parkinsons",
+      "method": "stable_lcb",
+      "seed": 72001,
+      "historical_fitness": 0.120078424090052
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/hill_valley_EHOA_72001_1_b0.3_r4_l1.0",
+      "name": "hill_valley_EHOA_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "hill_valley",
+      "method": "EHOA",
+      "seed": 72001,
+      "historical_fitness": 0.4786131350681536
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/hill_valley_random_72001_1_b0.3_r4_l1.0",
+      "name": "hill_valley_random_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "hill_valley",
+      "method": "random",
+      "seed": 72001,
+      "historical_fitness": 0.4542697232548534
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/hill_valley_cheapest_72001_1_b0.3_r4_l1.0",
+      "name": "hill_valley_cheapest_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "hill_valley",
+      "method": "cheapest",
+      "seed": 72001,
+      "historical_fitness": 0.4705479966955803
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/hill_valley_mi_72001_1_b0.3_r4_l1.0",
+      "name": "hill_valley_mi_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "hill_valley",
+      "method": "mi",
+      "seed": 72001,
+      "historical_fitness": 0.4710080958281702
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/hill_valley_stable_lcb_72001_1_b0.3_r4_l1.0",
+      "name": "hill_valley_stable_lcb_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "hill_valley",
+      "method": "stable_lcb",
+      "seed": 72001,
+      "historical_fitness": 0.4607656753407682
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/steel_plates_fault_EHOA_72001_1_b0.3_r4_l1.0",
+      "name": "steel_plates_fault_EHOA_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "steel_plates_fault",
+      "method": "EHOA",
+      "seed": 72001,
+      "historical_fitness": 0.3161979032396665
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/steel_plates_fault_random_72001_1_b0.3_r4_l1.0",
+      "name": "steel_plates_fault_random_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "steel_plates_fault",
+      "method": "random",
+      "seed": 72001,
+      "historical_fitness": 0.3321978566927329
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/steel_plates_fault_cheapest_72001_1_b0.3_r4_l1.0",
+      "name": "steel_plates_fault_cheapest_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "steel_plates_fault",
+      "method": "cheapest",
+      "seed": 72001,
+      "historical_fitness": 0.3326775049411359
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/steel_plates_fault_mi_72001_1_b0.3_r4_l1.0",
+      "name": "steel_plates_fault_mi_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "steel_plates_fault",
+      "method": "mi",
+      "seed": 72001,
+      "historical_fitness": 0.3177293331614677
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/steel_plates_fault_stable_lcb_72001_1_b0.3_r4_l1.0",
+      "name": "steel_plates_fault_stable_lcb_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "steel_plates_fault",
+      "method": "stable_lcb",
+      "seed": 72001,
+      "historical_fitness": 0.3292409448311419
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/madelon_EHOA_72001_1_b0.3_r4_l1.0",
+      "name": "madelon_EHOA_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "madelon",
+      "method": "EHOA",
+      "seed": 72001,
+      "historical_fitness": 0.3928618867426673
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/madelon_random_72001_1_b0.3_r4_l1.0",
+      "name": "madelon_random_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "madelon",
+      "method": "random",
+      "seed": 72001,
+      "historical_fitness": 0.4002122576105578
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/madelon_cheapest_72001_1_b0.3_r4_l1.0",
+      "name": "madelon_cheapest_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "madelon",
+      "method": "cheapest",
+      "seed": 72001,
+      "historical_fitness": 0.4033787532458188
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/madelon_mi_72001_1_b0.3_r4_l1.0",
+      "name": "madelon_mi_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "madelon",
+      "method": "mi",
+      "seed": 72001,
+      "historical_fitness": 0.4098508429433553
+    },
+    {
+      "path": "fold_safe_revision_2026_10_12/jobs/madelon_stable_lcb_72001_1_b0.3_r4_l1.0",
+      "name": "madelon_stable_lcb_72001_1_b0.3_r4_l1.0",
+      "scope": "primary",
+      "dataset": "madelon",
+      "method": "stable_lcb",
+      "seed": 72001,
+      "historical_fitness": 0.4100670952446633
+    },
+    {
+      "path": "external_evidence_2026_10_13/jobs/cheapest_72001",
+      "name": "external_cheapest_72001",
+      "scope": "external",
+      "dataset": "parkinsons_common3",
+      "method": "cheapest",
+      "seed": 72001
+    },
+    {
+      "path": "external_evidence_2026_10_13/jobs/cheapest_72002",
+      "name": "external_cheapest_72002",
+      "scope": "external",
+      "dataset": "parkinsons_common3",
+      "method": "cheapest",
+      "seed": 72002
+    },
+    {
+      "path": "external_evidence_2026_10_13/jobs/cheapest_72003",
+      "name": "external_cheapest_72003",
+      "scope": "external",
+      "dataset": "parkinsons_common3",
+      "method": "cheapest",
+      "seed": 72003
+    },
+    {
+      "path": "external_evidence_2026_10_13/jobs/cheapest_72004",
+      "name": "external_cheapest_72004",
+      "scope": "external",
+      "dataset": "parkinsons_common3",
+      "method": "cheapest",
+      "seed": 72004
+    },
+    {
+      "path": "external_evidence_2026_10_13/jobs/cheapest_72005",
+      "name": "external_cheapest_72005",
+      "scope": "external",
+      "dataset": "parkinsons_common3",
+      "method": "cheapest",
+      "seed": 72005
+    },
+    {
+      "path": "external_evidence_2026_10_13/jobs/EHOA_72001",
+      "name": "external_EHOA_72001",
+      "scope": "external",
+      "dataset": "parkinsons_common3",
+      "method": "EHOA",
+      "seed": 72001
+    },
+    {
+      "path": "external_evidence_2026_10_13/jobs/EHOA_72002",
+      "name": "external_EHOA_72002",
+      "scope": "external",
+      "dataset": "parkinsons_common3",
+      "method": "EHOA",
+      "seed": 72002
+    },
+    {
+      "path": "external_evidence_2026_10_13/jobs/EHOA_72003",
+      "name": "external_EHOA_72003",
+      "scope": "external",
+      "dataset": "parkinsons_common3",
+      "method": "EHOA",
+      "seed": 72003
+    },
+    {
+      "path": "external_evidence_2026_10_13/jobs/EHOA_72004",
+      "name": "external_EHOA_72004",
+      "scope": "external",
+      "dataset": "parkinsons_common3",
+      "method": "EHOA",
+      "seed": 72004
+    },
+    {
+      "path": "external_evidence_2026_10_13/jobs/EHOA_72005",
+      "name": "external_EHOA_72005",
+      "scope": "external",
+      "dataset": "parkinsons_common3",
+      "method": "EHOA",
+      "seed": 72005
+    },
+    {
+      "path": "external_evidence_2026_10_13/jobs/mi_72001",
+      "name": "external_mi_72001",
+      "scope": "external",
+      "dataset": "parkinsons_common3",
+      "method": "mi",
+      "seed": 72001
+    },
+    {
+      "path": "external_evidence_2026_10_13/jobs/mi_72002",
+      "name": "external_mi_72002",
+      "scope": "external",
+      "dataset": "parkinsons_common3",
+      "method": "mi",
+      "seed": 72002
+    },
+    {
+      "path": "external_evidence_2026_10_13/jobs/mi_72003",
+      "name": "external_mi_72003",
+      "scope": "external",
+      "dataset": "parkinsons_common3",
+      "method": "mi",
+      "seed": 72003
+    },
+    {
+      "path": "external_evidence_2026_10_13/jobs/mi_72004",
+      "name": "external_mi_72004",
+      "scope": "external",
+      "dataset": "parkinsons_common3",
+      "method": "mi",
+      "seed": 72004
+    },
+    {
+      "path": "external_evidence_2026_10_13/jobs/mi_72005",
+      "name": "external_mi_72005",
+      "scope": "external",
+      "dataset": "parkinsons_common3",
+      "method": "mi",
+      "seed": 72005
+    },
+    {
+      "path": "external_evidence_2026_10_13/jobs/random_72001",
+      "name": "external_random_72001",
+      "scope": "external",
+      "dataset": "parkinsons_common3",
+      "method": "random",
+      "seed": 72001
+    },
+    {
+      "path": "external_evidence_2026_10_13/jobs/random_72002",
+      "name": "external_random_72002",
+      "scope": "external",
+      "dataset": "parkinsons_common3",
+      "method": "random",
+      "seed": 72002
+    },
+    {
+      "path": "external_evidence_2026_10_13/jobs/random_72003",
+      "name": "external_random_72003",
+      "scope": "external",
+      "dataset": "parkinsons_common3",
+      "method": "random",
+      "seed": 72003
+    },
+    {
+      "path": "external_evidence_2026_10_13/jobs/random_72004",
+      "name": "external_random_72004",
+      "scope": "external",
+      "dataset": "parkinsons_common3",
+      "method": "random",
+      "seed": 72004
+    },
+    {
+      "path": "external_evidence_2026_10_13/jobs/random_72005",
+      "name": "external_random_72005",
+      "scope": "external",
+      "dataset": "parkinsons_common3",
+      "method": "random",
+      "seed": 72005
+    },
+    {
+      "path": "external_evidence_2026_10_13/jobs/stable_lcb_72001",
+      "name": "external_stable_lcb_72001",
+      "scope": "external",
+      "dataset": "parkinsons_common3",
+      "method": "stable_lcb",
+      "seed": 72001
+    },
+    {
+      "path": "external_evidence_2026_10_13/jobs/stable_lcb_72002",
+      "name": "external_stable_lcb_72002",
+      "scope": "external",
+      "dataset": "parkinsons_common3",
+      "method": "stable_lcb",
+      "seed": 72002
+    },
+    {
+      "path": "external_evidence_2026_10_13/jobs/stable_lcb_72003",
+      "name": "external_stable_lcb_72003",
+      "scope": "external",
+      "dataset": "parkinsons_common3",
+      "method": "stable_lcb",
+      "seed": 72003
+    },
+    {
+      "path": "external_evidence_2026_10_13/jobs/stable_lcb_72004",
+      "name": "external_stable_lcb_72004",
+      "scope": "external",
+      "dataset": "parkinsons_common3",
+      "method": "stable_lcb",
+      "seed": 72004
+    },
+    {
+      "path": "external_evidence_2026_10_13/jobs/stable_lcb_72005",
+      "name": "external_stable_lcb_72005",
+      "scope": "external",
+      "dataset": "parkinsons_common3",
+      "method": "stable_lcb",
+      "seed": 72005
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-18",
+  "reviewer": "Codex parent agent visual inspection",
+  "pages_inspected": 16,
+  "status": "All16finalrenderedpagesinspected; no clipping, missing tables, blank fifth page or overlapping content observed",
+  "pdf_sha256": {
+    "manuscript_fa.pdf": "74d07ab3ea1f4c2831017f8a815d45cfc9617ac4df3e7dc2298481f7fb0acb69",
+    "manuscript_en.pdf": "517572042cff3e95f9e043b210fb5404f566bf0324d2ec3a9055cf88f7ee2caf",
+    "qa/word_fa.pdf": "71e9ef6256b67c1b77f2335e2404786fdb7103f58e5e9453caa8bdf2f4e058da",
+    "qa/word_en.pdf": "f496c6a09bd2ccd1b419c9957bf28e93d9ac4bed029b8b31d8d3cfe83fc02432"
+  },
+  "docx_sha256": {
+    "manuscript_fa.docx": "e2f548ae1178e64778a557ad6a4d5ce05a4f4856763ee6b088cff43ab0d8438e",
+    "manuscript_en.docx": "3fcc39749bbdde84512a77325190237209eae940c7904e3a03f09130c1449ddf"
+  },
+  "content_sha256": "013d40c8e5774271406f641c8e8ee4c37de6895b8eb8da30f26707bc726e58c6"
+}

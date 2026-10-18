@@ -1,0 +1,7 @@
+{
+  "leave_one_out_families": 10,
+  "comparisons_per_family": 24,
+  "minimum_p_holm_all_24": 0.09375,
+  "significant_all24_rows": 0,
+  "analysis_role": "Post-hoc sensitivity only; original ten-dataset analysis retained unchanged"
+}

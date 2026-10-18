@@ -1,0 +1,15 @@
+{
+  "runs": 1464,
+  "primary_runs": 750,
+  "datasets": 10,
+  "factorial_runs": 240,
+  "factorial_max_effect_error": 2.4868995751603507e-14,
+  "primary_max_comparison_error": 2.842170943040401e-14,
+  "metric_recomputation_scope": "Saved hard-label predictions; score-based AUC/PR-AUC of the 1464 primary-study runs cannot be independently recalculated because saved files contain no probabilities",
+  "group_identity_scope": "Checks pseudonymous mapping, not clinical identity",
+  "files_sha256": {
+    "analyze_extended_revision.py": "605723bab12271170522b77b0cb686e1250f505c283ac91bcf25e0857f57ab2b",
+    "analyze_fold_safe_revision.py": "5c0166223094514bbaa7c2bc387f83921b9d4ab485e3b5aec5e8f7ba6541ae56",
+    "proposed/stability.py": "1ae0d5fe67851a337bb740dd75e35455c60bc5732731ffd5d8ee71362614109e"
+  }
+}

@@ -24,7 +24,7 @@ Data attribution and redistribution permissions are documented separately. Publi
 
 The Hill-Valley UCI identifier was corrected to 166; id 147 is Statlog Image Segmentation. The exact OpenML 1479 numeric snapshot and numerical results were unchanged. Public dataset snapshots and attribution are now included.
 
-All 1,464 public benchmark job outputs include masks, predictions, split provenance and candidate audits. Extension audit and dataset-block statistical results are in `extended_revision_2026_10_12/analysis`. Recorded timings compare batches with different worker counts (three versus six) and are not a controlled speed benchmark. At the author’s explicit request, the complete research workspace now includes manuscripts, reviewer responses, author declaration drafts and prior versions. The latest authoritative manuscript is integrated_revision_2026_10_13; extended_revision_2026_10_12 and earlier results are archival.
+All 1,464 public benchmark job outputs include masks, predictions, split provenance and candidate audits. Extension audit and dataset-block statistical results are in `extended_revision_2026_10_12/analysis`. Recorded timings compare batches with different worker counts (three versus six) and are not a controlled speed benchmark. At the author’s explicit request, the complete research workspace now includes manuscripts, reviewer responses, author declaration drafts and prior versions. The latest authoritative manuscript is scientific_revision_2026_10_18; earlier manuscript versions remain archival.
 
 ## Complete workspace transfer
 
@@ -36,4 +36,8 @@ See external_evidence_2026_10_13/REPORT_FA.md. This adds 25 exploratory source-o
 
 ## Integrated manuscript revision — 2026-10-13
 
-Latest authoritative manuscript: integrated_revision_2026_10_13. Both languages have four-page Word/PDF/LaTeX versions,17references,8tables and2figures. Transfer and shared-service-cost findings are integrated into the abstract, discussion,Table8,conclusion and14reviewer responses. See unresolved_items_fa.md and SUBMISSION_STATUS_FA.md: author approval was explicitly withheld and no conference submission occurred. The1464original runs and25transfer fits retain distinct protocols.
+Historical integrated manuscript: integrated_revision_2026_10_13. Both languages have four-page Word/PDF/LaTeX versions,17references,8tables and2figures. Transfer and shared-service-cost findings are integrated into the abstract, discussion,Table8,conclusion and14reviewer responses. See unresolved_items_fa.md and SUBMISSION_STATUS_FA.md: author approval was explicitly withheld and no conference submission occurred. The1464original runs and25transfer fits retain distinct protocols.
+
+## Scientific audit and revised manuscript — 2026-10-18
+
+Latest manuscript: scientific_revision_2026_10_18 (both languages4pages,17references,9tables,2figures). See scientific_audit_2026_10_18/SCIENTIFIC_AUDIT_FA.md. All1464fixed-mask final classifiers and25external predictions were refitted; probabilities are saved.75selected searches replayed with matching masks; this is not a replay of every historical optimizer run. Main statistical results reproduce, but all post-hoc nine-dataset leave-one-out families lose Holm24 significance(minimum0.09375); positive stability effects remain. Feature-label collisions are disclosed. Clinical evidence gaps and author submission hold remain.

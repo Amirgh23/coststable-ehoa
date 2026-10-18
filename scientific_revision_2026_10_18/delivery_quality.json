@@ -1,0 +1,106 @@
+{
+  "date": "2026-10-18",
+  "page_counts": {
+    "manuscript_fa.pdf": 4,
+    "manuscript_en.pdf": 4,
+    "qa/word_fa.pdf": 4,
+    "qa/word_en.pdf": 4
+  },
+  "references": 17,
+  "tables": 9,
+  "figures": 2,
+  "native_word_equations": {
+    "manuscript_en.docx": 5,
+    "manuscript_fa.docx": 5
+  },
+  "visual_review": {
+    "date": "2026-10-18",
+    "reviewer": "Codex parent agent visual inspection",
+    "pages_inspected": 16,
+    "status": "All16finalrenderedpagesinspected; no clipping, missing tables, blank fifth page or overlapping content observed",
+    "pdf_sha256": {
+      "manuscript_fa.pdf": "74d07ab3ea1f4c2831017f8a815d45cfc9617ac4df3e7dc2298481f7fb0acb69",
+      "manuscript_en.pdf": "517572042cff3e95f9e043b210fb5404f566bf0324d2ec3a9055cf88f7ee2caf",
+      "qa/word_fa.pdf": "71e9ef6256b67c1b77f2335e2404786fdb7103f58e5e9453caa8bdf2f4e058da",
+      "qa/word_en.pdf": "f496c6a09bd2ccd1b419c9957bf28e93d9ac4bed029b8b31d8d3cfe83fc02432"
+    },
+    "docx_sha256": {
+      "manuscript_fa.docx": "e2f548ae1178e64778a557ad6a4d5ce05a4f4856763ee6b088cff43ab0d8438e",
+      "manuscript_en.docx": "3fcc39749bbdde84512a77325190237209eae940c7904e3a03f09130c1449ddf"
+    },
+    "content_sha256": "013d40c8e5774271406f641c8e8ee4c37de6895b8eb8da30f26707bc726e58c6"
+  },
+  "final_classifier_refit": {
+    "recorded_runs": 1464,
+    "refitted_runs": 1464,
+    "refit_scope": "Fixed saved feature masks and outer splits; optimizer not rerun",
+    "prediction_disagreements": 0,
+    "record_order_mismatches": 0,
+    "true_label_mismatches": 0,
+    "maximum_metric_error": 1.1102230246251565e-16,
+    "maximum_cost_error": 5.684341886080802e-14,
+    "budget_violations": 0,
+    "outer_subject_overlap": 0,
+    "row_overlap": 0,
+    "incomplete_outer_partitions": 0,
+    "refit_classifier_fit_calls": 1464,
+    "probabilities_saved": 1464,
+    "environment": {
+      "python": "3.13.13",
+      "numpy": "2.5.0",
+      "pandas": "3.0.3",
+      "scipy": "1.18.0",
+      "sklearn": "1.9.0",
+      "imblearn": "0.14.2"
+    },
+    "code_sha256": "6ac10732d77d82782b17d9a2dd6641479523ba4a0946a20e25885788b85e0bec"
+  },
+  "optimizer_replay": {
+    "replays": 75,
+    "primary_replays": 50,
+    "external_replays": 25,
+    "historical_mask_mismatches": 0,
+    "maximum_historical_fitness_error": 9.71445146547012e-17,
+    "maximum_winning_fitness_recalculation_error": 5.551115123125783e-17,
+    "outer_repair_mismatches": 0,
+    "inner_subject_overlap": 0,
+    "scope": "Only these75searches replayed on current runtime. Original full optimizer runs not retrospectively instrumented; no historical raw winner trace was saved. Classifier audit covers all1464+25 fixed masks."
+  },
+  "statistical_audit": {
+    "runs": 1464,
+    "primary_runs": 750,
+    "datasets": 10,
+    "factorial_runs": 240,
+    "factorial_max_effect_error": 2.4868995751603507e-14,
+    "primary_max_comparison_error": 2.842170943040401e-14,
+    "metric_recomputation_scope": "Saved hard-label predictions; score-based AUC/PR-AUC of the 1464 primary-study runs cannot be independently recalculated because saved files contain no probabilities",
+    "group_identity_scope": "Checks pseudonymous mapping, not clinical identity",
+    "files_sha256": {
+      "analyze_extended_revision.py": "605723bab12271170522b77b0cb686e1250f505c283ac91bcf25e0857f57ab2b",
+      "analyze_fold_safe_revision.py": "5c0166223094514bbaa7c2bc387f83921b9d4ab485e3b5aec5e8f7ba6541ae56",
+      "proposed/stability.py": "1ae0d5fe67851a337bb740dd75e35455c60bc5732731ffd5d8ee71362614109e"
+    }
+  },
+  "secondary_audit": {
+    "secondary_maximum_error": 2.842170943040401e-14,
+    "spambase_collision_rows": 6,
+    "spambase_collision_groups": 3,
+    "spambase_runs_audited": 114,
+    "spambase_runs_with_collision_across_outer_split": 94,
+    "collision_interpretation": "Identical feature vectors have discordant labels. This is not sufficient evidence of identical emails or a shared real-world source; do not claim established subject leakage.",
+    "parkinson_mapping_label_mismatches": 0,
+    "parkinson_prefixes": 32,
+    "parkinson_prefix_label_max_nunique": 1
+  },
+  "robustness": {
+    "leave_one_out_families": 10,
+    "comparisons_per_family": 24,
+    "minimum_p_holm_all_24": 0.09375,
+    "significant_all24_rows": 0,
+    "analysis_role": "Post-hoc sensitivity only; original ten-dataset analysis retained unchanged"
+  },
+  "author_approved": false,
+  "submitted": false,
+  "scope": "All saved runs and active scientific analysis audited;75representative optimizer searches replayed, not every historical search. No independent clinical identity or new measured marginal acquisition costs obtained.",
+  "score_vector_provenance": "The statistical subaudit used saved historical hard labels. The separate parent audit refitted all1464final classifiers, saved fresh score vectors and matched historical scalar AUC/PR-AUC; absent original score vectors are not claimed recovered."
+}

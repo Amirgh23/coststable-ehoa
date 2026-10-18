@@ -1,0 +1,27 @@
+[
+  {
+    "finding": "S01",
+    "resolution": "Corrected interpretation in new abstract,section7,Table7 and conclusion; primary ten-dataset analysis retained",
+    "status": "addressed"
+  },
+  {
+    "finding": "S02",
+    "resolution": "Disclosed in section5 and collision files; no unsupported entity-leakage claim or relabeling",
+    "status": "disclosed evidence limitation"
+  },
+  {
+    "finding": "S03",
+    "resolution": "All mapped groups checked and Oxford-exclusion sensitivity reported; clinical mapping unavailable",
+    "status": "external evidence pending"
+  },
+  {
+    "finding": "Missing saved primary score vectors",
+    "resolution": "1464fixed-mask final classifiers refitted and fresh probabilities saved; original score vectors not claimed recovered",
+    "status": "forward audit gap addressed"
+  },
+  {
+    "finding": "Historical optimizer raw traces missing",
+    "resolution": "75current-runtime replay traces and independent fitness checks saved",
+    "status": "sampled replay completed; missing original history remains"
+  }
+]

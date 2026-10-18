@@ -1,0 +1,11 @@
+{
+  "replays": 75,
+  "primary_replays": 50,
+  "external_replays": 25,
+  "historical_mask_mismatches": 0,
+  "maximum_historical_fitness_error": 9.71445146547012e-17,
+  "maximum_winning_fitness_recalculation_error": 5.551115123125783e-17,
+  "outer_repair_mismatches": 0,
+  "inner_subject_overlap": 0,
+  "scope": "Only these75searches replayed on current runtime. Original full optimizer runs not retrospectively instrumented; no historical raw winner trace was saved. Classifier audit covers all1464+25 fixed masks."
+}
